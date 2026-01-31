@@ -1,0 +1,286 @@
+
+\chapter{Marco Referencial}
+
+\section{Marco Teórico}
+
+\subsection{Agricultura 4.0}
+
+\subsubsection{Contexto y relevancia para Colombia}
+La Agricultura 4.0 constituye la integración de tecnologías emergentes —tales como el Internet de las Cosas (IoT), analítica avanzada de datos, automatización e inteligencia artificial— en los sistemas productivos agropecuarios, con el propósito de optimizar procedimientos, incrementar la productividad y fortalecer la sostenibilidad de la actividad agrícola \parencite[]{shafi2019precision}. En el contexto colombiano, este enfoque adquiere una especial importancia debido al peso estratégico del sector rural y a la diversidad ecológica y climática que caracteriza los sistemas de producción del país.
+
+No obstante, la literatura evidencia la existencia de rezagos estructurales en materia de adopción tecnológica. Únicamente el 1.7\% de las Unidades de Producción Agrícola (UPA) cuentan con conectividad a Internet y solo el 6.6\% poseen activos de Tecnologías de la Información y las Comunicaciones, lo cual supone una limitación crítica para el despliegue de infraestructuras digitales aplicables a esquemas de Agricultura 4.0 \parencite[]{alvarez2022colombian}
+
+Asimismo, un reporte del año 2021 de la corporación colombiana de investigación agropecuaria (AGROSAVIA)  sostiene que la transición hacia sistemas agroindustriales inteligentes requiere no solo inversión en infraestructura tecnológica, sino también el fortalecimiento de capacidades humanas, así como procesos efectivos de transferencia de conocimiento técnico hacia los productores rurales \parencite[]{florez2021agroindustria}. 
+
+De este modo, la Agricultura 4.0 en Colombia se configura no únicamente como una transformación técnica, sino como un proceso socio-tecnológico que implica cambios en la organización productiva, la formación de capital humano y la gobernanza del conocimiento agrícola.
+
+\subsubsection{Retos: brecha digital e ineficiencias}
+A pesar de las ventajas potenciales que supone la Agricultura 4.0, su implementación enfrenta múltiples desafíos. Uno de los más significativos es la denominada brecha digital rural, entendida como la desigualdad en el acceso a tecnologías digitales entre agricultores tecnificados y pequeños productores tradicionales. Tovar-Quiroz (2023) evidencia que esta brecha no solo se manifiesta en infraestructura, sino también en alfabetización digital, acceso a plataformas inteligentes y capacidad de inversión en innovación tecnológica \parencite[]{quiroz2023agricultura}.
+
+A ello se suma la baja disponibilidad de conectividad en zonas rurales colombianas, condición imprescindible para soportar sistemas de monitoreo remoto, transmisión de datos sensorados y comunicación distribuida entre dispositivos IoT \parencite[]{alvarez2022colombian}.
+
+AGROSAVIA advierte además que la adopción acelerada de tecnologías inteligentes podría agravar desigualdades existentes si no se acompaña de políticas de democratización tecnológica y apropiación social del conocimiento \parencite[]{florez2021agroindustria}.
+
+Finalmente, en términos operativos, la integración de modelos de datos provenientes de sensores, imágenes satelitales y simulaciones agronómicas plantea grandes retos para la gestión eficiente de información y la toma de decisiones automatizada. Tovar-Quiroz (2023) identifica diez dominios en los que convergen estas tecnologías, destacando la necesidad de arquitecturas interoperables para lograr la integración funcional de múltiples fuentes de datos  \parencite[]{quiroz2023agricultura}.
+
+\subsubsection{El rol del IoT y la Agricultura de Precisión}
+La Agricultura de Precisión se constituye como un fundamento metodológico de la Agricultura 4.0. Esta se define como una estrategia de gestión basada en la captura y análisis de datos espacio-temporales, con el objetivo de optimizar decisiones relativas al uso de insumos, manejo de suelos y gestión de cultivos \parencite[]{quiroz2023agricultura}.
+
+En este marco, el IoT emerge como un componente clave y se presentan  arquitecturas IoT aplicables a la agricultura colombiana, donde se integran sensores ambientales, redes de comunicación de baja potencia y plataformas de visualización y análisis de datos \parencite[]{Cognitive-LPWAN}
+
+Por su parte, AGROSAVIA enfatiza que la incorporación de sistemas de sensorización y teledetección puede transformar los procesos tradicionales de cultivo en sistemas de control inteligente, combinando el conocimiento empírico local con modelos predictivos y automatización \parencite[]{florez2021agroindustria}.
+
+En consecuencia, tanto la Agricultura de Precisión como las infraestructuras IoT proveen las bases tecno-operativas para evolucionar hacia modelos agrícolas más robustos, sostenibles y basados en evidencia cuantificable. Este enfoque integra los datos provenientes del entorno físico con modelos de decisión computacional, reduciendo la incertidumbre operativa y permitiendo una mayor eficiencia en el uso de recursos críticos como agua, fertilizantes y energía.
+
+
+\subsection{Redes LPWAN: Tecnologías Habilitadoras de la Agricultura de Precisión}
+
+\subsubsection{Fundamentos: Arquitectura y Principios}
+Las Redes de Área Amplia de Baja Potencia (LPWAN, por sus siglas en inglés) constituyen una categoría de tecnologías de comunicación inalámbrica diseñada para resolver el compromiso fundamental en la conectividad del Internet de las Cosas (IoT): la necesidad de operar con bajo consumo de energía y largo alcance \parencite[]{diane2025systematic}. Este equilibrio es crucial para el despliegue de dispositivos alimentados por batería que deben transmitir datos intermitentemente a lo largo de extensas áreas geográficas \parencite[]{chen2018cognitive}.
+
+Los principios arquitectónicos de las LPWAN están orientados a la máxima eficiencia:
+\begin{itemize}
+\item \textbf{Eficiencia Energética:} La prioridad es extender la vida útil de los nodos finales a más de diez años. Esto se logra mediante la optimización de protocolos de acceso al medio que permiten a los dispositivos permanecer en estados de inactividad profunda durante la mayor parte del tiempo, minimizando el consumo de potencia durante las transmisiones \parencite[]{diane2025systematic}.
+\item \textbf{Largo Alcance:} Utilizan técnicas de modulación avanzadas, como el Chirp Spread Spectrum (CSS) en LoRa, y anchos de banda ultra-estrechos en NB-IoT, para mejorar la sensibilidad del receptor y permitir la comunicación efectiva a distancias de varios kilómetros en entornos rurales \parencite[]{diane2025systematic}.
+\item \textbf{Baja Tasa de Datos:} Están optimizadas para la transmisión de pequeños paquetes de datos (kilobits por segundo o menos), lo cual es suficiente para lecturas periódicas de sensores (temperatura, humedad, estado binario), pero inadecuado para servicios multimedia o de alta throughput \parencite[]{chen2018cognitive}. 
+\item \textbf{Alta Escalabilidad:} El diseño de la red permite que una única estación base o gateway gestione la conectividad de decenas de miles de dispositivos finales \parencite[]{chen2018cognitive}.
+\end{itemize}
+
+\subsubsection{Análisis Comparativo de Tecnologías LPWAN}
+El ecosistema LPWAN presenta una diversidad de tecnologías que compiten en función de sus características operativas y el espectro de frecuencia que utilizan, lo cual influye directamente en el costo, la cobertura y la calidad de servicio \parencite[]{ahmad2021lpwan}.
+
+\begin{enumerate}
+\item \textbf{Tecnologías de Espectro Sin Licencia (ISM):}
+Estas tecnologías permiten el despliegue de redes privadas con bajo costo de infraestructura inicial, pero enfrentan desafíos en la gestión de interferencias.
+\begin{itemize}
+\item \textbf{LoRaWAN:} Utiliza bandas ISM. Su modulación CSS le otorga un largo alcance superior ($\le 20 \text{ km}$ en campo abierto) y robustez contra el ruido. Es la opción preferida para entornos agrícolas donde la construcción de una red privada y la maximización del alcance son prioritarias \parencite[]{chen2018cognitive}
+\item \textbf{SigFox:} Opera con ultra-banda estrecha. Es una tecnología propietaria con un servicio centralizado, limitada a un tráfico muy bajo (mensajes pequeños y pocos por día). Su alcance es amplio, pero su baja capacidad de datos restringe su uso a aplicaciones de reporte de estado binario o seguimiento \parencite[]{ahmad2021lpwan}.
+\item \textbf{MIoTy y RPW (Rotating Polarization Wave):} Son tecnologías más recientes que buscan mejorar la fiabilidad y el rendimiento en ambientes industriales ruidosos, mejorando la eficiencia espectral en las bandas ISM \parencite[]{ahmad2021lpwan}.
+\end{itemize}
+
+\item \textbf{Tecnologías de Espectro Licenciado (3GPP):}
+Evolucionadas a partir de los estándares celulares, ofrecen seguridad, calidad de servicio (QoS) y se integran en la infraestructura móvil existente.
+\begin{itemize}
+\item \textbf{NB-IoT (Narrowband-IoT):} Estandarizada en 3GPP, utiliza un ancho de banda estrecho ($200 \text{ kHz}$) dentro del espectro celular ($700 - 900 \text{ MHz}$). Ofrece una cobertura extendida ($\le 15 \text{ km}$) y una mayor penetración en el subsuelo, siendo ideal para aplicaciones fijas de bajo throughput como la monitorización de medidores o sensores subterráneos \parencite[]{chen2018cognitive}.
+\item \textbf{LTE-M (LTE-Machine-to-Machine) / Cat-M1:} También estandarizada en 3GPP, opera con un ancho de banda mayor ($\sim 1.4 \text{ MHz}$), lo que le permite soportar tasas de datos más altas ($\le 1 \text{ Mbps}$) y mayor movilidad de los dispositivos. Es la elección óptima cuando la aplicación requiere actualizaciones más frecuentes o soporta tráfico de voz \parencite[]{chen2018cognitive}.
+\item \textbf{EC-GSM (Extended Coverage GSM):} Es una optimización del estándar 2G/GSM para mejorar la cobertura. Aunque relevante históricamente, su desarrollo se ha visto eclipsado por el enfoque más eficiente y moderno de NB-IoT \parencite[]{chen2018cognitive}.
+\end{itemize}
+\end{enumerate}
+
+\subsubsection{Aplicación en el Monitoreo Agrícola}
+Las LPWAN proporcionan la \textbf{base tecnológica} sobre la cual se sustentan los sistemas de Agricultura de Precisión. Su aplicación en el monitoreo agrícola es crucial por las siguientes razones, que justifican la necesidad de seleccionar la tecnología adecuada:
+
+\begin{itemize}
+\item \textbf{Viabilidad en Campos Extensos:} La capacidad de largo alcance permite conectar sensores distribuidos en grandes parcelas de cultivo donde otras tecnologías son inviables o prohibitivamente caras de implementar. Esto es fundamental para obtener datos de alta resolución espacial \parencite[]{chen2018cognitive}.
+\item \textbf{Sostenibilidad Operativa:} El bajo consumo energético garantiza que los sensores permanezcan operativos durante periodos prolongados (años) sin intervención humana para recargar o reemplazar baterías, reduciendo significativamente los costos de mantenimiento y operación .
+\item \textbf{Insumo para la Inteligencia Artificial (IA):} Las LPWAN son el canal de comunicación que traslada los datos críticos de campo (clima, suelo, estado hídrico) hacia las plataformas de IA, las cuales procesan esta información para generar \textbf{prescripciones agronómicas} \parencite[]{chen2018cognitive}. La selección errónea de la LPWAN puede resultar en fallas de conectividad, comprometiendo la calidad de los datos y, por ende, la precisión de las recomendaciones del sistema inteligente.
+\end{itemize}
+
+\subsection{Sensórica y Variables Agronómicas}
+
+El fundamento de la Agricultura de Precisión reside en la capacidad de recolectar, procesar y utilizar datos espaciales y temporales para optimizar la gestión de insumos y mejorar la productividad de los cultivos \parencite[]{alahmad2023applying}. Esta capacidad depende intrínsecamente de la sensórica, que transforma las condiciones físicas, químicas y biológicas del agrosistema en información cuantificable \parencite[]{rajak2023internet}.
+
+\subsubsection{Variables Clave: Suelo, Ambiente y Estado del Cultivo}
+Para alimentar un sistema de Inteligencia Artificial (IA) capaz de generar prescripciones agronómicas, es indispensable monitorear un conjunto de variables interconectadas que definen el estado de salud y desarrollo del cultivo \parencite[]{alahmad2023applying}.
+
+\begin{enumerate}
+    \item \textbf{Variables del Suelo:} Definen el medio de crecimiento y la disponibilidad de recursos.
+    \begin{itemize}
+        \item \textbf{Humedad del Suelo:} Es la variable más crítica, ya que determina el estrés hídrico y la necesidad de riego \parencite[]{rajak2023internet}.
+        \item \textbf{Temperatura del Suelo:} Afecta la germinación, la actividad microbiana y la absorción de nutrientes \parencite[]{rajak2023internet}. %Fuente???%
+        \item \textbf{Composición Química (pH, CE):} El pH influye en la disponibilidad de nutrientes, mientras que la Conductividad Eléctrica (CE) se correlaciona con la salinidad y la concentración de nutrientes solubles \parencite[]{soussi2024smart}
+    \end{itemize}
+    \item \textbf{Variables Ambientales (Microclima):} Definen el entorno inmediato del cultivo.
+    \begin{itemize}
+        \item \textbf{Temperatura y Humedad Ambiental:} Variables atmosféricas que afectan la transpiración, la evaporación y la incidencia de enfermedades y plagas \parencite[]{rajak2023internet}.
+        \item \textbf{Precipitación y Radiación Solar:} Determinan la energía disponible para la fotosíntesis y la recarga de la humedad del suelo  \parencite[]{alahmad2023applying}.
+        \item \textbf{Velocidad y Dirección del Viento:} Variables necesarias para la modelación de la evaporación y la dispersión de aerosoles y patógenos  \parencite[]{alahmad2023applying}.
+    \end{itemize}
+    \item \textbf{Variables del Estado del Cultivo (Fenología):} Indican la salud y el desarrollo de la planta.
+    \begin{itemize}
+        \item \textbf{Índices de Vegetación:} Obtenidos principalmente mediante sensores remotos (satelitales, aéreos o montados en drones), como el NDVI (Normalized Difference Vegetation Index). Estos índices miden la actividad fotosintética y se correlacionan directamente con el rendimiento y el estrés \parencite[]{alahmad2023applying}. 
+        \item \textbf{Altura y Densidad Foliar:} Variables de crecimiento que se pueden medir en el lugar con sensores ultrasónicos o de manera remota con tecnologías LiDAR \parencite[]{alahmad2023applying}.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Tipos de Sensores y Compatibilidad con LPWAN}
+La selección del sensor no solo depende de la variable a medir, sino también de su compatibilidad energética y de comunicación con las Redes LPWAN \parencite[]{rajak2023internet}.
+
+\begin{itemize}
+    \item \textbf{Sensores Capacitivos:} Son el estándar para medir la humedad del suelo. Funcionan midiendo la constante dieléctrica del suelo, la cual cambia con el contenido de agua. Son de bajo costo y, crucialmente, consumen baja potencia, lo que los hace ideales para la integración con nodos LoRaWAN o NB-IoT \parencite[]{rajak2023internet}.
+    \item \textbf{Sensores Electroquímicos:} Utilizados para medir el pH y otros iones. Requieren una calibración y mantenimiento más intensivos, y aunque su consumo de potencia es generalmente bajo, la complejidad de la medición in situ y el costo pueden limitar su despliegue masivo en comparación con los sensores de humedad \parencite[]{soussi2024smart}.
+    \item \textbf{Sensores Ópticos y Remotos:} Incluyen cámaras multiespectrales o hiperespectrales (para obtener índices como el NDVI) y fotodiodos. Son fundamentales para evaluar el estado del cultivo a escala de campo. Aunque el sensor en sí es activo, la plataforma de adquisición (dron o satélite) no utiliza directamente la red LPWAN. Sin embargo, los datos de prescripción resultantes del análisis de estas imágenes sí deben ser transmitidos a los actuadores vía LPWAN 
+    \parencite[]{omia2023remote}
+    \item \textbf{Sensores Termopares y Resistivos (DHT):} Comunes para medir temperatura y humedad ambiente. Son de bajo costo y presentan una buena eficiencia energética para el monitoreo microclimático \parencite[]{de2444monitoreo}
+\end{itemize}
+
+La baja tasa de datos de las LPWAN impone una restricción: solo los sensores que generan datos de pequeño tamaño (valores discretos como temperatura, humedad, o pH) son directamente compatibles. Los datos de gran volumen (como imágenes de alta resolución) deben ser procesados en el borde o de forma remota, y solo los resultados resumidos se transmiten por la red LPWAN \parencite[]{alahmad2023applying}.
+
+\subsubsection{Densidad de Sensores y Frecuencia de Reporte}
+La eficacia de la Agricultura de Precisión depende de la resolución espacial y temporal de los datos, que se define por la densidad de la red de sensores y su frecuencia de reporte \parencite{alahmad2023applying,soussi2024smart}.
+
+\begin{itemize}
+    \item \textbf{Densidad de Sensores:} La heterogeneidad del suelo y del microclima requiere una densidad de muestreo adecuada. El muestreo por celdas (ej., un sensor por cada hectárea) es una estrategia común, pero la ubicación óptima debe ser determinada por análisis de variabilidad espacial del campo \parencite[]{soussi2024smart} . Una mayor densidad mejora la precisión del modelo de IA, pero aumenta linealmente la carga de tráfico en la red LPWAN.
+    \item \textbf{Frecuencia de Reporte:} La necesidad de actualización de los datos varía: mientras que la temperatura del suelo puede medirse cada pocas horas, la humedad en condiciones de riego activo puede requerir muestreos más frecuentes \parencite[]{de2444monitoreo}. Un reporte más frecuente (ej., cada 10 minutos) permite una detección más rápida de anomalías, pero consume más batería y satura el ancho de banda limitado de las LPWAN \parencite[]{chen2018cognitive}.
+\end{itemize}
+
+
+
+\subsection{Simulación de Redes LPWAN}
+\subsubsection{Estado del Arte de Herramientas de Simulación y sus Métricas de Desempeño}
+
+El siguiente análisis se basa en el artículo: \textit{A Survey on LoRaWAN Technology: Recent Trends, Opportunities, Simulation Tools and Future Directions} \parencite{almuhaya2022survey}, la simulación de redes LPWAN (específicamente LoRaWAN) es crucial para evaluar el rendimiento de la red a gran escala. A continuación, se detallan las herramientas de simulación tratadas en el artículo y sus métricas de desempeño.
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Herramienta} & \textbf{Descripción y Plataforma} & \textbf{Características Clave} & \textbf{Métricas de Desempeño Evaluadas} \\
+\midrule
+LoRaSim & 
+Simulador de eventos discretos y probabilístico implementado en Python. & 
+Simula un único gateway (puerta de enlace) LoRaWAN que sirve a varios dispositivos finales (EDs). Incorpora el efecto de captura y la asignación de factor de dispersión (SF) y potencia. & 
+Packet Reception Ratio (PRR) y capacidad de la red (escalabilidad). \\
+\addlinespace
+
+LoRaWANSim & 
+Módulo para el simulador de red ns-3 basado en C++. & 
+Extiende el modelo ALOHA para incluir el efecto de captura y la interferencia inter-SF. Soporta comunicación multicanal, multi-SF, multi-gateway y bidireccional. Soporta las Clases A y C de LoRaWAN. & 
+Consumo de energía, Packet Delivery Ratio (PDR) y latencia de la red. \\
+\addlinespace
+
+FAD & 
+Simulador de eventos discretos implementado en Python. & 
+Enfocado en simulaciones de gran escala. Introduce un modelo de canal LoRaWAN realista y considera el efecto de captura. & 
+PDR y consumo de energía. \\
+\addlinespace
+
+Simu-LoRa & 
+Implementado en MATLAB. & 
+Diseñado para evaluar el rendimiento de los dispositivos finales y diferentes factores de dispersión (SF). Se centra en la capa física (PHY). & 
+Eficiencia energética y PDR. \\
+\bottomrule
+\end{tabularx}
+\caption{Comparativa de herramientas de simulación para redes LoRaWAN}
+\label{tab:lorawan_tools}
+\end{table}
+
+
+\subsection{Agentes de Inteligencia Artificial}
+
+\subsubsection{Definición y diferencia con la IA generativa tradicional}
+
+Un agente de Inteligencia Artificial (IA) se define como una entidad que percibe su entorno y actúa dentro de él de forma autónoma con el objetivo de lograr sus metas \parencite{artint3e}. Los agentes son una pieza fundamental de la arquitectura de los sistemas de IA\parencite{gutowska2025aiagents}.
+
+La diferencia con la IA generativa tradicional (como los grandes modelos de lenguaje) radica en que un agente de IA no solo genera contenido o respuestas, sino que también incluye capacidades de percepción, razonamiento y acción en un entorno para alcanzar un objetivo específico \parencite{gutowska2025aiagents}. La IA generativa puede ser un componente que el agente utiliza para razonar o planificar.
+
+\subsubsection{Características clave: autonomía, capacidad de decisión, autoaprendizaje y adaptación}
+
+Las características fundamentales de los agentes computacionales incluyen:
+
+\begin{itemize}
+    \item \textbf{Autonomía:} La capacidad de operar sin la necesidad de un control humano o de la interacción directa en cada paso. Un agente de IA puede ejecutar tareas y tomar decisiones de forma independiente \parencite{gutowska2025aiagents}.
+    \item \textbf{Capacidad de Decisión:} Un agente posee un espacio de diseño de agente que le permite tomar decisiones basadas en sus percepciones y metas. Estos diseños progresan gradualmente desde lo simple hasta lo complejo \parencite{artint3e}.
+    \item \textbf{Autoaprendizaje y Adaptación:} Aunque no se detalla explícitamente el ``autoaprendizaje'' o ``adaptación'' como términos, el libro sobre Fundamentos de Agentes Computacionales aborda cómo la IA moderna se explica a través de agentes computacionales, y cómo las nuevas ediciones incluyen capítulos sobre aprendizaje profundo (deep learning) e IA generativa, lo que implica mecanismos de mejora y ajuste de comportamiento \parencite{artint3e}.
+\end{itemize}
+
+\subsubsection{Arquitectura de sistemas multiagente y flujos de trabajo}
+
+Un Sistema Multiagente es una arquitectura donde múltiples agentes especializados interactúan para resolver problemas complejos \parencite{gutowska2025aiagents}.
+
+La Arquitectura de Referencia Multiagente (MARA) es una documentación de Microfosft que se enfoca en los desafíos únicos de orquestar, gobernar y escalar sistemas donde varios agentes colaboran, en lugar de centrarse en un agente individual \parencite{multiagent_architecture}.
+
+Los flujos de trabajo en estos sistemas implican:
+
+\begin{itemize}
+    \item \textbf{Orquestación:} Gestionar las interacciones de los agentes.
+    \item \textbf{Gobernanza:} Establecer reglas y límites.
+    \item \textbf{Escalabilidad:} Asegurar que el sistema pueda crecer y manejar más agentes o tareas \parencite{multiagent_architecture}.
+\end{itemize}
+
+\subsubsection{Aplicación en sistemas de recomendación y soporte a la decisión}
+
+Los agentes de IA son la base de los agentes computacionales, un concepto central en la IA que se aplica a diversas áreas.
+
+\begin{itemize}
+    \item \textbf{Soporte a la Decisión:} El concepto de agentes se relaciona directamente con los modelos de razonamiento y de causalidad \parencite{artint3e}. Los agentes pueden ser diseñados para razonar y evaluar la información, lo que es esencial para el apoyo a la decisión.
+    
+    \item \textbf{Sistemas de Recomendación:} Al igual que en el soporte a la decisión, los agentes se utilizan para aplicar técnicas de aprendizaje profundo y razonamiento a grandes volúmenes de datos, una tarea habitual en los sistemas de recomendación modernos \parencite{artint3e}.
+\end{itemize}
+
+\subsubsection{Gobernanza y límites de los agentes autónomos}
+
+La \textbf{gobernanza} es un componente clave en la Arquitectura de Referencia Multiagente. El objetivo es establecer el marco para la orquestación y gestión de los agentes \parencite{multiagent_architecture}.
+
+Los límites y desafíos de estos sistemas incluyen:
+
+\begin{itemize}
+    \item \textbf{Complejidad:} La necesidad de diseñar el sistema para el cambio, equilibrando la extensibilidad a largo plazo con una ingeniería pragmática para el lanzamiento \parencite{multiagent_architecture}.
+    \item \textbf{Ética y Responsabilidad:} La IA, incluido el diseño de agentes, tiene un impacto social que debe ser considerado. Las características de autonomía y capacidad de decisión de los agentes plantean desafíos éticos importantes \parencite{artint3e}.
+\end{itemize}
+
+
+\subsection{Metodologías Ágiles (Scrum + Kanban)}
+
+\noindent\textit{La información presentada en esta sección se basa completamente en \parencite[]{grotenfelt2021agile}}
+
+Las metodologías ágiles representan un conjunto de prácticas y marcos de trabajo cuyo objetivo principal es la entrega rápida y continua de valor al cliente, fomentando la adaptabilidad y la respuesta al cambio. El desarrollo de \textit{software} ágil y su implementación se centran en el estudio de cómo estos enfoques pueden afectar el trabajo de un equipo de desarrollo. Dos de los marcos ágiles más populares son Scrum y Kanban, que a menudo se utilizan conjuntamente.
+
+\subsubsection{Marco de Scrum}
+
+Scrum es uno de los marcos de trabajo ágiles más utilizados, diseñado para implementar las prácticas y valores de la agilidad. Este marco se basa en la división del trabajo en periodos de tiempo fijos y cortos llamados sprints.
+
+Un sprint es un \textit{time-box} que tiene una duración de un mes o menos, durante el cual se crea un incremento de producto potencialmente utilizable, integrado y completo. El sprint actúa como el contenedor para todos los demás eventos de Scrum.
+
+\subsubsection{Roles de Scrum}
+
+El equipo de Scrum está compuesto por tres roles principales:
+
+\begin{itemize}
+    \item Product Owner (PO): Responsable de maximizar el valor del producto y gestionar la pila del producto.
+    \item Scrum Master (SM): Asegura que Scrum sea comprendido e implementado, y ayuda al equipo a eliminar impedimentos.
+    \item Equipo de Desarrollo (Development Team): Profesionales encargados de crear el incremento de producto utilizable; son autoorganizados y multifuncionales.
+\end{itemize}
+
+\subsubsection{Eventos de Scrum}
+
+\begin{itemize}
+    \item Planificación del Sprint (Sprint Planning)
+    \item Scrum Diario (Daily Scrum)
+    \item Revisión del Sprint (Sprint Review)
+    \item Retrospectiva del Sprint (Sprint Retrospective)
+\end{itemize}
+
+\subsubsection{Framework de Kanban}
+
+Kanban se centra en el flujo del trabajo, la visualización del proceso y la limitación del trabajo en curso (WIP). El nombre proviene del japonés y significa “señal visual”.
+
+\subsubsection{Prácticas Clave}
+
+\begin{itemize}
+    \item Visualización del flujo de trabajo mediante el tablero Kanban.
+    \item Limitación del WIP para evitar sobrecarga y mejorar la eficiencia del flujo.
+\end{itemize}
+
+\subsubsection{Métricas Ágiles}
+
+Las métricas permiten inspeccionar el progreso y detectar oportunidades de mejora.
+
+\subsubsection{Métricas de Progreso y Alcance}
+
+\begin{itemize}
+    \item Gráfico burn-down: muestra la cantidad de trabajo restante en función del tiempo.
+    \item Gráfico burn-up: indica el trabajo completado frente al alcance total.
+\end{itemize}
+
+\subsubsection{Métricas de Flujo y Eficiencia}
+
+\begin{itemize}
+    \item Tiempo de ciclo (cycle time): mide el tiempo desde que una tarea entra en estado “en progreso” hasta que se completa.
+    \item Tiempo de espera (lead time): mide el tiempo total desde que se solicita una tarea hasta su entrega final.
+\end{itemize}
+
+
+
+\section{Marco Conceptual}
+

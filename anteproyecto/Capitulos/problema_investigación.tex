@@ -1,0 +1,41 @@
+       
+\chapter{Problema de Investigación}
+
+
+
+
+\section{Planteamiento del problema}
+
+El sector agrícola colombiano es un pilar de la economía nacional, representando el 10.5\% del valor agregado bruto y registrando un crecimiento del 3.8\% en el segundo trimestre de 2025, respecto al mismo periodo un año antes \parencite{DANE2025}. A pesar de su relevancia, este sector enfrenta una limitación estructural en su modernización: la brecha de conectividad digital en zonas rurales \parencite{alvarez2022colombian}. Esta restricción dificulta la adopción de Agricultura 4.0, la cual depende de tecnologías como el Internet de las Cosas (IoT) y la Inteligencia Artificial (IA) para optimizar recursos y mejorar la productividad.
+
+En este contexto de conectividad limitada, persiste una incertidumbre técnica relacionada con la selección e integración adecuada de tecnologías LPWAN —como LoRaWAN o NB-IoT— para su despliegue en escenarios agrícolas específicos. Esta decisión involucra compensaciones entre cobertura (especialmente sensible en regiones con infraestructura limitada), consumo energético y costo \parencite{Cognitive-LPWAN}. Actualmente, dicha selección se realiza de manera empírica debido a la ausencia de herramientas de apoyo, generando un alto riesgo de implementaciones subóptimas, ineficientes o económicamente inviables.
+
+A ello se suma una desconexión entre las capacidades de las herramientas de simulación y las necesidades reales del entorno agrícola. Si bien existen simuladores como NS-3 o LoRaSim \parencite{almuhaya2022survey}, estos permiten modelar el comportamiento técnico de las redes LPWAN pero no traducen las necesidades del cultivo, terreno y condiciones ambientales en criterios de decisión tecnológica. Como resultado, se evidencia un vacío de investigación en la integración de modelos de desempeño de red con parámetros agronómicos, orientado a la generación de una recomendación tecnológica sistemática y fundamentada.
+
+Las consecuencias de esta brecha son significativas: la falta de conectividad limita la capacidad de monitoreo y control de variables críticas del cultivo, perpetúa ineficiencias en el uso de recursos como agua y fertilizantes \parencite{alvarez2022colombian}, incrementa la desigualdad digital y afecta la competitividad del sector agrícola colombiano en mercados globales \parencite{florez2021agroindustria}.
+
+Por lo tanto, surge la necesidad de desarrollar una herramienta inteligente que, integrando simulación de redes LPWAN e inteligencia artificial, sirva como asistente técnico para la selección de tecnologías de comunicación rurales, permitiendo predecir su desempeño según condiciones reales del terreno y los requerimientos del proyecto agrícola. Tal herramienta contribuiría a convertir una decisión compleja y especializada en una recomendación técnica sólida y accesible, respaldada en evidencia y simulación.
+
+
+\section{Formulación del problema}
+
+
+
+
+\subsection{Pregunta principal de investigación}
+
+
+¿En qué medida una plataforma de software con agentes de inteligencia artificial que integran simulaciones de redes LPWAN y modelos de decisión agrícolas, mejora la precisión en las recomendaciones técnicas y reduce el tiempo de selección de tecnologías de conectividad para agricultura de precisión, en comparación con los métodos empíricos actualmente utilizados por ingenieros en Colombia?
+
+\subsection{Sistematización del problema}
+
+
+\begin{enumerate}[leftmargin=*, align=left]
+    \item ¿Cuáles son los criterios técnicos determinantes para seleccionar entre las tecnologías LPWAN en el contexto agrícola colombiano?
+    
+    \item ¿Cómo se puede diseñar e implementar un sistema de inteligencia artificial que, integrado con un sistema de simulación de redes, traduzca los criterios identificados en una recomendación técnica cuantificable sobre la tecnología LPWAN óptima? 
+
+
+    \item ¿En qué medida la recomendación de la plataforma genera una reducción significativa en los costos de implementación inicial y operativos, en comparación con una selección de tecnología realizada por expertos mediante métodos empíricos tradicionales?
+ 
+\end{enumerate}

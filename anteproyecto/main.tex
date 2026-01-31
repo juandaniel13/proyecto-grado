@@ -1,0 +1,147 @@
+\documentclass[12pt,letterpaper]{report}
+
+% ====== Idioma y codificación ======
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{csquotes}
+
+% ====== Tipografía y márgenes ======
+\usepackage{newtxtext,newtxmath}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=16pt}
+\onehalfspacing
+% ====== Hipervínculos ======
+\usepackage[hidelinks]{hyperref}
+
+% ====== Encabezados ======
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% ====== Figuras y Tablas estilo APA ======
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{labelfont=bf}
+\captionsetup[figure]{textfont=it}
+
+
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+
+
+% ====== Referencias APA ======
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{referencias.bib}
+\usepackage[style=ieee]{biblatex}  % o el estilo que prefieras
+
+% Cargar el archivo .bib
+\addbibresource{referencias.bib} 
+
+% ====== Títulos (jerarquías personalizadas) ======
+\usepackage{titlesec}
+
+
+% Nivel 1 - Capítulos
+\titleformat{\chapter}[block]
+  {\normalfont\bfseries\centering\MakeUppercase}
+  {\thechapter.}{1em}{}
+\titlespacing{\chapter}{0pt}{0pt}{1.5\baselineskip}
+
+% Nivel 2 - Secciones
+\titleformat{\section}[block]
+{\normalfont\bfseries\MakeUppercase}
+{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{1\baselineskip}{0.5\baselineskip}
+
+% Nivel 3 - SubSecciones
+\titleformat{\subsection}[runin]
+  {\normalfont\bfseries}{\thesubsection}{0.6em}{}
+
+% ====== Comandos para portada ======
+\newcommand{\tituloTesis}{Desarrollo de una aplicación web para el análisis y simulación de redes LPWAN con inteligencia artificial para agricultura inteligente en Colombia usando metodología Scrumban}
+\newcommand{\nombreEstudiante}{Santiago Sánchez Moya}
+\newcommand{\nombreEstudianteJ}{Juan Daniel Rodríguez Hurtado}
+\newcommand{\nombreDirector}{Ing. Roberto Ferro Escobar PhD}
+\newcommand{\nombreCoDirector}{Ing. Carlos Andrés Martínez Alayón MsC}
+\newcommand{\ciudad}{Bogotá D. C. – Colombia}
+\newcommand{\mesanio}{2025}
+
+
+\begin{document}
+
+% ====== Portada ======
+\begin{titlepage}
+    \noindent
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=0.5\textwidth]{IMAGENES/LOGOLIDER.jpg} % logo izquierda
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \flushright
+        \includegraphics[width=0.5\textwidth]{IMAGENES/LOGOUD.png} % logo derecha
+    \end{minipage}
+    \vspace{2cm}
+
+    \centering
+    {\Large \tituloTesis \par}
+    \vspace{2cm}
+    Trabajo de investigación/grado para optar por el título en\\
+    \textbf{Ingeniería de Sistemas}
+    \vspace{2cm}
+    
+    \textbf{\nombreEstudiante}\par
+    \textbf{\nombreEstudianteJ}\par
+    \vspace{2cm}
+    Director: 
+    \nombreDirector \\
+    CoDirector:
+    \nombreCoDirector
+    \vspace{2cm}
+   
+    \ciudad \par
+    \mesanio
+\end{titlepage}
+
+% ====== Índice ======
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+% Numeración arriba derecha
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\include{Capitulos/Resumen}
+
+\include{Capitulos/Introduccion}
+ 
+\include{Capitulos/problema_investigación}
+
+\include{Capitulos/objetivos}
+
+\include{Capitulos/Justificacion}
+
+\include{Capitulos/marco_referencial}
+
+\include{Capitulos/Metodología}
+
+\include{Capitulos/Alcances y Limitaciones}
+
+\printbibliography
+
+
+
+\end{document}
