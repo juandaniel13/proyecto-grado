@@ -1,37 +1,102 @@
 \chapter{Introducción}
+La agricultura, pilar histórico  de  la  economía  y  sustento  de  millones  en
+Colombia,  se  ve  crecientemente  amenazada  por  el  cambio  climático  y   la
+variabilidad ambiental extrema, que generan pérdidas significativas y reducen la
+competitividad del sector.  Para  mitigar  estos  riesgos,  la  adopción  de  la
+agricultura de precisión, basada en redes de sensores y análisis  de  datos,  se
+presenta  como  una  solución  indispensable.  Sin  embargo,  su  implementación
+efectiva tropieza con una barrera crítica previa: la complejidad  técnica  y  la
+incertidumbre en la toma de decisiones inicial para seleccionar y  desplegar  la
+infraestructura de conectividad adecuada, como las redes  LPWAN  (LoRa,  Sigfox,
+NB-IoT, entre otras), en diversos contextos agrícolas.\\
 
-La agricultura ha sido históricamente uno de los pilares fundamentales de la economía colombiana, proporcionando empleo y sustento a millones de personas. Sin embargo, este sector enfrenta múltiples desafíos asociados al cambio climático, la variabilidad de las condiciones ambientales y la limitada incorporación de tecnologías de monitoreo y análisis de datos. Estas dificultades se evidencian con mayor fuerza en zonas rurales, donde los eventos climáticos impredecibles, como heladas o sequías, representan una amenaza constante para la productividad agrícola, generando pérdidas económicas significativas y reduciendo la competitividad del país en el sector agroindustrial. \\
 
-Ante este panorama, la incorporación de tecnologías emergentes como la inteligencia artificial (IA) y las redes LPWAN (Low Power Wide Area Network) ofrece nuevas oportunidades para fortalecer la agricultura inteligente en Colombia. En este contexto, se propone el desarrollo de una aplicación web para el análisis y simulación de arquitecturas de redes LPWAN con inteligencia artificial, orientada a mejorar la toma de decisiones en el despliegue de tecnologías de monitoreo agrícola. La aplicación empleará un sistema de agentes de IA, los cuales a partir de un contexto determinado —como tipo de cultivo, ubicación geográfica, presupuesto disponible y requerimientos de conectividad—, identificarán las variables más relevantes y realizarán un análisis predictivo comparando los protocolos LoRa, Sigfox, NB-IoT, entre otros. Con base en dicho análisis, el sistema recomendará la red más adecuada según criterios de rendimiento, costo, cobertura y escalabilidad.\\
+Ante  este  panorama,  la  incorporación  de  tecnologías   modernas   como   la
+inteligencia artificial (AI) y las redes LPWAN (Low  Power  Wide  Area  Network)
+ofrece nuevas  oportunidades  para  fortalecer  la  agricultura  inteligente  en
+Colombia. En este contexto, se propone el desarrollo de una aplicación web  para
+el análisis y simulación  de  arquitecturas  de  redes  LPWAN  con  inteligencia
+artificial, orientada a mejorar la  toma  de  decisiones  en  el  despliegue  de
+tecnologías de monitoreo agrícola. La aplicación  empleará  un  sistema  de  que
+incluye un agente de IA, el cual a partir de un contexto determinado —como  tipo
+de cultivo, ubicación geográfica, presupuesto  disponible  y  requerimientos  de
+conectividad—,  identificará  las  variables  más  relevantes  y  realizarán  un
+análisis comparativo entre las distintas tecnologías LPWAN, seleccionando la que
+mejor se ajuste al escenario propuesto, proponiendo una aquitectura báse para su
+despliegue y recomendando los sensores más adecuados para el tipo de cultivo que
+se desea monitorear. Con base en dicho análisis, el sistema recomendará  la  red
+más adecuada según criterios de rendimiento, costo, cobertura y escalabilidad.\\
 
-En este contexto, el presente proyecto se desarrolla en el marco del semillero SCISEN (Smart cities \& sensor network), adscrito al grupo de investigación LIDER (Laboratorio de Investigación y desarrollo en Electrónica y redes) de la Universidad Distrital Francisco José de Caldas. Este grupo trabaja en diversas líneas de investigación internas, entre las que se destacan en este proyecto: Agrointeligente (Smart Agro), internet de las cosas (IoT) y el 
-        desarrollo y programación de hardware, firmware y software para sistemas de comunicación. 
-        Estas líneas se encuentran alineadas con los ejes de investigación institucionales en ciencias 
-        de la computación, desarrollo regional sustentable, infraestructura y tecnología, redes de 
-        sensores inalámbricos y telecomunicaciones. 
-        Asimismo, el proyecto está directamente relacionado con varios Objetivos de Desarrollo 
-        Sostenible (ODS) establecidos por la ONU: \\
-        \begin{itemize}
-            \item  ODS 2. Hambre Cero: Este proyecto contribuye a una agricultura más resiliente y productiva al facilitar la toma de decisiones informada para el despliegue de tecnologías de agricultura de precisión. Al ayudar a seleccionar la infraestructura de conectividad (LPWAN) más adecuda para cada contexto, la herramienta reduce la barrera de entrada y el riesgo de inversión en sistemas de monitoreo y predicción agroclimática. Esto, a su vez, permite a los productores implementar soluciones más eficaces para anticipar fenómenos climáticos adversos, optimizar recursos y reducir pérdidas, fortaleciendo así la seguridad alimentaria desde una perspectiva de planificación tecnológica robusta. 
-            \item  ODS 9. Industria, Innovación e Infraestructura: El proyecto es una innovación directa en el ecosistema tecnológico agroindustrial. Desarrolla una herramienta digital avanzada (aplicación web con IA) que resuelve un cuello de botella crítico en la cadena de valor de la agricultura 4.0: la selección de infraestructura de conectividad. Al proporcionar un método accesible y basado en datos para diseñar redes LPWAN eficientes, promueve la construcción de infraestructura tecnológica más resiliente, accesible y adecuada al entorno rural colombiano, fomentando directamente la innovación y la industrialización sostenible del sector. 
-            \item ODS 13. Acción por el Clima: La herramienta contribuye a la acción climática de manera indirecta pero potente, al ser un facilitador clave para la agricultura climáticamente inteligente. Al optimizar la elección de redes de sensores, maximiza la viabilidad y efectividad de los sistemas que monitorean variables climáticas y ambientales. Esto permite a los agricultores adaptar sus prácticas con base en datos precisos, mejorar la gestión de recursos como el agua y los insumos, y reducir la vulnerabilidad de los cultivos, promoviendo así una adaptación sistémica y basada en evidencia frente al cambio climático.
-        \end{itemize}
+En este contexto, el presente proyecto se desarrolla en el marco  del  semillero
+SCISEN (Smart cities \& sensor network),  adscrito  al  grupo  de  investigación
+LIDER (Laboratorio de Investigación y desarrollo en Electrónica y redes)  de  la
+Universidad Distrital Francisco José de Caldas. Este grupo trabaja  en  diversas
+líneas de investigación internas, entre las que se destacan  en  este  proyecto:
+Agrointeligente (Smart Agro), internet de las cosas  (IoT)  y  el  desarrollo  y
+programación de hardware, firmware y software  para  sistemas  de  comunicación.
+Estas  líneas  se  encuentran  alineadas   con   los   ejes   de   investigación
+institucionales en ciencias de la computación, desarrollo regional  sustentable,
+infraestructura   y   tecnología,   redes    de    sensores    inalámbricos    y
+telecomunicaciones. Asimismo, el  proyecto  está  directamente  relacionado  con
+varios Objetivos de Desarrollo Sostenible (ODS) establecidos por la ONU: \\
+\begin{itemize}
+    \item  ODS 2. Hambre Cero: Este proyecto contribuye  a  una  agricultura  más
+          resiliente y productiva al facilitar la toma de  decisiones  informada
+          para el despliegue de tecnologías  de  agricultura  de  precisión.  Al
+          ayudar a seleccionar la arquitectura  de  conectividad  (LPWAN)  más
+          adecuda para cada  contexto,  la  herramienta  reduce  la  barrera  de
+          entrada y el riesgo de inversión en sistemas de monitoreo y predicción
+          agroclimática. Esto, a su vez, permite a los  productores  implementar
+          soluciones más eficaces para anticipar fenómenos climáticos  adversos,
+          optimizar recursos y reducir pérdidas, fortaleciendo así la  seguridad
+          alimentaria  desde  una  perspectiva  de   planificación   tecnológica
+          robusta.
+    \item  ODS 9. Industria, Innovación e Infraestructura:  El  proyecto  es  una
+          innovación  directa  en  el  ecosistema  tecnológico   agroindustrial.
+          Desarrolla una herramienta digital avanzada (aplicación  web  con  IA)
+          que resuelve un cuello de botella crítico en la cadena de valor de  la
+          agricultura 4.0: la selección de arquitectura de  conectividad.  Al
+          proporcionar un método accesible y basado en datos para diseñar  redes
+          LPWAN  eficientes,  promueve  la   construcción   de  una arquitectura
+          tecnológica más resiliente, accesible  y  adecuada  al  entorno  rural
+          colombiano,   fomentando   directamente    la    innovación    y    la
+          industrialización sostenible del sector.
+    \item ODS 13. Acción por el Clima: La herramienta  contribuye  a  la  acción
+          climática de manera indirecta pero  potente,  al  ser  un  facilitador
+          clave para la agricultura climáticamente inteligente. Al optimizar  la
+          elección de redes de sensores, maximiza la viabilidad y efectividad de
+          los sistemas que monitorean variables climáticas y  ambientales.  Esto
+          permite a los agricultores adaptar sus prácticas  con  base  en  datos
+          precisos, mejorar la gestión de recursos como el agua y los insumos, y
+          reducir  la  vulnerabilidad  de  los  cultivos,  promoviendo  así  una
+          adaptación sistémica y basada en evidencia frente al cambio climático.
+\end{itemize}
 
-        El desarrollo se llevará a cabo bajo la metodología ágil Scrumban, que combina la flexibilidad de Kanban con la estructura iterativa de Scrum, favoreciendo la gestión adaptativa de tareas y la entrega continua de valor. Esta propuesta busca contribuir al avance de la agricultura inteligente en Colombia, facilitando la integración de herramientas digitales en zonas rurales, optimizando el uso de recursos tecnológicos y promoviendo la sostenibilidad del sector.
+El desarrollo se llevará a cabo bajo la metodología ágil Scrumban,  que  combina
+la flexibilidad de Kanban con la estructura iterativa de Scrum, favoreciendo  la
+gestión adaptativa de tareas y la entrega  continua  de  valor.  Esta  propuesta
+busca  contribuir  al  avance  de  la  agricultura  inteligente   en   Colombia,
+facilitando  la  integración  de  herramientas  digitales  en   zonas   rurales,
+optimizando el uso de recursos tecnológicos y promoviendo la sostenibilidad  del
+sector.
 
-        Adicionalmente, se articula con el proyecto doctoral titulado “Estructuración de un 
-        modelo para el análisis, simulación y aplicación de tecnologías LPWAN, a través de la 
-        integración comunitaria de redes IOT al agro inteligente en sectores rurales colombianos",
-        cuyo investigador principal es el Ing. Carlos Andrés Martínez Alayón, bajo la dirección del docente tutor Roberto Ferro Escobar. Este proyecto ha sido institucionalizado sin recursos por el Consejo de la Facultad de Ingeniería y está registrado en el Sistema de Información 
-        del Centro de Investigaciones (SICIUD), fortaleciendo su respaldo académico y científico. 
-        Con las siguientes especificaciones:
-        \begin{itemize}
-            \item Código SICIUD: 3370084523
-            \item Estado: Vigente sin financiación 
-            \item Grupo de Investigación: Grupo de Investigación Laboratorio de Investigación y desarrollo 
-        en Electrónica y redes. 
-        \end{itemize}
-        El desarrollo de este proyecto contribuirá con los siguientes productos de investigación: 
-        La dirección de una tesis de pregrado, entrega de un informe de investigación, el desarrollo 
-        de un producto de desarrollo web y un artículo para la participación de una ponencia a un 
-        evento nacional o internacional.
+Adicionalmente, se articula con el proyecto doctoral titulado “Estructuración de
+un modelo para el análisis, simulación y  aplicación  de  tecnologías  LPWAN,  a
+través de la integración  comunitaria  de  redes  IOT  al  agro  inteligente  en
+sectores rurales colombianos", cuyo investigador principal  es  el  Ing.  Carlos
+Andrés Martínez Alayón, bajo  la  dirección  del  docente  tutor  Roberto  Ferro
+Escobar. Este proyecto ha sido institucionalizado sin recursos por el Consejo de
+la Facultad de Ingeniería y está registrado en el  Sistema  de  Información  del
+Centro de  Investigaciones  (SICIUD),  fortaleciendo  su  respaldo  académico  y
+científico. Con las siguientes especificaciones:
+\begin{itemize}
+    \item Código SICIUD: 3370084523
+    \item Estado: Vigente sin financiación
+    \item Grupo  de  Investigación: Laboratorio   de
+          Investigación y desarrollo
+          en Electrónica y redes.
+\end{itemize}
+El desarrollo de este proyecto  contribuirá  con  los  siguientes  productos  de
+investigación: La dirección de una tesis de pregrado, entrega de un  informe  de
+investigación, el desarrollo de un producto de desarrollo web y un artículo para
+la participación de una ponencia a un evento nacional o internacional.
