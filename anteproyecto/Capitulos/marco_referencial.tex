@@ -105,109 +105,114 @@ Los objetivos de diseño  de  las  redes  LPWAN  están  orientados  a  la  máx
 eficiencia y efectividad:
 \begin{itemize}
       \item \textbf{Largo rango de transmisión:} Las tecnologías LPWAN están
-            diseñadas para ofrecer comunicaciones  de  largo  alcance,  alcanzando
-            varios kilómetros en zonas rurales y  entre  2  y  5  km  en  entornos
-            urbanos, especialmente aquellas  basadas  en  infraestructura  celular
-            como NB-IoT. Muchas de estas tecnologías operan en la banda Sub-1 GHz,
-            cuyas características permiten una  mayor  penetración  de  la  señal,
-            menor   atenuación   y   menor   efecto   de    desvanecimiento    por
-            multitrayectoria,  además  de  presentar   menos   interferencias   en
-            comparación con la banda de 2.4 GHz. Tecnologías como LoRaWAN, SigFox,
-            IEEE 802.11ah, IEEE 802.15.4g, Weightless  y  DASH7  aprovechan  estas
-            ventajas, mientras que RPMA opera en 2.4 GHz. El tipo de modulación es
-            un factor  clave  en  el  alcance  de  comunicación,  predominando  la
-            modulación de banda estrecha, como Ultra Narrowband (UNB), que permite
-            transmisiones de varios kilómetros con  bajo  nivel  de  ruido,  y  la
-            modulación  de  espectro  ensanchado,  que  mejora  la  resistencia  a
-            interferencias mediante técnicas como DSSS, FHSS y CSS, empleadas  por
-            tecnologías como LoRa y RPMA \parencite[]{diane2025systematic}.
-      \item \textbf{Eficiencia Energética:} En las redes LPWAN, el consumo
-            energético de los nodos depende principalmente de la topología de red,
-            los ciclos de operación y los protocolos  de  comunicación  empleados.
-            Dado que  los  nodos  suelen  estar  alimentados  por  baterías  y  se
-            despliegan a gran escala, es fundamental maximizar su vida  útil  para
-            reducir los  costos  de  mantenimiento.  Por  esta  razón,  las  LPWAN
-            priorizan la topología  en  estrella  sobre  la  topología  en  malla,
-            evitando el sobreconsumo energético de los nodos intermedios.  Además,
-            el uso del duty cycle permite disminuir significativamente el  consumo
-            de energía al mantener los nodos en estado  inactivo  durante  ciertos
-            intervalos,  aunque  este   mecanismo   puede   estar   limitado   por
-            regulaciones del espectro. Finalmente,  el  empleo  de  protocolos  de
-            acceso al medio simplificados, como ALOHA en tecnologías como  LoRaWAN
-            y SigFox, contribuye a reducir la complejidad de los dispositivos y su
-            consumo energético, mientras que NB-IoT utiliza mecanismos  de  acceso
-            aleatorio         propios         de          redes          celulares
+            diseñadas para ofrecer comunicaciones de largo  alcance,  alcanzando
+            varios kilómetros en zonas rurales y entre 2  y  5  km  en  entornos
+            urbanos, especialmente aquellas basadas en  infraestructura  celular
+            como NB-IoT. Muchas de estas tecnologías operan en  la  banda  Sub-1
+            GHz, cuyas características permiten  una  mayor  penetración  de  la
+            señal, menor  atenuación  y  menor  efecto  de  desvanecimiento  por
+            multitrayectoria,  además  de  presentar  menos  interferencias   en
+            comparación con la banda  de  2.4  GHz.  Tecnologías  como  LoRaWAN,
+            SigFox, IEEE 802.11ah, IEEE 802.15.4g, Weightless y DASH7 aprovechan
+            estas ventajas, mientras que RPMA opera  en  2.4  GHz.  El  tipo  de
+            modulación es  un  factor  clave  en  el  alcance  de  comunicación,
+            predominando la modulación de banda estrecha, como Ultra  Narrowband
+            (UNB), que permite transmisiones de varios kilómetros con bajo nivel
+            de ruido, y la modulación de  espectro  ensanchado,  que  mejora  la
+            resistencia a interferencias mediante técnicas  como  DSSS,  FHSS  y
+            CSS,    empleadas    por    tecnologías    como    LoRa    y    RPMA
             \parencite[]{diane2025systematic}.
+      \item \textbf{Eficiencia Energética:} En las redes LPWAN, el consumo
+            energético de los nodos depende principalmente de  la  topología  de
+            red, los ciclos  de  operación  y  los  protocolos  de  comunicación
+            empleados. Dado que los nodos suelen estar alimentados por  baterías
+            y se despliegan a gran escala, es fundamental maximizar su vida útil
+            para reducir los costos de mantenimiento. Por esta razón, las  LPWAN
+            priorizan la topología en estrella  sobre  la  topología  en  malla,
+            evitando  el  sobreconsumo  energético  de  los  nodos  intermedios.
+            Además, el uso del duty cycle permite  disminuir  significativamente
+            el consumo de energía al  mantener  los  nodos  en  estado  inactivo
+            durante  ciertos  intervalos,  aunque  este  mecanismo  puede  estar
+            limitado por regulaciones del espectro.  Finalmente,  el  empleo  de
+            protocolos  de  acceso  al  medio  simplificados,  como   ALOHA   en
+            tecnologías  como  LoRaWAN  y  SigFox,  contribuye  a   reducir   la
+            complejidad de los dispositivos y su  consumo  energético,  mientras
+            que NB-IoT utiliza mecanismos de acceso aleatorio propios  de  redes
+            celulares \parencite[]{diane2025systematic}.
       \item \textbf{Escalabilidad:} La escalabilidad constituye un aspecto
-            fundamental en las LPWAN, ya que numerosos  escenarios  de  aplicación
-            demandan la capacidad de gestionar cientos de miles de dispositivos de
-            manera simultánea. Este concepto hace referencia a la habilidad de  la
-            red para conectar una gran cantidad de nodos sin afectar la calidad ni
-            la  continuidad  de  los  servicios   ofrecidos.   No   obstante,   la
-            coexistencia de un  elevado  número  de  dispositivos  puede  provocar
-            interferencias, impactando de forma negativa el desempeño de  la  red.
-            Para enfrentar estos desafíos, se  implementan  distintas  estrategias
-            orientadas a mejorar la escalabilidad, tales como  la  comunicación  a
-            través de múltiples canales, la instalación de varios gateways  y  los
-            mecanismos de adaptación dinámica de la velocidad  de  transmisión  de
+            fundamental en las LPWAN, ya que numerosos escenarios de  aplicación
+            demandan la capacidad de gestionar cientos de miles de  dispositivos
+            de manera simultánea. Este concepto hace referencia a  la  habilidad
+            de la red para conectar una gran cantidad de nodos  sin  afectar  la
+            calidad ni la continuidad de los servicios ofrecidos.  No  obstante,
+            la coexistencia de un elevado número de dispositivos puede  provocar
+            interferencias, impactando de forma negativa el desempeño de la red.
+            Para enfrentar estos desafíos, se implementan distintas  estrategias
+            orientadas a mejorar la escalabilidad, tales como la comunicación  a
+            través de múltiples canales, la instalación de varios gateways y los
+            mecanismos de adaptación dinámica de la velocidad de transmisión  de
             datos \parencite[]{diane2025systematic}.
 
-      \item \textbf{Bajo costo:} El creciente interés por las tecnologías LPWAN se
-            debe, en gran medida, al bajo costo de los dispositivos. Por  ejemplo,
-            equipos basados en LoRa  o  SigFox  pueden  adquirirse  por  un  valor
-            aproximado de 3 a 5 dólares. Para reducir  la  inversión  de  capital,
-            estas tecnologías emplean diversas estrategias, entre ellas el uso  de
-            transceptores con formas de  onda  menos  complejas,  lo  que  permite
-            disminuir el tamaño del hardware, la tasa máxima de transmisión y  los
-            requerimientos de memoria. Como resultado, se  reduce  la  complejidad
-            del diseño y, por ende, el costo de fabricación.\\
+      \item \textbf{Bajo costo:} El creciente interés por las tecnologías LPWAN
+            se debe, en gran medida, al bajo  costo  de  los  dispositivos.  Por
+            ejemplo, equipos basados en LoRa o SigFox pueden adquirirse  por  un
+            valor aproximado de 3 a 5 dólares.  Para  reducir  la  inversión  de
+            capital, estas tecnologías emplean diversas estrategias, entre ellas
+            el uso de transceptores con formas de onda menos complejas,  lo  que
+            permite  disminuir  el  tamaño  del  hardware,  la  tasa  máxima  de
+            transmisión y los requerimientos  de  memoria.  Como  resultado,  se
+            reduce  la  complejidad  del  diseño  y,  por  ende,  el  costo   de
+            fabricación.\\
 
-            Adicionalmente, una estación base puede gestionar decenas de miles  de
-            dispositivos finales distribuidos en un área de varios kilómetros,  lo
-            que  contribuye  a  una  disminución  significativa  de   los   costos
-            operativos para los proveedores de red.  Asimismo,  las  LPWAN  operan
-            tanto en bandas no licenciadas, como la banda ISM o  los  espacios  en
-            blanco de televisión, como en  bandas  licenciadas  propiedad  de  los
-            operadores, evitando así  costos  adicionales  asociados  al  uso  del
-            espectro radioeléctricos \parencite[]{diane2025systematic}.
+            Adicionalmente, una estación base puede gestionar decenas  de  miles
+            de  dispositivos  finales  distribuidos  en  un   área   de   varios
+            kilómetros, lo que contribuye a una disminución significativa de los
+            costos operativos para los proveedores de red. Asimismo,  las  LPWAN
+            operan tanto en bandas no licenciadas,  como  la  banda  ISM  o  los
+            espacios  en  blanco  de  televisión,  como  en  bandas  licenciadas
+            propiedad  de  los  operadores,  evitando  así  costos   adicionales
+            asociados     al     uso      del      espectro      radioeléctricos
+            \parencite[]{diane2025systematic}.
       \item \textbf{Calidad del servicio} El creciente interés por las
-            tecnologías LPWAN se debe, en  gran  medida,  al  bajo  costo  de  los
-            dispositivos. Por ejemplo, equipos basados en  LoRa  o  SigFox  pueden
-            adquirirse por un valor aproximado de 3 a 5 dólares. Para  reducir  la
-            inversión de capital, estas tecnologías emplean diversas  estrategias,
-            entre  ellas  el  uso  de  transceptores  con  formas  de  onda  menos
-            complejas, lo que permite disminuir el tamaño del  hardware,  la  tasa
-            máxima de transmisión y los requerimientos de memoria. Como resultado,
-            se reduce  la  complejidad  del  diseño  y,  por  ende,  el  costo  de
-            fabricación.\\
+            tecnologías LPWAN se debe, en gran medida,  al  bajo  costo  de  los
+            dispositivos. Por ejemplo, equipos basados en LoRa o  SigFox  pueden
+            adquirirse por un valor aproximado de 3 a 5 dólares. Para reducir la
+            inversión   de   capital,   estas   tecnologías   emplean   diversas
+            estrategias, entre ellas el uso de transceptores con formas de  onda
+            menos complejas, lo que permite disminuir el tamaño del hardware, la
+            tasa máxima de transmisión y los  requerimientos  de  memoria.  Como
+            resultado, se reduce la complejidad del diseño y, por ende, el costo
+            de fabricación.\\
 
-            Adicionalmente, una estación base puede gestionar decenas de miles  de
-            dispositivos finales distribuidos en un área de varios kilómetros,  lo
-            que  contribuye  a  una  disminución  significativa  de   los   costos
-            operativos para los proveedores de red.  Asimismo,  las  LPWAN  operan
-            tanto en bandas no licenciadas, como la banda ISM o  los  espacios  en
-            blanco de televisión, como en  bandas  licenciadas  propiedad  de  los
-            operadores, evitando así  costos  adicionales  asociados  al  uso  del
-            espectro radioeléctricos \parencite[]{diane2025systematic}.
+            Adicionalmente, una estación base puede gestionar decenas  de  miles
+            de  dispositivos  finales  distribuidos  en  un   área   de   varios
+            kilómetros, lo que contribuye a una disminución significativa de los
+            costos operativos para los proveedores de red. Asimismo,  las  LPWAN
+            operan tanto en bandas no licenciadas,  como  la  banda  ISM  o  los
+            espacios  en  blanco  de  televisión,  como  en  bandas  licenciadas
+            propiedad  de  los  operadores,  evitando  así  costos   adicionales
+            asociados     al     uso      del      espectro      radioeléctricos
+            \parencite[]{diane2025systematic}.
       \item \textbf{Gestión de la interferencia:} El creciente interés por las
-            tecnologías LPWAN se debe, en  gran  medida,  al  bajo  costo  de  los
-            dispositivos. Por ejemplo, equipos basados en  LoRa  o  SigFox  pueden
-            adquirirse por un valor aproximado de 3 a 5 dólares. Para  reducir  la
-            inversión de capital, estas tecnologías emplean diversas  estrategias,
-            entre  ellas  el  uso  de  transceptores  con  formas  de  onda  menos
-            complejas, lo que permite disminuir el tamaño del  hardware,  la  tasa
-            máxima de transmisión y los requerimientos de memoria. Como resultado,
-            se reduce  la  complejidad  del  diseño  y,  por  ende,  el  costo  de
-            fabricación.\\
+            tecnologías LPWAN se debe, en gran medida,  al  bajo  costo  de  los
+            dispositivos. Por ejemplo, equipos basados en LoRa o  SigFox  pueden
+            adquirirse por un valor aproximado de 3 a 5 dólares. Para reducir la
+            inversión   de   capital,   estas   tecnologías   emplean   diversas
+            estrategias, entre ellas el uso de transceptores con formas de  onda
+            menos complejas, lo que permite disminuir el tamaño del hardware, la
+            tasa máxima de transmisión y los  requerimientos  de  memoria.  Como
+            resultado, se reduce la complejidad del diseño y, por ende, el costo
+            de fabricación.\\
 
-            Adicionalmente, una estación base puede gestionar decenas de miles  de
-            dispositivos finales distribuidos en un área de varios kilómetros,  lo
-            que  contribuye  a  una  disminución  significativa  de   los   costos
-            operativos para los proveedores de red.  Asimismo,  las  LPWAN  operan
-            tanto en bandas no licenciadas, como la banda ISM o  los  espacios  en
-            blanco de televisión, como en  bandas  licenciadas  propiedad  de  los
-            operadores, evitando así  costos  adicionales  asociados  al  uso  del
-            espectro radioeléctricos \parencite[]{diane2025systematic}.
+            Adicionalmente, una estación base puede gestionar decenas  de  miles
+            de  dispositivos  finales  distribuidos  en  un   área   de   varios
+            kilómetros, lo que contribuye a una disminución significativa de los
+            costos operativos para los proveedores de red. Asimismo,  las  LPWAN
+            operan tanto en bandas no licenciadas,  como  la  banda  ISM  o  los
+            espacios  en  blanco  de  televisión,  como  en  bandas  licenciadas
+            propiedad  de  los  operadores,  evitando  así  costos   adicionales
+            asociados     al     uso      del      espectro      radioeléctricos
+            \parencite[]{diane2025systematic}.
 \end{itemize}
 
 
@@ -227,48 +232,49 @@ ampliación del rango de cobertura \parencite[]{chilamkurthy2022low}.
 
 \begin{itemize}
       \item \textbf{Topología de estrella:} La topología de estrella consiste en
-            una red de tipo punto a punto (P2P, por sus siglas en inglés),  en  la
-            cual todos los  nodos  se  conectan  a  un  nodo  central,  denominado
-            \textit{hub} o \textit{gateway}. Este  gateway  actúa  como  el  único
-            medio de comunicación entre los nodos de la topología,  enrutando  los
-            mensajes hacia un servidor central, donde se gestionan  aspectos  como
-            la redundancia, la detección de fallos y la seguridad. Este enfoque es
-            ampliamente utilizado en  aplicaciones  de  monitoreo  y  en  entornos
-            peligrosos, donde el despliegue de cableado representa un alto  riesgo
-            \parencite[]{chilamkurthy2022low}.\\
+            una red de tipo punto a punto (P2P, por sus siglas en inglés), en la
+            cual todos los nodos se  conectan  a  un  nodo  central,  denominado
+            \textit{hub} o \textit{gateway}. Este gateway actúa  como  el  único
+            medio de comunicación entre los nodos de la topología, enrutando los
+            mensajes hacia un servidor central, donde se gestionan aspectos como
+            la redundancia, la detección de fallos y la seguridad. Este  enfoque
+            es ampliamente utilizado en aplicaciones de monitoreo y en  entornos
+            peligrosos, donde el  despliegue  de  cableado  representa  un  alto
+            riesgo \parencite[]{chilamkurthy2022low}.\\
 
-            Entre las principales ventajas de una estructura basada  en  un  único
-            hub se encuentran la alta velocidad de  transmisión  de  mensajes,  la
-            escalabilidad — ya que  es  posible  añadir  nuevos  nodos  de  manera
-            sencilla mediante  su  conexión  directa  al  gateway—  y  el  impacto
-            limitado ante fallos a nivel de nodo, puesto que la desconexión de  un
-            nodo final no afecta  al  funcionamiento  del  resto  de  la  red.  No
-            obstante, esta topología presenta desventajas significativas, como  la
-            existencia de un único punto de fallo; si el  gateway  o  hub  central
-            deja de funcionar, toda la  red  se  vuelve  inoperable  y  los  nodos
-            finales dejan de ser accesibles \parencite[]{chilamkurthy2022low}.
+            Entre las principales ventajas de una estructura basada en un  único
+            hub se encuentran la alta velocidad de transmisión de  mensajes,  la
+            escalabilidad — ya que es posible  añadir  nuevos  nodos  de  manera
+            sencilla mediante su conexión  directa  al  gateway—  y  el  impacto
+            limitado ante fallos a nivel de nodo, puesto que la  desconexión  de
+            un nodo final no afecta al funcionamiento del resto de  la  red.  No
+            obstante, esta topología presenta desventajas  significativas,  como
+            la existencia de un único punto  de  fallo;  si  el  gateway  o  hub
+            central deja de funcionar, toda la red se vuelve  inoperable  y  los
+            nodos       finales       dejan       de       ser        accesibles
+            \parencite[]{chilamkurthy2022low}.
 
       \item \textbf{Topología de malla:} Esta topología está compuesta por tres
-            tipos de nodos: nodos sensores, gateways y nodos sensores enrutadores.
-            En una topología  de  malla  completamente  conectada,  cada  nodo  se
-            comunica directamente  con  todos  los  demás  nodos  de  la  red.  En
-            contraste, en una topología  de  malla  parcial,  solo  algunos  nodos
-            mantienen  múltiples  conexiones,  mientras  que  otros  se  comunican
-            únicamente con aquellos nodos con los que intercambian información  de
-            manera frecuente \parencite[]{chilamkurthy2022low}.\\
+            tipos  de  nodos:  nodos  sensores,  gateways   y   nodos   sensores
+            enrutadores. En una topología de malla completamente conectada, cada
+            nodo se comunica directamente con todos los demás nodos de  la  red.
+            En contraste, en una topología de malla parcial, solo algunos  nodos
+            mantienen múltiples conexiones,  mientras  que  otros  se  comunican
+            únicamente con aquellos nodos con los que  intercambian  información
+            de manera frecuente \parencite[]{chilamkurthy2022low}.\\
 
-            Entre las ventajas de la topología  de  malla  se  destaca  su  diseño
-            redundante, el cual permite la existencia de rutas  alternativas  para
-            la transmisión de datos, mitigando el  problema  del  punto  único  de
-            fallo presente en la topología en estrella.  Asimismo,  este  tipo  de
-            topología  soporta  el  intercambio   de   datos   bajo   un   enfoque
-            \textit{full-duplex}  (FD),   lo   que   contribuye   a   mejorar   la
-            escalabilidad de la red. Sin  embargo,  también  presenta  desventajas
-            importantes, como el aumento de la complejidad debido a  la  presencia
-            de múltiples  enlaces  entre  nodos,  el  incremento  de  la  latencia
-            ocasionado  por  la  comunicación  multi-salto,  el  mayor  costo   de
-            implementación y una reducción en la eficiencia energética derivada de
-            su diseño redundante \parencite[]{chilamkurthy2022low}.
+            Entre las ventajas de la topología de malla  se  destaca  su  diseño
+            redundante, el cual permite la existencia de rutas alternativas para
+            la transmisión de datos, mitigando el problema del  punto  único  de
+            fallo presente en la topología en estrella. Asimismo, este  tipo  de
+            topología  soporta  el  intercambio  de  datos   bajo   un   enfoque
+            \textit{full-duplex}  (FD),  lo  que   contribuye   a   mejorar   la
+            escalabilidad de la red. Sin embargo, también  presenta  desventajas
+            importantes, como el aumento de la complejidad debido a la presencia
+            de múltiples enlaces entre  nodos,  el  incremento  de  la  latencia
+            ocasionado por  la  comunicación  multi-salto,  el  mayor  costo  de
+            implementación y una reducción en la eficiencia energética  derivada
+            de su diseño redundante \parencite[]{chilamkurthy2022low}.
 \end{itemize}
 
 \item \textbf{Arquitecturas} Los dos tipos principales de topología presentes en
@@ -278,75 +284,79 @@ debido a  su  valor  agregado  en  términos  de  eficiencia  energética  y
 ampliación del rango de cobertura \parencite[]{chilamkurthy2022low}.
 
 \begin{itemize}
-\item \textbf{Compoentes principales de una arquitectura LPWAN} La  arquitectura
+\item \textbf{Compoentes principales de una arquitectura LPWAN} La arquitectura
 típica de una  red  LPWAN  se  compone  de  varios  elementos  funcionales
 claramente diferenciados:
 
 \begin{enumerate}
-\item \textbf{Dispositivos  finales  (End  Devices  o  Nodos  LPWAN):}  Son   los
+\item \textbf{Dispositivos finales (End Devices o Nodos LPWAN):} Son los
 encargados de capturar datos del entorno (sensores, actuadores) o ejecutar
 las acciones según la aplicación. Operan con recursos limitados  (energía,
 memoria  y  capacidad  de  cómputo)  y  se  comunican   mediante   enlaces
-inalámbricos de largo alcance y bajo consumo \parencite[]{chilamkurthy2022low}.
-\item \textbf{Estaciones de acceso / gateways / concentradores:} Actúan como  el
+inalámbricos      de      largo      alcance      y      bajo      consumo
+\parencite[]{chilamkurthy2022low}.
+\item \textbf{Estaciones de acceso / gateways / concentradores:} Actúan como el
 punto de enlace entre los dispositivos finales y la infrastrctura de  red.
 Reciben los datos transmitidos por los nodos, garantizan la integridad del
 enlace radioeléctrico (BER, seguridad, QoS) y reenvía la información hacia
 el núcleo de la red. En algunas  tecnologías,  estos  dispositivos  pueden
-incorporar capcidades de edge computing y almacenamiento local \parencite[]{chilamkurthy2022low}.
+incorporar  capcidades  de   edge   computing   y   almacenamiento   local
+\parencite[]{chilamkurthy2022low}.
 \item \textbf{Núcleo de red (Core o Network Server):} Es responsable del control
 y enrutamiento del tráfico, la traducción de protocolos, la gestión de  la
 movilidad, el control de admisión y,  en  ciertos  casos,  el  tratamiento
 prioritario  de  los  datos,  También  cumple   un   rpñ   clave   en   la
 interoperabilidad ente tecnologías y en la descarga de procesamiento hacia
 el borde \parencite[]{chilamkurthy2022low}.
-\item \textbf{Servidores de aplicación y nube:} Se encargan del  almacenamiento,
+\item \textbf{Servidores de aplicación y nube:} Se encargan del almacenamiento,
 procesamiento  a  análisis  de  los  datos  recolectados,  apoyándose   en
 plataformas  de  cloud  y  técnicas  de  big  data.  Además,  permiten  la
 visualización,  exportación  de  la  información  y  la  integración   con
-aplicaciones de IOT y servicios externos \parencite[]{chilamkurthy2022low}.
+aplicaciones       de        IOT        y        servicios        externos
+\parencite[]{chilamkurthy2022low}.
 
 \end{itemize}
 
-\item \textbf{Tipos de Arquitectura LPWAN} Las  LPWAN  pueden  organizarse  bajo
+\item \textbf{Tipos de Arquitectura LPWAN} Las LPWAN pueden organizarse bajo
 diferentes enfoques arquitectónicos,  dependiendo  de  la  tecnología,  el
 entorno de despliegue y los requerimientos de la aplicación:
 
 \begin{enumerate}
       \item  \textbf{Arquitectura básica o tradicional LPWAN:}
-            Presenta conectividad directa entre  los  dispositivos  finales  y  el
-            gateway (topología de estrella). Es simple, eficiente  energéticamente
-            y  adecuada  para  aplicaciones  de  monitoreo  a  gran   escala.   La
-            comunicación se realiza en un solo salto, lo que reduce la complejidad
-            de los nodos finales \parencite[]{chilamkurthy2022low}.
+            Presenta conectividad directa entre los dispositivos  finales  y  el
+            gateway   (topología   de   estrella).    Es    simple,    eficiente
+            energéticamente y adecuada para aplicaciones  de  monitoreo  a  gran
+            escala. La comunicación se realiza en un solo salto, lo  que  reduce
+            la       complejidad       de        los        nodos        finales
+            \parencite[]{chilamkurthy2022low}.
 
 
-      \item \textbf{ Arquitecturas híbridas con tecnologías de  acceso  externas:}
-            En
-            este enfoque, tecnologías como ZigBee, Wi-Fi u otras  redes  de  corto
-            alcance proporcionan conectividad inicial a los dispositivos, mientras
-            que una LPWAN actúa como red de transporte hacia la nube. Este tipo de
-            arquitectura es común en LPWAN celulares, donde el gateway de  la  red
-            local  se  integra  con  la  infraestructura   LPWAN,   formando   una
-            arquitectura mixta \parencite[]{chilamkurthy2022low}.
+      \item \textbf{ Arquitecturas híbridas con tecnologías de acceso externas:}
+            En este enfoque, tecnologías como ZigBee, Wi-Fi  u  otras  redes  de
+            corto alcance proporcionan conectividad inicial a los  dispositivos,
+            mientras que una LPWAN actúa como red de transporte hacia  la  nube.
+            Este tipo de arquitectura es común  en  LPWAN  celulares,  donde  el
+            gateway de la red local se integra  con  la  infraestructura  LPWAN,
+            formando una arquitectura mixta \parencite[]{chilamkurthy2022low}.
 
       \item \textbf{Arquitecturas híbridas multi-LPWAN:} Utilizan múltiples
-            tecnologías LPWAN (por ejemplo, LoRa y SigFox)  de  manera  simultánea
-            para conectar diferentes tipos de  dispositivos  o  cubrir  áreas  con
-            requisitos heterogéneos. Cada tecnología gestiona los nodos dentro  de
-            su zona de cobertura, y el núcleo de  red  centraliza  funciones  como
-            autenticación, registro reminder, asignación de recursos y control del
-            tráfico.  Este  enfoque  es  especialmente  útil   para   aplicaciones
-            complejas  que  demandan  flexibilidad,   redundancia   y   diversidad
-            tecnológica \parencite[]{chilamkurthy2022low}.
+            tecnologías LPWAN (por ejemplo, LoRa y SigFox) de manera  simultánea
+            para conectar diferentes tipos de dispositivos o  cubrir  áreas  con
+            requisitos heterogéneos. Cada tecnología gestiona los  nodos  dentro
+            de su zona de cobertura, y el núcleo  de  red  centraliza  funciones
+            como autenticación, registro  reminder,  asignación  de  recursos  y
+            control  del  tráfico.  Este  enfoque  es  especialmente  útil  para
+            aplicaciones complejas  que  demandan  flexibilidad,  redundancia  y
+            diversidad tecnológica \parencite[]{chilamkurthy2022low}.
 
-      \item  \text{Arquitecturas LPWAN cognitivas:} Representan una evolución hacia
-            arquitecturas inteligentes, apoyadas en IA y  aprendizaje  automático.
-            Permiten la coexistencia e interoperabilidad de múltiples  tecnologías
-            LPWAN, optimizando dinámicamente el uso  de  recursos  de  red.  Estas
-            arquitecturas son clave  para  aplicaciones  avanzadas  como  ciudades
-            inteligentes,  Green  IoT,  salud  digital,  hogares  inteligentes   y
-            sistemas autónomos \parencite[]{chilamkurthy2022low}.
+      \item  \text{Arquitecturas LPWAN cognitivas:} Representan una evolución
+            hacia arquitecturas  inteligentes,  apoyadas  en  IA  y  aprendizaje
+            automático.  Permiten  la  coexistencia   e   interoperabilidad   de
+            múltiples tecnologías LPWAN, optimizando  dinámicamente  el  uso  de
+            recursos de red. Estas arquitecturas  son  clave  para  aplicaciones
+            avanzadas como ciudades  inteligentes,  Green  IoT,  salud  digital,
+            hogares       inteligentes        y        sistemas        autónomos
+            \parencite[]{chilamkurthy2022low}.
 
 \end{enumerate}
 \end{itemize}
@@ -356,152 +366,165 @@ entorno de despliegue y los requerimientos de la aplicación:
 \subsubsection{Análisis Comparativo de Tecnologías LPWAN}
 Las tecnologías de Red de Área Extensa  de  Baja  Potencia  (LPWAN)  se  dividen
 principalmente en dos categorías según el espectro de frecuencia  que  utilizan:
-\textbf{banda con licencia (celular)},  gestionada  por  el  consorcio  3GPP,  y
-\textbf{banda sin licencia (ISM)}, que  engloba  a  tecnologías  propietarias  y
-abiertas. Este análisis compara sus características técnicas clave,  rendimiento
-e idoneidad para distintos objetivos de diseño IoT.
+banda con licencia (celular), gestionada por el  consorcio  3GPP,  y  banda  sin
+licencia (ISM), que engloba a tecnologías propietarias y abiertas. Este análisis
+compara  sus  características  técnicas  clave,  rendimiento  e  idoneidad  para
+distintos objetivos de diseño IoT.
 
 \begin{itemize}
-      \item \textbf{Tecnologías en Banda con Licencia (3GPP):}  Estas  tecnologías
-            operan en espectro licenciado (principalmente  700-900  MHz),  lo  que
-            garantiza una comunicación confiable sin interferencias, pero conlleva
-            costos de suscripción. Son ideales  para  aplicaciones  que  requieren
-            alta confiabilidad, movilidad y cobertura nacional \parencite[]{chilamkurthy2022low}.
+      \item \textbf{Tecnologías en Banda con Licencia (3GPP):} Estas tecnologías
+            operan en espectro licenciado (principalmente 700-900 MHz),  lo  que
+            garantiza  una  comunicación  confiable  sin  interferencias,   pero
+            conlleva costos de suscripción. Son ideales  para  aplicaciones  que
+            requieren  alta  confiabilidad,  movilidad  y   cobertura   nacional
+            \parencite[]{chilamkurthy2022low}.
             \begin{itemize}
-                  \item \textbf{LTE-M (LTE Cat M1 / eMTC):} Basada en LTE, ofrece la
-                        mayor tasa  de  datos  (hasta  1  Mbps),  soporta  movilidad
-                        (handover)  y  voz  (VoLTE).  Es  la   más   adecuada   para
-                        aplicaciones que requieren latencia  baja  (150  ms)  y  una
-                        mayor  cantidad  de  datos,  como  rastreo  de   activos   y
-                        wearables, aunque con un consumo energético moderado-alto.
-                  \item \textbf{NB-IoT:} Optimizada para IoT, utiliza  un  ancho  de
-                        banda muy estrecho (200 kHz).  Destaca  por  su  excepcional
-                        \textbf{cobertura} (hasta 15 km, presupuesto  de  enlace  de
-                        164 dB) y gran \textbf{profundidad de  penetración},  siendo
-                        óptima para sensores  estáticos  en  ubicaciones  remotas  o
-                        subterráneas (e.g., medidores inteligentes). Su latencia  es
-                        mayor (hasta 10 s).
-                  \item \textbf{EC-GSM-IoT:} Una evolución de  GSM/GPRS.  Ofrece  un
-                        equilibrio     entre     cobertura,      capacidad      (50k
-                        dispositivos/celda) y coste, aprovechando la infraestructura
-                        GSM existente. Es  una  opción  para  modernizar  redes  M2M
-                        tradicionales.
+                  \item \textbf{LTE-M (LTE Cat M1 / eMTC):} Basada en LTE,
+                        ofrece la mayor tasa de datos (hasta  1  Mbps),  soporta
+                        movilidad (handover) y voz (VoLTE). Es la  más  adecuada
+                        para aplicaciones que requieren latencia baja (150 ms) y
+                        una mayor cantidad de datos, como rastreo de  activos  y
+                        wearables,   aunque   con    un    consumo    energético
+                        moderado-alto.
+                  \item \textbf{NB-IoT:} Optimizada para IoT, utiliza un ancho
+                        de  banda  muy  estrecho  (200  kHz).  Destaca  por   su
+                        excepcional \textbf{cobertura} (hasta 15 km, presupuesto
+                        de enlace de  164  dB)  y  gran  \textbf{profundidad  de
+                              penetración}, siendo óptima para sensores  estáticos  en
+                        ubicaciones  remotas  o  subterráneas  (e.g.,  medidores
+                        inteligentes). Su latencia es mayor (hasta 10 s).
+                  \item \textbf{EC-GSM-IoT:} Una evolución de GSM/GPRS. Ofrece
+                        un   equilibrio   entre   cobertura,   capacidad    (50k
+                        dispositivos/celda)    y    coste,    aprovechando    la
+                        infraestructura  GSM  existente.  Es  una  opción   para
+                        modernizar redes M2M tradicionales.
             \end{itemize}
 
-      \item \textbf{Tecnologías en  Banda  Sin  Licencia  (Non-3GPP):}  Operan  en
-            bandas ISM sub-GHz (e.g., 868 MHz, 915 MHz) o 2.4 GHz, sin  costos  de
-            espectro pero sujetas  a  restricciones  de  duty  cycle  y  potencial
-            interferencia. Permiten el despliegue de redes privadas \parencite[]{chilamkurthy2022low}.
+      \item \textbf{Tecnologías en Banda Sin Licencia (Non-3GPP):} Operan en
+            bandas ISM sub-GHz (e.g., 868 MHz, 915 MHz) o 2.4 GHz, sin costos de
+            espectro pero sujetas a restricciones  de  duty  cycle  y  potencial
+            interferencia.   Permiten   el   despliegue   de   redes    privadas
+            \parencite[]{chilamkurthy2022low}.
             \begin{itemize}
-                  \item \textbf{SigFox:} Utiliza  Banda  Ultra  Estrecha  (UNB).  Se
-                        caracteriza   por   su    \textbf{extremo    bajo    costo},
-                        \textbf{mayor alcance} (50 km rural) y  \textbf{minimización
-                              del consumo energético} (6 nA en sleep).  Es  adecuada  para
-                        aplicaciones de uplink muy esporádico con mensajes diminutos
-                        (12 bytes), pero su escalabilidad de carga es limitada  (140
-                        mensajes/día) y la capacidad de downlink es muy reducida.
-                  \item \textbf{LoRaWAN:}  Utiliza  modulación   CSS   de   espectro
-                        ensanchado. Ofrece un buen equilibrio entre \textbf{alcance}
-                        (15    km    rural),    \textbf{consumo    energético}     y
-                        \textbf{flexibilidad}  (diferentes  clases  de  dispositivos
-                        A/B/C). Su arquitectura de red abierta  y  la  capacidad  de
-                        desplegar gateways privados la hacen muy popular para  redes
-                        IoT corporativas y de  ciudades  inteligentes.  La  tasa  de
-                        datos  es  baja  (0.3-50  kbps)  y  depende  del  factor  de
-                        ensanchamiento (SF).
-                  \item \textbf{RPMA (Ingenu):} Opera en la banda de 2.4 GHz, lo que
-                        le   otorga   un   gran    ancho    de    banda    y    alta
-                        \textbf{escalabilidad estructural}. Ofrece la mayor tasa  de
-                        datos entre las tecnologías sin licencia (624 kbps  uplink).
-                        Sin embargo, su alcance es limitado (10 km rural)  debido  a
-                        la mayor atenuación de la frecuencia y  sufre  interferencia
-                        de otras tecnologías (Wi-Fi, Bluetooth).
-                  \item \textbf{Telensa:}   Tecnología    UNB    especializada    en
-                        aplicaciones de control como alumbrado público  inteligente.
-                        Ofrece comunicación bidireccional  full-duplex  y  una  vida
-                        útil de batería de ~8 años, pero con un alcance  modesto  (4
-                        km rural) y baja tasa de datos.
-                  \item \textbf{Weightless:}  Conjunto   de   estándares   abiertos.
-                        \textbf{Weightless-P}  es  el   más   completo,   ofreciendo
-                        comunicación bidireccional  confiable  con  acknowledgments,
-                        buena gestión de interferencias y  movilidad,  comparable  a
-                        una versión ligera de LTE para IoT.
-                  \item \textbf{DASH7 (D7AP):} Protocolo derivado de RFID activo. Se
-                        destaca  por   soportar   \textbf{movilidad},   comunicación
-                        \textbf{asíncrona}  y  \textbf{baja  latencia},  ideal  para
-                        activos en movimiento como logística. Su principio de diseño
-                        es   BLAST   (Bursty,    Light,    Asynchronous,    Stealth,
-                        Transitional).
-                  \item \textbf{NB-Fi:}  Enfocada  en   lograr   la   \textbf{máxima
-                              cobertura y penetración} (hasta 30 km, presupuesto de enlace
-                        de 174 dB) en banda sin licencia,  con  una  tasa  de  datos
-                        mínima (11 bps). Es  adecuada  para  aplicaciones  donde  el
-                        único  requisito  es  recibir  una  señal  de  sensores  muy
+                  \item \textbf{SigFox:} Utiliza Banda Ultra Estrecha (UNB). Se
+                        caracteriza  por   su   \textbf{extremo   bajo   costo},
+                        \textbf{mayor    alcance}    (50     km     rural)     y
+                        \textbf{minimización
+                              del  consumo  energético}  (6  nA  en  sleep).  Es
+                        adecuada para
+                        aplicaciones  de  uplink  muy  esporádico  con  mensajes
+                        diminutos (12 bytes), pero su escalabilidad de carga  es
+                        limitada (140 mensajes/día) y la capacidad  de  downlink
+                        es muy reducida.
+                  \item \textbf{LoRaWAN:} Utiliza modulación CSS de espectro
+                        ensanchado.   Ofrece   un    buen    equilibrio    entre
+                        \textbf{alcance}   (15   km   rural),    \textbf{consumo
+                              energético} y \textbf{flexibilidad}  (diferentes  clases
+                        de dispositivos A/B/C). Su arquitectura de red abierta y
+                        la capacidad de desplegar gateways privados la hacen muy
+                        popular  para  redes  IoT  corporativas  y  de  ciudades
+                        inteligentes. La tasa de datos es baja (0.3-50  kbps)  y
+                        depende del factor de ensanchamiento (SF).
+                  \item \textbf{RPMA (Ingenu):} Opera en la banda de 2.4 GHz, lo
+                        que  le  otorga  un  gran  ancho   de   banda   y   alta
+                        \textbf{escalabilidad estructural}. Ofrece la mayor tasa
+                        de datos entre las tecnologías sin  licencia  (624  kbps
+                        uplink). Sin embargo, su  alcance  es  limitado  (10  km
+                        rural) debido a la mayor atenuación de la  frecuencia  y
+                        sufre  interferencia  de   otras   tecnologías   (Wi-Fi,
+                        Bluetooth).
+                  \item \textbf{Telensa:} Tecnología UNB especializada en
+                        aplicaciones   de   control   como   alumbrado   público
+                        inteligente.    Ofrece    comunicación     bidireccional
+                        full-duplex y una vida útil de batería de ~8 años,  pero
+                        con un alcance modesto (4  km  rural)  y  baja  tasa  de
+                        datos.
+                  \item \textbf{Weightless:} Conjunto de estándares abiertos.
+                        \textbf{Weightless-P} es  el  más  completo,  ofreciendo
+                        comunicación      bidireccional      confiable       con
+                        acknowledgments,  buena  gestión  de  interferencias   y
+                        movilidad, comparable a una versión ligera de  LTE  para
+                        IoT.
+                  \item \textbf{DASH7 (D7AP):} Protocolo derivado de RFID
+                        activo.  Se  destaca  por  soportar  \textbf{movilidad},
+                        comunicación    \textbf{asíncrona}    y     \textbf{baja
+                              latencia},  ideal  para  activos  en   movimiento   como
+                        logística. Su principio  de  diseño  es  BLAST  (Bursty,
+                        Light, Asynchronous, Stealth, Transitional).
+                  \item \textbf{NB-Fi:} Enfocada en lograr la \textbf{máxima
+                              cobertura y penetración} (hasta 30 km, presupuesto
+                        de enlace
+                        de 174 dB) en banda sin licencia, con una tasa de  datos
+                        mínima (11 bps). Es adecuada para aplicaciones donde  el
+                        único requisito es recibir una  señal  de  sensores  muy
                         remotos.
             \end{itemize}
 
 \end{itemize}
 
-\item \textbf{Comparativa Sintética por Objetivos de Diseño:} La elección de  la
+\item \textbf{Comparativa Sintética por Objetivos de Diseño:} La elección de la
 tecnología óptima implica  negociar  entre  distintos  objetivos,  ya  que
 ninguna domina en todos los aspectos.
 
 \begin{itemize}
-      \item \textbf{Eficiencia  Energética   y   Vida   Útil:}   Las   tecnologías
-            \textbf{sin  licencia}  (especialmente  SigFox,  LoRaWAN,  D7AP)   son
-            generalmente superiores. SigFox es líder absoluto en consumo  en  modo
-            sleep. Las tecnologías celulares (NB-IoT, LTE-M) implementan modos  de
-            ahorro (PSM, eDRX) para alcanzar vidas de ~10 años.
-      \item \textbf{Costo Total:} Las  tecnologías  \textbf{sin  licencia}  tienen
-            ventaja al eliminar tarifas de suscripción y permitir redes  privadas.
-            SigFox y NB-Fi ofrecen costos operativos muy  bajos.  Las  tecnologías
-            \textbf{con licencia} implican un costo  recurrente,  pero  aprovechan
-            infraestructura existente.
-      \item \textbf{Cobertura y Penetración:} \textbf{NB-IoT} lidera en  la  banda
-            con  licencia.  En  la   banda   sin   licencia,   \textbf{SigFox}   y
-            \textbf{NB-Fi} ofrecen los  mayores  alcances,  mientras  que  D7AP  y
+      \item \textbf{Eficiencia Energética y Vida Útil:} Las tecnologías
+            \textbf{sin licencia}  (especialmente  SigFox,  LoRaWAN,  D7AP)  son
+            generalmente superiores. SigFox es líder absoluto en consumo en modo
+            sleep. Las tecnologías celulares (NB-IoT, LTE-M)  implementan  modos
+            de ahorro (PSM, eDRX) para alcanzar vidas de ~10 años.
+      \item \textbf{Costo Total:} Las tecnologías \textbf{sin licencia} tienen
+            ventaja  al  eliminar  tarifas  de  suscripción  y  permitir   redes
+            privadas. SigFox y NB-Fi ofrecen costos operativos  muy  bajos.  Las
+            tecnologías \textbf{con licencia} implican un costo recurrente, pero
+            aprovechan infraestructura existente.
+      \item \textbf{Cobertura y Penetración:} \textbf{NB-IoT} lidera en la banda
+            con  licencia.  En  la  banda  sin   licencia,   \textbf{SigFox}   y
+            \textbf{NB-Fi} ofrecen los mayores alcances,  mientras  que  D7AP  y
             Weightless-P tienen un alcance más corto.
       \item \textbf{Escalabilidad:}
             \begin{itemize}
-                  \item \textit{Escalabilidad Estructural (dispositivos por celda):}
-                        Superior en tecnologías  \textbf{sin  licencia}  como  D7AP,
-                        Weightless-P,  LoRaWAN  y  SigFox  (hasta   millones).   Las
-                        tecnologías celulares  manejan  decenas  de  miles  (NB-IoT:
-                        ~50k, LTE-M: ~80k-1M).
-                  \item \textit{Escalabilidad de Carga (mensajes por  dispositivo):}
-                        Superior en tecnologías \textbf{con licencia}, al  no  tener
-                        restricciones de duty cycle. Las  tecnologías  sin  licencia
-                        están limitadas por regulación (e.g.,  140  mensajes/día  en
-                        SigFox, duty cycle del 1% en EU para LoRa).
+                  \item \textit{Escalabilidad Estructural (dispositivos por
+                              celda):} Superior en tecnologías  \textbf{sin  licencia}
+                        como  D7AP,  Weightless-P,  LoRaWAN  y   SigFox   (hasta
+                        millones). Las tecnologías celulares manejan decenas  de
+                        miles (NB-IoT: ~50k, LTE-M: ~80k-1M).
+                  \item \textit{Escalabilidad de Carga (mensajes por
+                              dispositivo):}  Superior  en   tecnologías   \textbf{con
+                              licencia}, al no tener restricciones de duty cycle.  Las
+                        tecnologías sin licencia están limitadas por  regulación
+                        (e.g., 140 mensajes/día en SigFox, duty cycle del 1%  en
+                        EU para LoRa).
             \end{itemize}
-      \item \textbf{Manejo  de  Interferencias:}   Las   tecnologías   \textbf{con
-                  licencia} están libres de interferencias accidentales. Entre  las  sin
-            licencia, \textbf{LoRaWAN} (CSS) y  \textbf{Weightless-P}  (saltos  de
-            frecuencia + FEC) son muy robustas. Las que usan UNB  (SigFox,  NB-Fi)
+      \item \textbf{Manejo de Interferencias:} Las tecnologías \textbf{con
+                  licencia} están libres de interferencias  accidentales.  Entre
+            las sin
+            licencia, \textbf{LoRaWAN} (CSS) y \textbf{Weightless-P} (saltos  de
+            frecuencia + FEC) son muy robustas. Las que usan UNB (SigFox, NB-Fi)
             también minimizan el riesgo.
-      \item \textbf{Calidad  de  Servicio  (QoS),  Movilidad  y   Latencia:}   Las
-            tecnologías  \textbf{con  licencia}  (especialmente  LTE-M  y  NB-IoT)
-            ofrecen la mejor QoS garantizada, soporte nativo para handover  y  las
-            latencias más bajas. Entre las sin licencia,  \textbf{Weightless-P}  y
-            \textbf{D7AP} son las que mejor soportan  movilidad  y  comunicaciones
+      \item \textbf{Calidad de Servicio (QoS), Movilidad y Latencia:} Las
+            tecnologías \textbf{con licencia}  (especialmente  LTE-M  y  NB-IoT)
+            ofrecen la mejor QoS garantizada, soporte nativo para handover y las
+            latencias más bajas. Entre las sin licencia, \textbf{Weightless-P} y
+            \textbf{D7AP} son las que mejor soportan movilidad y  comunicaciones
             bidireccionales confiables.
 \end{itemize}
 
-\item \textbf{Discusión y Aplicabilidad:} No existe una tecnología  LPWAN  única
+\item \textbf{Discusión y Aplicabilidad:} No existe una tecnología LPWAN única
 óptima para todos los casos. La selección debe basarse en  los  requisitos
 específicos de la aplicación:
 \begin{itemize}
-      \item \textbf{Aplicaciones de Monitoreo Masivo y Estático} (e.g., medidores,
-            agricultura):   \textbf{NB-IoT}    (por    cobertura/penetración)    o
-            \textbf{SigFox/LoRaWAN} (por coste y energía).
-      \item \textbf{Aplicaciones con Movilidad o Baja Latencia} (e.g.,  logística,
-            wearables):    \textbf{LTE-M}     (mejor     opción     celular)     o
+      \item \textbf{Aplicaciones de Monitoreo Masivo y Estático} (e.g.,
+            medidores, agricultura): \textbf{NB-IoT} (por cobertura/penetración)
+            o \textbf{SigFox/LoRaWAN} (por coste y energía).
+      \item \textbf{Aplicaciones con Movilidad o Baja Latencia} (e.g.,
+            logística,  wearables):  \textbf{LTE-M}  (mejor  opción  celular)  o
             \textbf{D7AP/Weightless-P} (en redes privadas).
-      \item \textbf{Redes  Privadas  y   Control   Industrial}   (e.g.,   ciudades
-            inteligentes, fabricas): \textbf{LoRaWAN} (flexibilidad y  ecosistema)
-            o \textbf{Weightless-P} (QoS y confiabilidad).
-      \item \textbf{Aplicaciones  con  Datos  más  Voluminosos   o   Voz}   (e.g.,
-            vigilancia, teleasistencia): \textbf{LTE-M} es la opción predominante.
+      \item \textbf{Redes Privadas y Control Industrial} (e.g., ciudades
+            inteligentes,   fabricas):    \textbf{LoRaWAN}    (flexibilidad    y
+            ecosistema) o \textbf{Weightless-P} (QoS y confiabilidad).
+      \item \textbf{Aplicaciones con Datos más Voluminosos o Voz} (e.g.,
+            vigilancia,   teleasistencia):   \textbf{LTE-M}   es    la    opción
+            predominante.
 \end{itemize}
 La tendencia futura apunta hacia la convergencia  y  coexistencia  de  múltiples
 tecnologías en arquitecturas híbridas, donde una plataforma de gestión unificada
@@ -517,146 +540,137 @@ es  crucial  por  las  siguientes  razones,  que  justifican  la  necesidad   de
 seleccionar la tecnología adecuada:
 
 \begin{itemize}
-      \item \textbf{Viabilidad en Campos Extensos:} La capacidad de largo alcance
-            permite conectar sensores distribuidos en grandes parcelas de  cultivo
-            donde otras tecnologías son  inviables  o  prohibitivamente  caras  de
-            implementar. Esto es fundamental para obtener datos de alta resolución
-            espacial \parencite[]{chen2018cognitive}.
+      \item \textbf{Viabilidad en Campos Extensos:} La capacidad de largo
+            alcance permite conectar sensores distribuidos en  grandes  parcelas
+            de cultivo donde otras tecnologías son  inviables  u  extremadamente
+            caras de implementar. Esto es fundamental para obtener datos de alta
+            resolución espacial \parencite[]{chen2018cognitive}.
       \item \textbf{Sostenibilidad Operativa:} El bajo consumo energético
-            garantiza que los sensores  permanezcan  operativos  durante  periodos
-            prolongados (años) sin intervención humana para recargar o  reemplazar
-            baterías, reduciendo significativamente los costos de mantenimiento  y
-            operación .
-      \item \textbf{Insumo para la Inteligencia Artificial (IA):} Las LPWAN son el
-            canal de comunicación que traslada los datos críticos de campo (clima,
-            suelo, estado  hídrico)  hacia  las  plataformas  de  IA,  las  cuales
-            procesan esta información para generar \textbf{prescripciones
-                  agronómicas} \parencite[]{chen2018cognitive}. La selección errónea
-            de la LPWAN puede resultar en fallas de  conectividad,  comprometiendo
-            la  calidad  de  los  datos  y,  por  ende,  la   precisión   de   las
+            garantiza que los sensores permanezcan operativos  durante  periodos
+            prolongados  (años)  sin  intervención  humana   para   recargar   o
+            reemplazar baterías, reduciendo  significativamente  los  costos  de
+            mantenimiento y operación.
+      \item \textbf{Insumo para la Inteligencia Artificial (IA):} Las LPWAN son
+            el canal de comunicación que traslada los datos  críticos  de  campo
+            (clima, suelo, estado hídrico) hacia  las  plataformas  de  IA,  las
+            cuales procesan esta información para generar prescripciones
+            agronómicas  \parencite[]{chen2018cognitive}.   La   selección
+            errónea
+            de la LPWAN puede resultar en fallas de conectividad, comprometiendo
+            la  calidad  de  los  datos  y,  por  ende,  la  precisión  de   las
             recomendaciones del sistema inteligente.
 \end{itemize}
 
 \subsection{Sensórica y Variables Agronómicas}
 
-El fundamento  de  la  Agricultura  de  Precisión  reside  en  la  capacidad  de
-recolectar, procesar y utilizar datos espaciales y temporales para optimizar  la
-gestión   de   insumos   y   mejorar   la   productividad   de   los    cultivos
-\parencite[]{alahmad2023applying}. Esta capacidad depende intrínsecamente de  la
-sensórica, que transforma las condiciones físicas,  químicas  y  biológicas  del
-agrosistema en información cuantificable \parencite[]{rajak2023internet}.
+La agricultura de precisión se fundamenta en la  captura  sistemática  de  datos
+agronómicos mediante sensores, los cuales permiten  monitorear  las  condiciones
+del cultivo y el ambiente en tiempo real o casi real. Esta capacidad de medición
+precisa y continua resulta esencial para la toma de  decisiones  informadas,  la
+optimización de insumos y la mitigación de riesgos asociados a  la  variabilidad
+climática. En el contexto del  despliegue  de  redes  LPWAN  para  el  monitoreo
+agrícola, la selección  de  la  sensórica  adecuada  y  la  comprensión  de  las
+variables que  miden  constituyen  un  paso  crítico  previo  al  diseño  de  la
+arquitectura de comunicación.
 
-\subsubsection{Variables Clave: Suelo, Ambiente y Estado del Cultivo}
-Para alimentar un sistema de  Inteligencia  Artificial  (IA)  capaz  de  generar
-prescripciones agronómicas, es indispensable monitorear un conjunto de variables
-interconectadas que  definen  el  estado  de  salud  y  desarrollo  del  cultivo
-\parencite[]{alahmad2023applying}.
+\subsubsection{Sensórica en la agricultura de presición}
+Los sensores son dispositivos que  convierten  señales  del  mundo  físico  (por
+ejemplo, humedad, temperatura, composición química) en datos digitales, actuando
+como la interfaz primaria entre el campo y los sistemas de información (Applying
+IoT Sensors and Big Data to  Improve  Precision  Crop.pdf).  Su  integración  en
+componentes de maquinaria, suelo, plantas  o  animales  proporciona  información
+vital sobre el  estado  del  sistema  agroproductivo  \parencite{alahmad2023applying}.
 
-\begin{enumerate}
-      \item \textbf{Variables del Suelo:} Definen el medio de crecimiento y la
-            disponibilidad de recursos.
-            \begin{itemize}
-                  \item \textbf{Humedad del Suelo:} Es la variable más crítica, ya
-                        que determina el estrés hídrico  y  la  necesidad  de  riego
-                        \parencite[]{rajak2023internet}.
-                  \item \textbf{Temperatura del Suelo:} Afecta la germinación, la
-                        actividad  microbiana   y   la   absorción   de   nutrientes
-                        \parencite[]{rajak2023internet}. %Fuente???%
-                  \item \textbf{Composición Química (pH, CE):} El pH influye en la
-                        disponibilidad de nutrientes, mientras que la  Conductividad
-                        Eléctrica  (CE)  se  correlaciona  con  la  salinidad  y  la
-                        concentración de nutrientes solubles
-                        \parencite[]{soussi2024smart}
-            \end{itemize}
-      \item \textbf{Variables Ambientales (Microclima):} Definen el entorno
-            inmediato del cultivo.
-            \begin{itemize}
-                  \item \textbf{Temperatura y Humedad Ambiental:} Variables
-                        atmosféricas que afectan la transpiración, la evaporación  y
-                        la     incidencia     de     enfermedades      y      plagas
-                        \parencite[]{rajak2023internet}.
-                  \item \textbf{Precipitación y Radiación Solar:} Determinan la
-                        energía disponible para la fotosíntesis y la recarga  de  la
-                        humedad del suelo \parencite[]{alahmad2023applying}.
-                  \item \textbf{Velocidad y Dirección del Viento:} Variables
-                        necesarias  para  la  modelación  de  la  evaporación  y  la
-                        dispersión       de       aerosoles       y        patógenos
-                        \parencite[]{alahmad2023applying}.
-            \end{itemize}
-      \item \textbf{Variables del Estado del Cultivo (Fenología):} Indican la
-            salud y el desarrollo de la planta.
-            \begin{itemize}
-                  \item \textbf{Índices de Vegetación:} Obtenidos principalmente
-                        mediante sensores remotos (satelitales, aéreos o montados en
-                        drones), como  el  NDVI  (Normalized  Difference  Vegetation
-                        Index). Estos índices miden la actividad fotosintética y  se
-                        correlacionan directamente con el rendimiento  y  el  estrés
-                        \parencite[]{alahmad2023applying}.
-                  \item \textbf{Altura y Densidad Foliar:} Variables de crecimiento
-                        que se pueden medir en el lugar con sensores ultrasónicos  o
-                        de     manera     remota     con      tecnologías      LiDAR
-                        \parencite[]{alahmad2023applying}.
-            \end{itemize}
-\end{enumerate}
-
-\subsubsection{Tipos de Sensores y Compatibilidad con LPWAN}
-La selección del sensor no solo depende de la variable a medir, sino también  de
-su  compatibilidad  energética  y  de   comunicación   con   las   Redes   LPWAN
-\parencite[]{rajak2023internet}.
+Para el desarrollo de sistemas IoT agrícolas (Ag-IoT), la selección  del  sensor
+apropiado debe considerar factores como bajo consumo de energía,  compatibilidad
+en la transferencia de información,  precisión,  sensibilidad,  repetibilidad  y
+durabilidad \parencite{alahmad2023applying}. Existe una amplia variedad de sensores clasificables  según  el
+parámetro físico que miden:
 
 \begin{itemize}
-      \item \textbf{Sensores Capacitivos:} Son el estándar para medir la humedad
-            del suelo. Funcionan midiendo la constante dieléctrica del  suelo,  la
-            cual  cambia  con  el  contenido  de  agua.  Son  de  bajo  costo   y,
-            crucialmente, consumen baja potencia, lo que los hace ideales para  la
-            integración       con       nodos       LoRaWAN        o        NB-IoT
-            \parencite[]{rajak2023internet}.
-      \item \textbf{Sensores Electroquímicos:} Utilizados para medir el pH y otros
-            iones. Requieren una calibración y  mantenimiento  más  intensivos,  y
-            aunque su consumo de potencia es generalmente bajo, la complejidad  de
-            la medición in situ y el costo pueden limitar su despliegue masivo  en
-            comparación con los sensores de humedad \parencite[]{soussi2024smart}.
-      \item \textbf{Sensores Ópticos y Remotos:} Incluyen cámaras multiespectrales
-            o hiperespectrales (para obtener índices como el NDVI)  y  fotodiodos.
-            Son fundamentales para evaluar el  estado  del  cultivo  a  escala  de
-            campo. Aunque el sensor en sí es activo, la plataforma de  adquisición
-            (dron o satélite) no utiliza directamente la red LPWAN.  Sin  embargo,
-            los datos de prescripción resultantes del análisis de  estas  imágenes
-            sí deben ser transmitidos a los actuadores vía LPWAN
-            \parencite[]{omia2023remote}
-      \item \textbf{Sensores Termopares y Resistivos (DHT):} Comunes para medir
-            temperatura y humedad ambiente. Son de  bajo  costo  y  presentan  una
-            buena eficiencia energética para el monitoreo microclimático
-            \parencite[]{de2444monitoreo}
+      \item \textbf{Sensores Químicos:} Miden propiedades como el pH del suelo y
+            agua, conductividad eléctrica, salinidad, y concentraciones de gases
+            (CO₂, O₂, CH₄) y nutrientes (nitratos). Se dividen principalmente en
+            fotodetectores y electroquímicos \parencite{alahmad2023applying}.
+      \item \textbf{Sensores Ópticos:} Utilizan la reflectancia de la luz en
+            diferentes longitudes de onda para determinar materia  orgánica  del
+            suelo, humedad, color, contenido de  clorofila  en  plantas,  estrés
+            hídrico y  detección  de  enfermedades  foliares.  Tecnologías  como
+            cámaras multiespectrales, hiperespectrales y el Índice de Vegetación
+            de Diferencia Normalizada (NDVI) son clave para la  teledetección  y
+            estimación de rendimiento \parencite{alahmad2023applying}.
+      \item \textbf{Sensores Electromecánicos y de Humedad:} Incluyen sensores
+            de humedad del suelo (que miden la constante dieléctrica),  sensores
+            de presión, acelerómetros y celdas de carga. Son fundamentales  para
+            medir la compactación del suelo, el crecimiento de frutos, el viento
+            y el peso continuo de las plantas \parencite{alahmad2023applying}.
+      \item \textbf{Sensores Acústicos:} Detectan cambios en las frecuencias
+            sonoras,  útiles  para  identificar  plagas  (como  barrenadores  de
+            madera) mediante el sonido que generan al alimentarse o  moverse,  y
+            para estimar la altura del dosel del cultivo \parencite{alahmad2023applying}.
+      \item \textbf{Sensores Térmicos:} Monitorean la temperatura de hojas,
+            suelo y ambiente. Los datos de temperatura foliar se  utilizan  para
+            predecir la producción, estimar la evapotranspiración y programar el
+            riego \parencite{alahmad2023applying}.
 \end{itemize}
 
-La baja tasa de datos de las LPWAN impone una restricción: solo los sensores que
-generan datos de pequeño tamaño (valores discretos como temperatura, humedad,  o
-pH) son directamente compatibles. Los datos de gran volumen  (como  imágenes  de
-alta resolución) deben ser procesados en el borde o de forma remota, y solo  los
-resultados     resumidos     se     transmiten     por     la     red      LPWAN
-\parencite[]{alahmad2023applying}.
-
-\subsubsection{Densidad de Sensores y Frecuencia de Reporte}
-La eficacia de la Agricultura de Precisión depende de la resolución  espacial  y
-temporal de los datos, que se define por la densidad de la red de sensores y  su
-frecuencia de reporte \parencite{alahmad2023applying,soussi2024smart}.
+\subsubsection{ Variables Agronómicas Críticas para el Monitoreo}
+Las variables agronómicas monitoreables definen el estado de salud del cultivo y
+del suelo, guiando las intervenciones de manejo. La  cantidad  y  frecuencia  de
+datos requeridos dependen del cultivo específico, las condiciones ambientales  y
+los objetivos del productor \parencite{alahmad2023applying}. Las  variables  más  relevantes,  vinculadas  a  los
+sensores antes descritos, incluyen:
 
 \begin{itemize}
-      \item \textbf{Densidad de Sensores:} La heterogeneidad del suelo y del
-            microclima requiere una densidad de muestreo adecuada. El muestreo por
-            celdas (ej., un sensor por cada hectárea)  es  una  estrategia  común,
-            pero  la  ubicación  óptima  debe  ser  determinada  por  análisis  de
-            variabilidad espacial del campo  \parencite[]{soussi2024smart}  .  Una
-            mayor densidad mejora la precisión del  modelo  de  IA,  pero  aumenta
-            linealmente la carga de tráfico en la red LPWAN.
-      \item \textbf{Frecuencia de Reporte:} La necesidad de actualización de los
-            datos varía: mientras que la temperatura del suelo puede medirse  cada
-            pocas horas, la humedad en condiciones de riego activo puede  requerir
-            muestreos más frecuentes \parencite[]{de2444monitoreo}. Un reporte más
-            frecuente (ej., cada 10 minutos) permite una detección más  rápida  de
-            anomalías, pero consume  más  batería  y  satura  el  ancho  de  banda
-            limitado de las LPWAN \parencite[]{chen2018cognitive}.
+      \item \textbf{Variables Edáficas (del Suelo):}
+            \begin{itemize}
+                  \item \textbf{Humedad del  Suelo:  }Parámetro  fundamental  para  la
+                        programación eficiente  del  riego.  Se  mide  comúnmente  con
+                        sensores capacitivos o de resistencia eléctrica \parencite{alahmad2023applying}.
+                  \item \textbf{Nutrientes (N, P, K) y pH:} Determinan  la  fertilidad
+                        del  suelo  y  la   necesidad   de   fertilización.   Sensores
+                        electroquímicos  y  ópticos  permiten  estimaciones  in  situ,
+                        aunque su medición en tiempo real sigue siendo un  desafío  en
+                        desarrollo \parencite{alahmad2023applying}.
+                  \item \textbf{Temperatura  del  Suelo:  }Afecta  la  germinación  de
+                        semillas y la  actividad  microbiana.  Se  mide  con  sensores
+                        térmicos  \parencite{alahmad2023applying}.
+                  \item \textbf{Conductividad Eléctrica (CE):} Indica la salinidad del
+                        suelo y la  concentración  de  iones.  Se  mide  con  sensores
+                        eléctricos \parencite{alahmad2023applying}.
+            \end{itemize}
+      \item \textbf{Variables Ambientales y Climáticas:}
+            \begin{itemize}
+                  \item \textbf{Temperatura  y  Humedad  del  Aire:}  Condicionan   la
+                        evapotranspiración, la aparición de enfermedades y  el  estrés
+                        térmico de los cultivos. Se monitorean con sensores térmicos y
+                        de humedad (capacitivos o resistivos)  \parencite{alahmad2023applying}.
+                  \item \textbf{Precipitación y Viento: }Afectan  la  programación  de
+                        riego, la aplicación de agroquímicos y los riesgos de erosión.
+                        Se miden con pluviómetros y anemómetros (sensores mecánicos  o
+                        acústicos) \parencite{alahmad2023applying}.
+                  \item \textbf{Radiación  Solar:}  Determina  la  fotosíntesis  y  el
+                        crecimiento. Se mide con sensores de radiación o  piranómetros
+                        \parencite{alahmad2023applying}.
+
+            \end{itemize}
+      \item \textbf{Variables del Cultivo:}
+            \begin{itemize}
+                  \item \textbf{Salud  y  Vigor  Vegetal:  }Se  evalúa  mediante
+                        índices espectrales (como NDVI) obtenidos  con  sensores
+                        ópticos montados en drones, tractores o  satélites,  que
+                        indican el contenido de clorofila y la cobertura  foliar
+                        \parencite{alahmad2023applying}.
+                  \item \textbf{Detección   de   Estrés   y   Enfermedades:    }
+                        Combinaciones de sensores ópticos (para detectar cambios
+                        de color o textura), térmicos (para  identificar  estrés
+                        hídrico) y acústicos (para detectar plagas) permiten una
+                        identificación temprana \parencite{alahmad2023applying}.
+                  \item \textbf{Estado Fenológico y  Rendimiento:  }  Cámaras  y
+                        sensores  de  flujo  de  masa  permiten  monitorear   el
+                        desarrollo  del  cultivo  y  estimar  o  cuantificar  el
+                        rendimiento  en   la   cosecha   \parencite{ pyingkodi2022sensor}
+            \end{itemize}
 \end{itemize}
 
 
@@ -666,7 +680,7 @@ frecuencia de reporte \parencite{alahmad2023applying,soussi2024smart}.
       Desempeño}
 
 El siguiente análisis se basa en el artículo: \textit{A Survey on LoRaWAN
-      Technology:  Recent  Trends,  Opportunities,  Simulation  Tools  and  Future
+      Technology: Recent Trends,  Opportunities,  Simulation  Tools  and  Future
       Directions} \parencite{almuhaya2022survey}, la simulación de redes LPWAN
 (específicamente LoRaWAN) es crucial para evaluar el rendimiento  de  la  red  a
 gran escala. A continuación, se detallan las herramientas de simulación tratadas
@@ -674,31 +688,31 @@ en el artículo y sus métricas de desempeño.
 
 \begin{table}[H] centering
       \begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
-            \toprule \textbf{Herramienta}                                         & \textbf{Descripción  y  Plataforma}                      &
-            \textbf{Características   Clave}                                      & \textbf{Métricas   de   Desempeño
-            Evaluadas}                                                                                                                                                      \\ \midrule  LoRaSim  &  Simulador  de  eventos  discretos  y
-            probabilístico implementado en Python.                                & Simula un único gateway (puerta
-            de enlace) LoRaWAN  que  sirve  a  varios  dispositivos  finales  (EDs).
-            Incorpora el efecto de captura y la asignación de factor  de  dispersión
-            (SF) y potencia.                                                      & Packet Reception Ratio (PRR) y capacidad  de  la  red
-            (escalabilidad).                                                                                                                                                \\ \addlinespace
+            \toprule \textbf{Herramienta}                             & \textbf{Descripción y Plataforma}                                  &
+            \textbf{Características  Clave}                           & \textbf{Métricas  de   Desempeño
+            Evaluadas}                                                                                                                                                   \\ \midrule LoRaSim & Simulador de  eventos  discretos  y
+            probabilístico implementado en Python.                    & Simula  un  único  gateway
+            (puerta de enlace) LoRaWAN que sirve a varios  dispositivos  finales
+            (EDs). Incorpora el efecto de captura y la asignación de  factor  de
+            dispersión (SF)  y  potencia.                             & Packet  Reception  Ratio  (PRR)  y
+            capacidad de la red (escalabilidad).                                                                                                                         \\ \addlinespace
 
-            LoRaWANSim                                                            & Módulo para el simulador de  red  ns-3  basado  en  C++. &
-            Extiende el modelo  ALOHA  para  incluir  el  efecto  de  captura  y  la
-            interferencia  inter-SF.  Soporta  comunicación  multicanal,   multi-SF,
-            multi-gateway y bidireccional. Soporta las Clases A y C  de  LoRaWAN. &
-            Consumo de energía, Packet Delivery Ratio (PDR) y latencia de la red.                                                                                           \\
-            \addlinespace
+            LoRaWANSim                                                & Módulo para el simulador de red ns-3 basado en  C++.               &
+            Extiende el modelo ALOHA para incluir el  efecto  de  captura  y  la
+            interferencia inter-SF. Soporta comunicación  multicanal,  multi-SF,
+            multi-gateway y bidireccional. Soporta las Clases A y C de  LoRaWAN.
+                                                                      & Consumo de energía, Packet Delivery Ratio (PDR) y latencia  de  la
+            red.                                                                                                                                                         \\ \addlinespace
 
-            FAD                                                                   & Simulador de eventos discretos implementado en Python.   & Enfocado
-            en simulaciones de gran escala. Introduce un  modelo  de  canal  LoRaWAN
-            realista y considera el efecto de captura.                            & PDR y consumo  de  energía.
-            \\ \addlinespace
+            FAD                                                       & Simulador de  eventos  discretos  implementado  en  Python.        &
+            Enfocado en simulaciones de gran  escala.  Introduce  un  modelo  de
+            canal LoRaWAN realista y considera el efecto de  captura. & PDR  y
+            consumo de energía.                                                                                                                                          \\ \addlinespace
 
-            Simu-LoRa                                                             & Implementado  en  MATLAB.                                & Diseñado  para  evaluar   el
-            rendimiento  de  los  dispositivos  finales  y  diferentes  factores  de
-            dispersión (SF). Se  centra  en  la  capa  física  (PHY).             & Eficiencia
-            energética y PDR.                                                                                                                                               \\ \bottomrule
+            Simu-LoRa                                                 & Implementado en  MATLAB.                                           & Diseñado  para  evaluar  el
+            rendimiento de los dispositivos finales  y  diferentes  factores  de
+            dispersión (SF). Se centra en la capa  física  (PHY).     & Eficiencia
+            energética y PDR.                                                                                                                                            \\ \bottomrule
       \end{tabularx}
       \caption{Comparativa de herramientas de simulación para redes LoRaWAN}
       \label{tab:lorawan_tools}
@@ -728,20 +742,21 @@ Las características fundamentales de los agentes computacionales incluyen:
 
 \begin{itemize}
       \item \textbf{Autonomía:} La capacidad de operar sin la necesidad de un
-            control humano o de la interacción directa en cada paso. Un agente  de
-            IA puede ejecutar tareas y tomar  decisiones  de  forma  independiente
-            \parencite{gutowska2025aiagents}.
+            control humano o de la interacción directa en cada paso.  Un  agente
+            de  IA  puede  ejecutar  tareas  y   tomar   decisiones   de   forma
+            independiente \parencite{gutowska2025aiagents}.
       \item \textbf{Capacidad de Decisión:} Un agente posee un espacio de diseño
-            de agente que le permite tomar decisiones basadas en sus  percepciones
-            y metas. Estos diseños progresan gradualmente desde lo simple hasta lo
-            complejo \parencite{artint3e}.
+            de  agente  que  le  permite  tomar  decisiones   basadas   en   sus
+            percepciones y metas. Estos diseños progresan gradualmente desde  lo
+            simple hasta lo complejo \parencite{artint3e}.
       \item \textbf{Autoaprendizaje y Adaptación:} Aunque no se detalla
-            explícitamente el ``autoaprendizaje'' o ``adaptación'' como  términos,
-            el libro sobre Fundamentos de Agentes Computacionales aborda  cómo  la
-            IA moderna se explica a través de agentes computacionales, y cómo  las
-            nuevas ediciones incluyen capítulos sobre aprendizaje  profundo  (deep
-            learning) e IA generativa, lo  que  implica  mecanismos  de  mejora  y
-            ajuste de comportamiento \parencite{artint3e}.
+            explícitamente  el   ``autoaprendizaje''   o   ``adaptación''   como
+            términos, el libro  sobre  Fundamentos  de  Agentes  Computacionales
+            aborda  cómo  la  IA  moderna  se  explica  a  través   de   agentes
+            computacionales, y cómo  las  nuevas  ediciones  incluyen  capítulos
+            sobre aprendizaje profundo (deep learning) e IA generativa,  lo  que
+            implica  mecanismos   de   mejora   y   ajuste   de   comportamiento
+            \parencite{artint3e}.
 \end{itemize}
 
 \subsubsection{Arquitectura de sistemas multiagente y flujos de trabajo}
@@ -760,8 +775,8 @@ Los flujos de trabajo en estos sistemas implican:
 \begin{itemize}
       \item \textbf{Orquestación:} Gestionar las interacciones de los agentes.
       \item \textbf{Gobernanza:} Establecer reglas y límites.
-      \item \textbf{Escalabilidad:} Asegurar que el sistema pueda crecer y manejar
-            más agentes o tareas \parencite{multiagent_architecture}.
+      \item \textbf{Escalabilidad:} Asegurar que el sistema pueda crecer y
+            manejar más agentes o tareas \parencite{multiagent_architecture}.
 \end{itemize}
 
 \subsubsection{Aplicación en sistemas de recomendación y soporte a la decisión}
@@ -771,15 +786,15 @@ central en la IA que se aplica a diversas áreas.
 
 \begin{itemize}
       \item \textbf{Soporte a la Decisión:} El concepto de agentes se relaciona
-            directamente  con  los  modelos  de  razonamiento  y   de   causalidad
-            \parencite{artint3e}. Los agentes pueden ser diseñados para razonar  y
-            evaluar la información,  lo  que  es  esencial  para  el  apoyo  a  la
+            directamente  con  los  modelos  de  razonamiento  y  de  causalidad
+            \parencite{artint3e}. Los agentes pueden ser diseñados para  razonar
+            y evaluar la información, lo que es esencial  para  el  apoyo  a  la
             decisión.
 
       \item \textbf{Sistemas de Recomendación:} Al igual que en el soporte a la
-            decisión, los agentes se utilizan para aplicar técnicas de aprendizaje
-            profundo y razonamiento  a  grandes  volúmenes  de  datos,  una  tarea
-            habitual    en    los    sistemas    de     recomendación     modernos
+            decisión,  los  agentes  se  utilizan  para  aplicar   técnicas   de
+            aprendizaje profundo y razonamiento a grandes  volúmenes  de  datos,
+            una  tarea  habitual  en  los  sistemas  de  recomendación  modernos
             \parencite{artint3e}.
 \end{itemize}
 
@@ -793,12 +808,12 @@ Los límites y desafíos de estos sistemas incluyen:
 
 \begin{itemize}
       \item \textbf{Complejidad:} La necesidad de diseñar el sistema para el
-            cambio,  equilibrando  la  extensibilidad  a  largo  plazo   con   una
-            ingeniería        pragmática        para        el         lanzamiento
+            cambio,  equilibrando  la  extensibilidad  a  largo  plazo  con  una
+            ingeniería       pragmática        para        el        lanzamiento
             \parencite{multiagent_architecture}.
       \item \textbf{Ética y Responsabilidad:} La IA, incluido el diseño de
-            agentes, tiene  un  impacto  social  que  debe  ser  considerado.  Las
-            características de autonomía y capacidad de decisión  de  los  agentes
+            agentes, tiene un impacto  social  que  debe  ser  considerado.  Las
+            características de autonomía y capacidad de decisión de los  agentes
             plantean desafíos éticos importantes \parencite{artint3e}.
 \end{itemize}
 
@@ -834,10 +849,10 @@ El equipo de Scrum está compuesto por tres roles principales:
 \begin{itemize}
       \item Product Owner (PO): Responsable de maximizar el valor del producto y
             gestionar la pila del producto.
-      \item Scrum Master (SM): Asegura que Scrum sea comprendido e implementado, y
-            ayuda al equipo a eliminar impedimentos.
+      \item Scrum Master (SM): Asegura que Scrum sea comprendido e implementado,
+            y ayuda al equipo a eliminar impedimentos.
       \item Equipo de Desarrollo (Development Team): Profesionales encargados de
-            crear el incremento de  producto  utilizable;  son  autoorganizados  y
+            crear el incremento de producto utilizable;  son  autoorganizados  y
             multifuncionales.
 \end{itemize}
 
@@ -860,8 +875,8 @@ significa “señal visual”.
 
 \begin{itemize}
       \item Visualización del flujo de trabajo mediante el tablero Kanban.
-      \item Limitación del WIP para evitar sobrecarga y mejorar la eficiencia del
-            flujo.
+      \item Limitación del WIP para evitar sobrecarga y mejorar la eficiencia
+            del flujo.
 \end{itemize}
 
 \subsubsection{Métricas Ágiles}
@@ -872,16 +887,17 @@ mejora.
 \subsubsection{Métricas de Progreso y Alcance}
 
 \begin{itemize}
-      \item Gráfico burn-down: muestra la cantidad de trabajo restante en función
-            del tiempo.
-      \item Gráfico burn-up: indica el trabajo completado frente al alcance total.
+      \item Gráfico burn-down: muestra la cantidad de trabajo restante en
+            función del tiempo.
+      \item Gráfico burn-up: indica el trabajo completado frente al alcance
+            total.
 \end{itemize}
 
 \subsubsection{Métricas de Flujo y Eficiencia}
 
 \begin{itemize}
-      \item Tiempo de ciclo (cycle time): mide el tiempo desde que una tarea entra
-            en estado “en progreso” hasta que se completa.
+      \item Tiempo de ciclo (cycle time): mide el tiempo desde que una tarea
+            entra en estado “en progreso” hasta que se completa.
       \item Tiempo de espera (lead time): mide el tiempo total desde que se
             solicita una tarea hasta su entrega final.
 \end{itemize}
@@ -890,191 +906,196 @@ mejora.
 
 \section{Marco Conceptual}
 
-El marco conceptual establece los conceptos fundamentales
-dentro del contexto de esta investigación, orientada al diseño y evaluación de
-una plataforma de software con IA basada en simulación de redes LPWAN y modelos de
-decisión agronómica para Agricultura de Precisión en entornos rurales. Este marco
-permite delimitar el significado operativo de los términos clave y articularlos
-en una estructura coherente que conecta la infraestructura tecnológica con la
-toma de decisiones inteligentes en el sector agrícola.
+El marco conceptual establece los conceptos fundamentales dentro del contexto de
+esta investigación, orientada al  diseño  y  evaluación  de  una  plataforma  de
+software con IA basada en simulación  de  redes  LPWAN  y  modelos  de  decisión
+agronómica para Agricultura de Precisión en entornos rurales. Este marco permite
+delimitar el significado operativo de los términos clave y articularlos  en  una
+estructura coherente que conecta la infraestructura tecnológica con la  toma  de
+decisiones inteligentes en el sector agrícola.
 
 \subsection{Agricultura 4.0}
-Se entiende por \textbf{Agricultura 4.0} el paradigma socio-tecnológico que integra
-tecnologías digitales avanzadas —Internet de las Cosas (IoT), analítica de datos,
-inteligencia artificial (IA), automatización y computación en la nube— en los
-sistemas productivos agrícolas, con el objetivo de optimizar el uso de recursos,
-incrementar la productividad y mejorar la sostenibilidad ambiental.
+Se entiende por \textbf{Agricultura  4.0}  el  paradigma  socio-tecnológico  que
+integra tecnologías digitales avanzadas —Internet de las Cosas (IoT),  analítica
+de datos, inteligencia artificial (IA), automatización y computación en la nube—
+en los sistemas productivos agrícolas, con el objetivo de optimizar  el  uso  de
+recursos, incrementar la productividad y mejorar la sostenibilidad ambiental.
 
 En esta investigación, la Agricultura 4.0 se concibe como el \textbf{marco
-      aplicativo} que da sentido al uso de redes LPWAN, la sensórica distribuida y los
-modelos de decisión agronómica, especialmente en contextos rurales con limitaciones
-de conectividad.
+      aplicativo} que da sentido al uso de redes LPWAN, la sensórica distribuida
+y los
+modelos  de  decisión  agronómica,  especialmente  en  contextos   rurales   con
+limitaciones de conectividad.
 
 \subsection{Agricultura de Precisión}
-La \textbf{Agricultura de Precisión} es un enfoque operativo de la Agricultura 4.0
-basado en la gestión diferencial de los cultivos mediante el análisis de datos
-espacio-temporales. Su propósito es reducir la variabilidad productiva y optimizar
-la aplicación de insumos (agua, fertilizantes y energía) en función de las
-condiciones reales del suelo, el ambiente y el estado del cultivo.
+La \textbf{Agricultura de Precisión} es un enfoque operativo de  la  Agricultura
+4.0 basado en la gestión diferencial de los cultivos  mediante  el  análisis  de
+datos espacio-temporales. Su propósito es reducir la variabilidad  productiva  y
+optimizar la aplicación de insumos (agua, fertilizantes y energía) en función de
+las condiciones reales del suelo, el ambiente y el estado del cultivo.
 
-Dentro del presente trabajo, la Agricultura de Precisión actúa como el
-\textbf{dominio funcional} sobre el cual se definen las variables agronómicas, la
-densidad de sensores y los requisitos de comunicación de la red.
+Dentro  del  presente  trabajo,  la  Agricultura  de  Precisión  actúa  como  el
+\textbf{dominio funcional} sobre el cual se definen las  variables  agronómicas,
+la densidad de sensores y los requisitos de comunicación de la red.
 
 \subsection{Internet de las Cosas (IoT) Agrícola}
-El \textbf{IoT agrícola} se define como la red de dispositivos físicos
-interconectados —sensores, actuadores y nodos inteligentes— que capturan datos del
-entorno agrícola y los transmiten a plataformas de procesamiento para su análisis
-y explotación.
+El  \textbf{IoT  agrícola}  se  define  como  la  red  de  dispositivos  físicos
+interconectados —sensores, actuadores y nodos inteligentes— que  capturan  datos
+del entorno agrícola y los transmiten a plataformas  de  procesamiento  para  su
+análisis y explotación.
 
-En este estudio, el IoT agrícola se materializa mediante nodos sensores de bajo
-consumo energético conectados a través de redes LPWAN, actuando como la capa de
+En este estudio, el IoT agrícola se materializa mediante nodos sensores de  bajo
+consumo energético conectados a través de redes LPWAN, actuando como la capa  de
 adquisición de datos del sistema.
 
 \subsection{Redes LPWAN}
-Las \textbf{Redes de Área Amplia de Baja Potencia (LPWAN)} son tecnologías de
-comunicación inalámbrica diseñadas para ofrecer largo alcance, bajo consumo
-energético y bajo costo, permitiendo la conectividad de dispositivos IoT en
+Las \textbf{Redes de Área Amplia de Baja Potencia (LPWAN)}  son  tecnologías  de
+comunicación inalámbrica diseñadas para  ofrecer  largo  alcance,  bajo  consumo
+energético y bajo costo, permitiendo la  conectividad  de  dispositivos  IoT  en
 entornos extensos y de difícil acceso.
 
 Conceptualmente, las LPWAN constituyen la \textbf{infraestructura de
-      comunicaciones} que habilita la transmisión de datos agronómicos desde el campo
-hasta las plataformas de procesamiento, siendo un factor crítico en el
+      comunicaciones} que habilita la transmisión de datos agronómicos desde  el
+campo
+hasta  las  plataformas  de  procesamiento,  siendo  un  factor  crítico  en  el
 rendimiento del sistema de Agricultura de Precisión.
 
 \subsection{Arquitectura LPWAN}
-La \textbf{arquitectura LPWAN} se refiere a la organización funcional de los
-componentes que conforman la red, incluyendo dispositivos finales, gateways,
+La \textbf{arquitectura LPWAN} se refiere a la  organización  funcional  de  los
+componentes que conforman la red,  incluyendo  dispositivos  finales,  gateways,
 núcleo de red y servidores de aplicación. Esta arquitectura define cómo fluye la
 información, cómo se gestiona la escalabilidad y cómo se garantiza la eficiencia
 energética y la calidad del servicio.
 
-En el contexto de esta investigación, la arquitectura LPWAN es el objeto de
-evaluación mediante simulación, considerando diferentes configuraciones y
+En el contexto de esta investigación, la arquitectura  LPWAN  es  el  objeto  de
+evaluación  mediante  simulación,  considerando  diferentes  configuraciones   y
 parámetros de diseño.
 
 \subsection{Topología de Red}
 La \textbf{topología de red} describe la forma en que los nodos se interconectan
-dentro de una LPWAN, principalmente bajo esquemas de estrella o malla. La
-topología influye directamente en el consumo energético, la latencia, la
+dentro de una LPWAN, principalmente  bajo  esquemas  de  estrella  o  malla.  La
+topología influye  directamente  en  el  consumo  energético,  la  latencia,  la
 escalabilidad y la resiliencia de la red.
 
-Este concepto es clave para analizar el impacto de la densidad de sensores y el
+Este concepto es clave para analizar el impacto de la densidad de sensores y  el
 número de gateways sobre el desempeño global de la red.
 
 \subsection{Sensórica Agrícola}
-La \textbf{sensórica agrícola} comprende el conjunto de sensores físicos
+La  \textbf{sensórica  agrícola}  comprende  el  conjunto  de  sensores  físicos
 empleados para medir variables del suelo, del ambiente y del estado del cultivo.
-Estos sensores transforman fenómenos físicos y químicos en datos digitales
+Estos sensores transforman fenómenos  físicos  y  químicos  en  datos  digitales
 utilizables por los sistemas de análisis y decisión.
 
-En esta investigación, la sensórica define la carga de datos que debe soportar la
-red LPWAN y condiciona la frecuencia de reporte y la vida útil de los nodos.
+En esta investigación, la sensórica define la carga de datos que  debe  soportar
+la red LPWAN y condiciona la frecuencia de reporte y la vida útil de los nodos.
 
 \subsection{Variables Agronómicas}
-Las \textbf{variables agronómicas} son los parámetros medibles que describen el
-estado del sistema agrícola, tales como humedad del suelo, temperatura,
+Las \textbf{variables agronómicas} son los parámetros medibles que describen  el
+estado  del  sistema  agrícola,  tales  como  humedad  del  suelo,  temperatura,
 precipitación, pH, índices de vegetación y variables microclimáticas.
 
-Estas variables constituyen la \textbf{entrada principal} de los modelos de
-decisión agronómica y determinan los requisitos de resolución espacial y temporal
-del sistema de monitoreo.
+Estas variables constituyen la \textbf{entrada  principal}  de  los  modelos  de
+decisión agronómica  y  determinan  los  requisitos  de  resolución  espacial  y
+temporal del sistema de monitoreo.
 
 \subsection{Densidad de Nodos}
-La \textbf{densidad de nodos} se define como el número de sensores desplegados por
-unidad de área (e.g., nodos por hectárea). Este concepto está directamente
+La \textbf{densidad de nodos} se define como el número de  sensores  desplegados
+por unidad de área (e.g., nodos por hectárea). Este concepto  está  directamente
 relacionado con la resolución espacial de los datos y con la carga de tráfico en
 la red LPWAN.
 
-En este trabajo, la densidad de nodos es una variable clave para evaluar el
+En este trabajo, la densidad de nodos es una  variable  clave  para  evaluar  el
 rendimiento de la arquitectura de red mediante simulación.
 
 \subsection{Simulación de Redes LPWAN}
-La \textbf{simulación de redes LPWAN} es una técnica de modelado computacional que
-permite reproducir el comportamiento de una red bajo diferentes condiciones de
-configuración, tráfico y entorno, sin necesidad de un despliegue físico.
+La \textbf{simulación de redes LPWAN} es una técnica de  modelado  computacional
+que permite reproducir el comportamiento de una red bajo diferentes  condiciones
+de configuración, tráfico y entorno, sin necesidad de un despliegue físico.
 
-Conceptualmente, la simulación actúa como una \textbf{herramienta de evaluación y
-      apoyo a la toma de decisiones}, permitiendo analizar métricas de desempeño como la
+Conceptualmente, la simulación actúa como una \textbf{herramienta de  evaluación
+      y
+      apoyo a la toma de decisiones}, permitiendo analizar métricas de desempeño
+como la
 entrega de paquetes, la latencia y el consumo energético.
 
 \subsection{Desempeño de la Red}
-El \textbf{desempeño de la red LPWAN} se refiere al conjunto de métricas que
-caracterizan su comportamiento operativo, tales como tasa de entrega de paquetes,
-retardo, consumo energético y escalabilidad.
+El \textbf{desempeño de la red LPWAN} se refiere al  conjunto  de  métricas  que
+caracterizan  su  comportamiento  operativo,  tales  como  tasa  de  entrega  de
+paquetes, retardo, consumo energético y escalabilidad.
 
-Estas métricas permiten evaluar la idoneidad de una arquitectura LPWAN para
+Estas métricas permiten evaluar la idoneidad  de  una  arquitectura  LPWAN  para
 soportar aplicaciones de Agricultura de Precisión en escenarios rurales.
 
 \subsection{Modelos de Decisión Agronómica}
-Los \textbf{modelos de decisión agronómica} son sistemas computacionales, apoyados
-en técnicas de inteligencia artificial y análisis de datos, que transforman los
-datos recolectados en recomendaciones o prescripciones agronómicas.
+Los  \textbf{modelos  de  decisión  agronómica}  son  sistemas  computacionales,
+apoyados en técnicas  de  inteligencia  artificial  y  análisis  de  datos,  que
+transforman  los  datos  recolectados  en   recomendaciones   o   prescripciones
+agronómicas.
 
-En esta investigación, dichos modelos dependen directamente de la calidad,
+En esta investigación, dichos  modelos  dependen  directamente  de  la  calidad,
 oportunidad y continuidad de los datos transmitidos por la red LPWAN.
 
 \subsection{Agentes de Inteligencia Artificial}
-Los \textbf{agentes de inteligencia artificial (IA)} son entidades computacionales
-autónomas capaces de percibir su entorno, razonar sobre la información disponible
-y ejecutar acciones orientadas al cumplimiento de objetivos específicos. Estos
-agentes pueden integrar modelos de aprendizaje automático, reglas de decisión y
-acceso a herramientas externas para adaptarse dinámicamente a diferentes
-escenarios.
+Los   \textbf{agentes   de   inteligencia   artificial   (IA)}   son   entidades
+computacionales autónomas capaces de  percibir  su  entorno,  razonar  sobre  la
+información  disponible  y  ejecutar  acciones  orientadas  al  cumplimiento  de
+objetivos específicos. Estos agentes  pueden  integrar  modelos  de  aprendizaje
+automático, reglas de decisión y acceso a herramientas externas  para  adaptarse
+dinámicamente a diferentes escenarios.
 
-En esta investigación, los agentes de IA actúan como componentes inteligentes
-encargados de interpretar los datos agronómicos recolectados, interactuar con los
-resultados de la simulación de redes LPWAN y apoyar la toma de decisiones en
+En esta investigación, los agentes de IA actúan  como  componentes  inteligentes
+encargados de interpretar los datos agronómicos  recolectados,  interactuar  con
+los resultados de la simulación de redes LPWAN y apoyar la toma de decisiones en
 contextos de Agricultura de Precisión.
 
 \subsection{Aplicación Web}
-Una \textbf{aplicación web} es una plataforma de software accesible mediante un
-navegador, que integra interfaces de usuario, lógica de negocio y servicios de
-procesamiento de datos. Estas aplicaciones facilitan la interacción entre los
-usuarios y los sistemas computacionales complejos de forma intuitiva y
+Una \textbf{aplicación web} es una plataforma de software accesible mediante  un
+navegador, que integra interfaces de usuario, lógica de negocio y  servicios  de
+procesamiento de datos. Estas aplicaciones facilitan la  interacción  entre  los
+usuarios  y  los  sistemas  computacionales  complejos  de  forma  intuitiva   y
 centralizada.
 
-Dentro del contexto de este trabajo, la aplicación web constituye la
-\textbf{capa de interacción} del sistema, permitiendo visualizar los resultados de
-la simulación de la red LPWAN, gestionar configuraciones del despliegue y acceder
-a las recomendaciones generadas por los modelos y agentes de decisión.
+Dentro  del  contexto  de  este  trabajo,  la  aplicación  web   constituye   la
+\textbf{capa de interacción} del sistema, permitiendo visualizar los  resultados
+de la simulación de la red LPWAN, gestionar  configuraciones  del  despliegue  y
+acceder a las recomendaciones generadas por los modelos y agentes de decisión.
 
 \subsection{Retrieval-Augmented Generation (RAG)}
-El \textbf{Retrieval-Augmented Generation (RAG)} es una arquitectura de inteligencia
-artificial que combina modelos generativos con mecanismos de recuperación de
-información desde fuentes externas, tales como bases de datos, repositorios
-documentales o históricos de mediciones.
+El  \textbf{Retrieval-Augmented  Generation  (RAG)}  es  una   arquitectura   de
+inteligencia artificial  que  combina  modelos  generativos  con  mecanismos  de
+recuperación de información desde fuentes externas, tales como bases  de  datos,
+repositorios documentales o históricos de mediciones.
 
-En esta investigación, RAG permite a los agentes de IA enriquecer sus procesos de
-razonamiento incorporando conocimiento contextual proveniente de datos
-agronómicos históricos, resultados de simulación y parámetros de la red LPWAN,
+En esta investigación, RAG permite a los agentes de IA enriquecer  sus  procesos
+de  razonamiento  incorporando  conocimiento  contextual  proveniente  de  datos
+agronómicos históricos, resultados de simulación y parámetros de la  red  LPWAN,
 mejorando la calidad y pertinencia de las recomendaciones generadas.
 
 \subsection{Arquitectura Multiagente}
-La \textbf{arquitectura multiagente} es un enfoque de diseño de sistemas en el cual
-múltiples agentes de IA interactúan entre sí de manera cooperativa o coordinada,
-cada uno con responsabilidades y capacidades específicas, para resolver problemas
-complejos de forma distribuida.
+La \textbf{arquitectura multiagente} es un enfoque de diseño de sistemas  en  el
+cual múltiples agentes de IA  interactúan  entre  sí  de  manera  cooperativa  o
+coordinada, cada uno  con  responsabilidades  y  capacidades  específicas,  para
+resolver problemas complejos de forma distribuida.
 
-En el marco de este estudio, la arquitectura multiagente permite separar funciones
-como el análisis de desempeño de la red, la interpretación agronómica de los datos
-y la generación de recomendaciones, favoreciendo la modularidad, escalabilidad y
-robustez del sistema.
+En el marco  de  este  estudio,  la  arquitectura  multiagente  permite  separar
+funciones como el análisis de desempeño de la red, la interpretación  agronómica
+de los datos y la generación de recomendaciones,  favoreciendo  la  modularidad,
+escalabilidad y robustez del sistema.
 
 \subsection{Orquestación de Agentes}
-La \textbf{orquestación de agentes} se refiere al conjunto de mecanismos que
-gestionan la coordinación, secuenciación y comunicación entre múltiples agentes de
-IA, definiendo flujos de interacción, dependencias y reglas de ejecución.
+La \textbf{orquestación de agentes} se refiere al  conjunto  de  mecanismos  que
+gestionan la coordinación, secuenciación y comunicación entre múltiples  agentes
+de IA, definiendo flujos de interacción, dependencias y reglas de ejecución.
 
-En esta investigación, la orquestación de agentes asegura que los procesos de
-simulación de la red, análisis de datos agronómicos y generación de decisiones se
-realicen de manera coherente, controlada y reproducible, alineando las acciones de
-los agentes con los objetivos del sistema.
+En esta investigación, la orquestación de agentes asegura que  los  procesos  de
+simulación de la red, análisis de datos agronómicos y generación  de  decisiones
+se realicen de  manera  coherente,  controlada  y  reproducible,  alineando  las
+acciones de los agentes con los objetivos del sistema.
 
 \subsection{Gobernanza de Sistemas de IA}
-La \textbf{gobernanza de sistemas de IA} comprende los principios, políticas y
-mecanismos técnicos orientados a garantizar el uso responsable, transparente y
-controlado de los sistemas inteligentes. Esto incluye aspectos como la trazabilidad
-de decisiones, el control de salidas, la gestión de datos y la validación de
-resultados.
+La \textbf{gobernanza de sistemas de IA} comprende los principios,  políticas  y
+mecanismos técnicos orientados a garantizar el uso responsable,  transparente  y
+controlado  de  los  sistemas  inteligentes.  Esto  incluye  aspectos  como   la
+trazabilidad de decisiones, el control de salidas, la  gestión  de  datos  y  la
+validación de resultados.
 
