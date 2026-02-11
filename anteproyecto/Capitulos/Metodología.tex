@@ -1,79 +1,51 @@
 \chapter{Metodología}
 
-La metodología adoptada en este proyecto se fundamenta en principios de ingeniería de software ágil, complementada con Scrumban, con el propósito de garantizar un desarrollo iterativo, incremental y controlado del sistema. El ciclo de vida del proyecto se estructura en cinco fases principales, diseñadas para abordar de manera organizada el levantamiento de requerimientos, la planificación, el diseño, el desarrollo, la validación y el despliegue del sistema, asegurando la pertinencia y calidad de cada entrega.
+El desarrollo del proyecto se fundamenta en una metodología ágil basada en Kanban, combinada con un modelo de prototipado iterativo. Este enfoque permite gestionar el flujo de trabajo de manera continua, facilitar entregas incrementales y adaptar el sistema de acuerdo con la retroalimentación obtenida durante el proceso de desarrollo. \\
 
-Cada fase ha sido definida para aportar valor específico al proyecto y permitir un flujo de trabajo coherente, donde la retroalimentación y la mejora continua son elementos centrales, especialmente durante la construcción de prototipos y su validación.
+La selección de Kanban se justifica por el tamaño reducido del equipo de trabajo y la necesidad de mantener un control flexible y visual de las actividades, sin la imposición de roles rígidos. Por su parte, el modelo de prototipado permite construir versiones funcionales del sistema desde etapas tempranas, favoreciendo la validación progresiva de los requisitos y la mejora continua del producto.
 
-\section{Fase 1: Preparación y Levantamiento de Requerimientos}
-\textbf{Objetivo:} Establecer una base sólida para el proyecto, definiendo el alcance, los objetivos y recursos, y recopilando información detallada sobre las necesidades de los usuarios y stakeholders.
+\section{Planificación inicial}
 
-\subsection{Análisis de stakeholders}
-Identificación de los actores clave, sus roles y expectativas, con el fin de priorizar requerimientos según relevancia.
-\subsection{Levantamiento de requerimientos}
-Recolección de requerimientos funcionales y no funcionales mediante entrevistas, encuestas y revisión de sistemas existentes.
-\subsection{Selección de tecnologías}
-Evaluación y elección de herramientas y frameworks que aseguren escalabilidad, integración con la red de sensores (WSN) y un desarrollo eficiente dentro del marco de Scrum.
-
-\section{Fase 2: Planificación y Diseño del Sistema}
-\textbf{Objetivo:} Estructurar y organizar los componentes del sistema, definiendo la arquitectura y los flujos de información para garantizar coherencia y efectividad en el desarrollo.
-
-\subsection{Priorización del backlog}
-Organización de funcionalidades y tareas según valor para el usuario y complejidad de implementación, permitiendo un flujo de trabajo iterativo.
-\subsection{Diseño de arquitecura de alto nivel}
-Elaboración de diagramas de alto nivel que representen la estructura de módulos y microservicios.
-\subsection{Definición de procesos y documentación}
-Elaboración de diagramas de alto nivel que representen la estructura de módulos, microservicios y la conectividad con la red de sensores.
-Establecimiento de estándares de modelado gráfico para representar el comportamiento esperado del sistema, el flujo de información y la interacción detallada entre sus componentes.
-\subsection{Planificación de iteraciones Scrumban}
-Establecimiento de ciclos de trabajo flexibles que faciliten entregas incrementales y ajustes continuos basados en la retroalimentación de prototipos.
-
-\section{Fase 3: Implementación y Desarrollo del Prototipo}
-\textbf{Objetivo:} Construir prototipos funcionales del sistema, asegurando la correcta integración de los componentes y la validación de los modelos de inteligencia artificial. Esta fase se desarrollará de manera cíclica, permitiendo refinamientos continuos antes de alcanzar la versión final.
-
-\subsection{Desarrollo del Backend y APIs de Microservicios:}
-Implementación de la lógica de negocio por servicio, definición estricta de APIs RESTful o gRPC para la comunicación entre componentes, y gestión de la persistencia de datos (bases de datos).
-\subsection{Desarrollo del Frontend y Visualización de Decisiones:}
-Construcción de interfaces responsivas y centradas en el usuario, con un enfoque especial en la visualización clara de datos de contexto y las recomendaciones/justificaciones de la IA.
-\subsection{Integración de modelos de IA para uso de variables agrícolas:}
-La inteligencia artificial será un componente clave en la Web App, ya que permitirá la predicción de variables agrícolas con base en los datos recolectados. En esta fase, se integrarán modelos de aprendizaje automático entrenados con datos históricos y en tiempo real, con el objetivo de proporcionar pronósticos precisos sobre parámetros como la humedad del suelo, la temperatura ambiental y los niveles de precipitación.
-\subsection{Aseguramiento de Calidad y Mantenibilidad:}
-Aplicación rigurosa de control de versiones y estándares de codificación (linter, code review).
-
-\section{Fase 4: Pruebas y Validación}
-\textbf{Objetivo:} Verificar que los prototipos cumplan con los requerimientos funcionales y de calidad, mediante pruebas estructuradas y ajustes iterativos. Esta fase también se desarrollará de manera cíclica, en estrecha interacción con la fase 3 (Desarrollo), permitiendo la mejora continua de los prototipos..
-
-\subsection{Pruebas Unitarias, integración y Carga}
-\begin{itemize}
-    \item Pruebas Unitarias: Evaluación del correcto funcionamiento interno de las funciones y clases en cada microservicio de forma aislada
-    \item Pruebas de Integración: Verificación de que la comunicación y el contrato de APIs entre los microservicio y los brokers de mensajes operen según lo esperado.
-    \item Pruebas de Carga: Medición del rendimiento del sistema (throughput y latencia) bajo el tráfico esperado para asegurar una experiencia de usuario fluida, especialmente en los servicios de API y la base de datos.
-\end{itemize}.
-\subsection{Validación y Monitoreo del Desempeño de Modelos de IA:}
-\begin{itemize}
-    \item Evaluación de Precisión y Desempeño: Pruebas del modelo en escenarios de prueba controlados y con datos históricos para medir métricas clave.
-    \item Detección de Sesgos (Bias) y Desviación (Drift): Establecimiento de mecanismos para identificar si el modelo de IA está generando resultados sesgados o si su rendimiento se degrada con el tiempo o con datos del mundo real.
-\end{itemize}.
-\subsection{Integración de modelos de IA para uso de variables agrícolas:}
+La fase de planificación se desarrolla previo al inicio del ciclo de vida del software y tiene como propósito establecer las bases generales del proyecto. En esta etapa se definen:
 
 \begin{itemize}
-    \item Incorporación de Retroalimentación: Uso de la metodología Scrumban para priorizar rápidamente los bugs detectados durante las pruebas y las mejoras funcionales sugeridas por los stakeholders o usuarios de prueba.
-    \item Gestión del Backlog: Mantenimiento de un backlog priorizado y visible, que alimente continuamente el trabajo de la Fase 3: Desarrollo (lo que refuerza la naturaleza cíclica entre las dos fases).
-    \item Criterios de Aceptación: Definición clara de los criterios que deben ser cumplidos para que un prototipo o una funcionalidad sea considerada "Hecha" y lista para pasar a la siguiente iteración o despliegue.
-\end{itemize}.
+    \item El alcance inicial del sistema.
+    \item Los objetivos del proyecto.
+    \item Los requisitos generales.
+    \item Los actores involucrados.
+    \item Los lineamientos metodológicos y técnicos.
+\end{itemize}
 
-\section{Fase 5: Despliegue y Evaluación Final}
-\textbf{Objetivo:} Entregar el sistema completo, validado y documentado, asegurando su integración final y preparación para su operación en condiciones reales.
+Los resultados de esta fase alimentan el tablero Kanban y sirven como referencia durante el desarrollo, permitiendo ajustes cuando el proyecto lo requiera.
 
-\subsection{Integración final de módulos y microservicios}
-Consolidación de todos los componentes desarrollados en un sistema coherente y funcional.
+\section{Gestión del Proyecto mediante Kanban}
+El proyecto se gestiona mediante un tablero Kanban, en el cual las actividades se organizan en función de su estado de avance. Cada tarea representa una unidad de trabajo que puede corresponder a análisis, diseño, desarrollo, pruebas o ajustes derivados del prototipado. \\
+El uso de Kanban permite:
+\begin{itemize}
+    \item Visualizar el progreso del proyecto.
+    \item Priorizar actividades de manera dinámica.
+    \item Facilitar entregas parciales y funcionales.
+    \item Controlar el flujo de trabajo durante todo el desarrollo.
+\end{itemize}
 
-\subsection{Pruebas de Aceptación y Validación en Escenario Real}
+\section{Ciclo de Vida del Desarrollo con Prototipado}
 
-Las Pruebas de Aceptación del Usuario (UAT) son cruciales para verificar el cumplimiento de los requerimientos y las expectativas de los stakeholders en un entorno de producción o staging final. Durante esta etapa, se realiza la Validación de la Cadena de Datos y Decisión, que sigue el flujo de información a tráves del funcionamiento del sistema. Adicionalmente, se llevan a cabo pruebas exhaustivas de Seguridad y Resiliencia para asegurar la protección de las APIs y la estabilidad del sistema ante fallos simulados.
+El ciclo de vida del sistema se desarrolla de manera iterativa a través de prototipos, siguiendo las fases que se describen a continuación:
 
-\subsection{Documentación Integral, MLOps y Transición a Operación}
+\subsection{Análisis}
+En esta fase se recopilan y analizan los requerimientos funcionales y no funcionales del sistema. Se documentan las necesidades del usuario y se formulan casos de uso o historias que servirán como base para el desarrollo del prototipo.
+\subsection{Diseño}
+Se realiza el diseño general del sistema, incluyendo la estructura de sus componentes y la propuesta de interfaz de usuario. Esta fase busca definir cómo interactúan los elementos del sistema y cómo será la experiencia del usuario.
+\subsection{Implementación}
+Corresponde a la construcción del prototipo mediante el desarrollo del código necesario para materializar las funcionalidades definidas. Cada implementación da lugar a una versión funcional del sistema.
+\subsection{Pruebas}
+Se realizan pruebas para verificar el correcto funcionamiento del prototipo, identificar errores y validar que las funcionalidades desarrolladas cumplan con los requerimientos establecidos.
+\subsection{Validación y Retroalimentación}
+El prototipo es evaluado con el fin de identificar oportunidades de mejora. La retroalimentación obtenida se traduce en nuevas tareas o ajustes que ingresan nuevamente al tablero Kanban, dando inicio a una nueva iteración.
 
-La fase culmina con la Documentación Integral, la cual abarca un mapa detallado de la arquitectura de microservicios, la documentación de las APIs y, fundamentalmente, la Documentación Operacional (Runbooks y MLOps). Estos manuales son esenciales para el monitoreo, la respuesta a incidentes y el proceso de reentrenamiento y deployment de nuevos modelos de IA. El proceso finaliza con el Plan de Go-Live, que incluye la estrategia de implementación, la capacitación a usuarios clave y el establecimiento de un período de garantía para la transición exitosa a la operación y el soporte continuo.
+\bigskip
+\noindent \textbf{Resumen del ciclo:}Este ciclo se repite tantas veces como sea necesario hasta obtener un prototipo final que cumpla con los objetivos del proyecto.
 
+\section{Despliegue y Mantenimiento}
 
-La interacción entre la Fase 3 (Desarrollo e Implementación) y la Fase 4 (Pruebas y Validación) se establecerá bajo un modelo de Entrega y Mejora Continua. Esta dinámica cíclica, basada en iteraciones cortas, permite la construcción incremental de microservicios funcionales, su validación inmediata a través de pruebas de integración y pruebas de data pipeline, y la incorporación ágil de feedback del usuario. Este enfoque asegura la evolución progresiva del sistema, minimizando el riesgo, manteniendo una alta calidad del código (gracias a los artefactos de CI/CD), y garantizando una alineación constante con los requerimientos cambiantes del usuario y las condiciones de los datos reales del contexto colombiano.
+Las actividades de despliegue y mantenimiento se consideran posteriores al ciclo de desarrollo. El sistema podrá ser desplegado de manera incremental, permitiendo la publicación de versiones funcionales sin afectar su estabilidad. Posteriormente, se realizarán tareas de mantenimiento correctivo y evolutivo según sea necesario.
