@@ -1,0 +1,86 @@
+% Requiere los paquetes: booktabs, tabularx, array
+% Puedes agregarlos en el preámbulo con:
+% \usepackage{booktabs, tabularx, array}
+
+\chapter{Presupuesto}
+
+Los siguientes valores se representan en pesos colombianos (COP) para el año 2026.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X c c c c}
+        \toprule
+        \textbf{Personal}         & \textbf{Horas/Semaman}                    & \textbf{Valor Hora} & \textbf{Valor Mes} & \textbf{Valor Semestre} \\
+        \midrule
+        Estudiante Investigador 1 & 20                                        & \$12.400            & \$1.000.000        & \$6.000.000             \\
+        \addlinespace
+        Estudiante Investigador 2 & 20                                        & \$12.500            & \$1.000.000        & \$6.000.000             \\
+        \addlinespace
+        Codirector (MsC)          & 4                                         & \$100.000           & \$1.600.000        & \$9.600.000             \\
+        \addlinespace
+        Director (PhD)            & 4                                         & \$500.000           & \$8.000.000        & \$48.000.000            \\
+        \midrule
+        \textbf{TOTAL RRHH}       & \multicolumn{4}{r}{\textbf{\$69.600.000}}                                                                      \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Presupuesto detallado de Recursos Humanos}
+    \label{tab:presupuesto_humano}
+\end{table}
+
+% --- TABLA 2: RECURSOS FÍSICOS ---
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X c c c}
+        \toprule
+        \textbf{Elemento (Grupo LIDER)} & \textbf{Valor Unidad}                    & \textbf{Cantidad} & \textbf{Valor Semestre} \\
+        \midrule
+        Uso de computadores             & \$200.000                                & 2                 & \$2.400.000             \\
+        \addlinespace
+        Servicio de conectividad        & \$125.000                                & 2                 & \$1.500.000             \\
+        \midrule
+        \textbf{TOTAL FÍSICO}           & \multicolumn{3}{r}{\textbf{\$3.900.000}}                                               \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Presupuesto de Recursos Físicos e Infraestructura}
+    \label{tab:presupuesto_fisico}
+\end{table}
+
+% --- TABLA 3: SOFTWARE Y CLOUD (ESTRATEGIA FREE TIER) ---
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r}
+        \toprule
+        \textbf{Recurso Digital}                         & \textbf{Costo (COP)} \\
+        \midrule
+        Servicios de cómputo en la nube                  & \$0                  \\
+        \addlinespace
+        Servicios de almacenamiento en la nube           & \$0                  \\
+        \addlinespace
+        API de LLM (Modelos de Lenguaje)                 & \$0                  \\
+        \addlinespace
+        Servicio de almacenamiento de contenido estático & \$0                  \\
+        \midrule
+        \multicolumn{2}{l}{\textbf{TOTAL SOFTWARE}}                             \\
+        \multicolumn{2}{r}{\textbf{\$0}}                                        \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Recursos de Software y Servicios Cloud bajo modalidad de capa gratuita}
+    \label{tab:presupuesto_software}
+\end{table}
+% --- TABLA 5: RESUMEN TOTAL ---
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{0.6\textwidth}{>{\raggedright\arraybackslash}X r}
+        \toprule
+        \textbf{Rubro}          & \textbf{Valor Total}  \\
+        \midrule
+        Recurso Humano          & \$69.600.000          \\
+        Recurso Físico          & \$3.900.000           \\
+        Software y Cloud        & \$0                   \\
+        \midrule
+        \textbf{TOTAL PROYECTO} & \textbf{\$73.500.000} \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Consolidado general del presupuesto del proyecto}
+    \label{tab:presupuesto_total}
+\end{table}

@@ -4,19 +4,25 @@
 \usepackage[spanish,es-noshorthands]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{enumitem}
-\usepackage{csquotes}
 
-% ====== Tipografía y márgenes ======
+% ====== Tipografía y márgenes (APA 7) ======
 \usepackage{newtxtext,newtxmath}
-\usepackage{setspace}
 \usepackage{geometry}
-\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=16pt}
-\onehalfspacing
-% ====== Hipervínculos ======
+\geometry{margin=2.54cm, headheight=16pt}
+\usepackage{setspace}
+\doublespacing 
+
+% ====== Figuras, Tablas y Gráficos ======
+\usepackage{graphicx}
+\usepackage{float}       % Fix: Para usar [H]
+\usepackage{booktabs}    % Fix: Para \toprule, \midrule
+\usepackage{tabularx}    % Fix: Para tablas tabularx
 \usepackage[hidelinks]{hyperref}
+
+% ====== Bibliografía (APA 7) ======
+\usepackage[backend=biber,style=apa]{biblatex}
+\usepackage{enumitem}
+\addbibresource{referencias.bib}
 
 % ====== Encabezados ======
 \usepackage{fancyhdr}
@@ -25,123 +31,71 @@
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
-% ====== Figuras y Tablas estilo APA ======
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{caption}
-\captionsetup{labelfont=bf}
-\captionsetup[figure]{textfont=it}
-
-
-
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{array}
-
-
-% ====== Referencias APA ======
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
-\DeclareLanguageMapping{spanish}{spanish-apa}
-\addbibresource{referencias.bib}
-%\usepackage[style=ieee]{biblatex}  
-
-% Cargar el archivo .bib
-\addbibresource{referencias.bib} 
-
-% ====== Títulos (jerarquías personalizadas) ======
-\usepackage{titlesec}
-
-
-% Nivel 1 - Capítulos
-\titleformat{\chapter}[block]
-  {\normalfont\bfseries\centering\MakeUppercase}
-  {\thechapter.}{1em}{}
-\titlespacing{\chapter}{0pt}{0pt}{1.5\baselineskip}
-
-% Nivel 2 - Secciones
-\titleformat{\section}[block]
-{\normalfont\bfseries\MakeUppercase}
-{\thesection}{1em}{}
-\titlespacing{\section}{0pt}{1\baselineskip}{0.5\baselineskip}
-
-% Nivel 3 - SubSecciones
-\titleformat{\subsection}[runin]
-  {\normalfont\bfseries}{\thesubsection}{0.6em}{}
-
-% ====== Comandos para portada ======
-\newcommand{\tituloTesis}{Desarrollo de una aplicación web para el análisis y simulación de redes LPWAN con inteligencia artificial para agricultura inteligente en Colombia usando metodología Scrumban}
+% ====== Comandos del proyecto ======
+\newcommand{\tituloTesis}{Desarrollo de una aplicación web basada en agentes de inteligencia artificial para el análisis, soporte a la decisión y simulación visual de arquitecturas LPWAN en escenarios de agricultura de precisión en Colombia}
 \newcommand{\nombreEstudiante}{Santiago Sánchez Moya}
 \newcommand{\nombreEstudianteJ}{Juan Daniel Rodríguez Hurtado}
-\newcommand{\nombreDirector}{Ing. Roberto Ferro Escobar PhD}
-\newcommand{\nombreCoDirector}{Ing. Carlos Andrés Martínez Alayón MsC}
-\newcommand{\ciudad}{Bogotá D. C. – Colombia}
-\newcommand{\mesanio}{2025}
-
+\newcommand{\nombreDirector}{Ing. Roberto Ferro Escobar, PhD}
+\newcommand{\nombreCoDirector}{Ing. Carlos Andrés Martínez Alayón, MsC}
+\newcommand{\nombreUni}{Universidad Distrital Francisco José de Caldas}
+\newcommand{\nombreFacultad}{Facultad de Ingeniería}
+\newcommand{\nombreProyecto}{Proyecto Curricular de Ingeniería de Sistemas}
+\newcommand{\ciudad}{Bogotá D. C., Colombia}
+\newcommand{\mesanio}{2026}
 
 \begin{document}
 
 % ====== Portada ======
 \begin{titlepage}
-  \noindent
+  \centering
   \begin{minipage}{0.45\textwidth}
-    \includegraphics[width=0.5\textwidth]{IMAGENES/LOGOLIDER.jpg} % logo izquierda
+    \flushleft
+    \includegraphics[height=2cm]{IMAGENES/LOGOLIDER.jpg}
   \end{minipage}
   \hfill
   \begin{minipage}{0.45\textwidth}
     \flushright
-    \includegraphics[width=0.5\textwidth]{IMAGENES/LOGOUD.png} % logo derecha
+    \includegraphics[height=2cm]{IMAGENES/LOGOUD.png}
   \end{minipage}
-  \vspace{2cm}
 
-  \centering
-  {\Large \tituloTesis \par}
-  \vspace{2cm}
-  Trabajo de investigación/grado para optar por el título en\\
-  \textbf{Ingeniería de Sistemas}
-  \vspace{2cm}
-
-  \textbf{\nombreEstudiante}\par
-  \textbf{\nombreEstudianteJ}\par
-  \vspace{2cm}
-  Director:
-  \nombreDirector \\
-  CoDirector:
-  \nombreCoDirector
-  \vspace{2cm}
-
-  \ciudad \par
-  \mesanio
+  \vspace*{3cm}
+  {\large \textbf{\tituloTesis} \par}
+  \vfill
+  {\normalsize \nombreEstudiante \\ \nombreEstudianteJ \par}
+  \vfill
+  {\normalsize
+    Trabajo de grado para optar por el título de:\\
+    \textbf{Ingeniero de Sistemas} \par
+    \vspace{1cm}
+    Director:\\ \nombreDirector \\
+    Codirector:\\ \nombreCoDirector \par}
+  \vfill
+  {\normalsize
+    \nombreUni \\
+    \nombreFacultad \\
+    \nombreProyecto \\
+    \ciudad \\
+    \mesanio \par}
 \end{titlepage}
 
 % ====== Índice ======
+\pagenumbering{roman} % Páginas preliminares en romanos
 \tableofcontents
-\thispagestyle{empty}
 \clearpage
 
-% Numeración arriba derecha
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-
+% ====== Contenido ======
+\pagenumbering{arabic} % Reinicia numeración a arábigos
 \include{Capitulos/Resumen}
-
 \include{Capitulos/Introduccion}
-
-\include{Capitulos/problema_investigación}
-
+\include{Capitulos/problema_investigación} % Error: evité tildes en nombres de archivos
 \include{Capitulos/objetivos}
-
 \include{Capitulos/Justificacion}
-
 \include{Capitulos/marco_referencial}
-
 \include{Capitulos/Metodología}
-
+% IMPORTANTE: Renombra tu archivo "Alcances y Limitaciones.tex" a "alcances.tex"
 \include{Capitulos/Alcances y Limitaciones}
+\include{Capitulos/presupuesto}
 
-\printbibliography
-
-
+\printbibliography[title=Bibliografía, heading=bibintoc]
 
 \end{document}
