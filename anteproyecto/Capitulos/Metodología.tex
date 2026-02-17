@@ -6,11 +6,31 @@ gestionar  el  flujo  de  trabajo  de  manera   continua,   facilitar   entregas
 incrementales y adaptar el sistema de acuerdo con la retroalimentación  obtenida
 durante el proceso de desarrollo. \\
 
-La selección de Kanban se justifica por el tamaño reducido del equipo de trabajo
-y la necesidad de mantener un control flexible y visual de las actividades,  sin
-la imposición de roles rígidos. Por su parte, el modelo de  prototipado  permite
-construir versiones funcionales del sistema desde etapas tempranas, favoreciendo
-la validación progresiva de los requisitos y la mejora continua del producto.
+
+\section{Gestión del Proyecto mediante Kanban} El proyecto se gestiona  mediante
+un tablero Kanban, en el cual las actividades se  organizan  en  función  de  su
+estado de avance. El uso de Kanban permite: 
+\begin{itemize}
+    \item Visualizar el progreso del proyecto.
+    \item Priorizar actividades de manera dinámica.
+    \item Facilitar entregas parciales y funcionales.
+    \item Controlar el flujo de trabajo durante todo el desarrollo.
+\end{itemize}
+
+\noindent Por otro lado, el tablero propuesto para el proyecto se estructura de la siguiente manera:
+
+\begin{itemize}
+    \item Backlog
+    \item Análisis
+    \item Diseño
+    \item Desarrollo
+    \item Pruebas
+    \item Finalizado
+\end{itemize}
+
+Se establecen límites de trabajo en progreso (WIP) con el fin de evitar sobrecarga y mantener eficiencia en la ejecución. La gestión del trabajo se realiza mediante priorización dinámica del backlog, permitiendo adaptar el desarrollo según hallazgos técnicos y validaciones parciales.
+
+Kanban es utilizado exclusivamente como mecanismo de gestión del flujo de tareas, mientras que la estructura técnica del desarrollo se definió mediante el modelo de prototipado.
 
 \section{Planificación inicial}
 
@@ -29,51 +49,98 @@ esta etapa se definen:
 Los resultados de esta fase alimentan el tablero Kanban y sirven como referencia
 durante el desarrollo, permitiendo ajustes cuando el proyecto lo requiera.
 
-\section{Gestión del Proyecto mediante Kanban} El proyecto se gestiona  mediante
-un tablero Kanban, en el cual las actividades se  organizan  en  función  de  su
-estado de avance.  Cada  tarea  representa  una  unidad  de  trabajo  que  puede
-corresponder a análisis, diseño, desarrollo, pruebas  o  ajustes  derivados  del
-prototipado. \\ El uso de Kanban permite: \begin{itemize}
-    \item Visualizar el progreso del proyecto.
-    \item Priorizar actividades de manera dinámica.
-    \item Facilitar entregas parciales y funcionales.
-    \item Controlar el flujo de trabajo durante todo el desarrollo.
-\end{itemize}
-
 \section{Ciclo de Vida del Desarrollo con Prototipado}
 
 El ciclo de vida del sistema se desarrolla  de  manera  iterativa  a  través  de
 prototipos, siguiendo las fases que se describen a continuación:
 
-\subsection{Análisis} En esta fase se recopilan y  analizan  los  requerimientos
-funcionales y no funcionales del sistema.  Se  documentan  las  necesidades  del
-usuario, se refinan y detallan  las  historias  de  usuario  definidas  en  la
-planificación inicial.
-comprender interacciones complejas. \subsection{Diseño}  Se  realiza  el  diseño
-general del sistema, incluyendo la estructura de sus componentes y la  propuesta
-de interfaz de usuario. Esta fase busca definir cómo interactúan  los  elementos
-del sistema y cómo será la experiencia del usuario.  \subsection{Implementación}
-Corresponde a la construcción del prototipo mediante el  desarrollo  del  código
-necesario para materializar las funcionalidades definidas.  Cada  implementación
-da lugar a una versión funcional del sistema. \subsection{Pruebas}  Se  realizan
-pruebas para verificar el correcto  funcionamiento  del  prototipo,  identificar
-errores  y  validar  que  las  funcionalidades  desarrolladas  cumplan  con  los
-requerimientos  establecidos.  \subsection{Validación  y  Retroalimentación}  El
-prototipo es evaluado con el fin de  identificar  oportunidades  de  mejora.  La
-retroalimentación obtenida se traduce en nuevas tareas o  ajustes  que  ingresan
-nuevamente  al  tablero  Kanban,  dando  inicio  a  una  nueva   iteración.   La
-retroalimentación y puntos clave obtenidos en la reunión con el usuario final se
-plasmarán en un acta con un formato claro y preciso. \\
+\subsection{Iteración 1 - Prototipo Inicial}
+
+Incluye las siguientes etapas:
+
+\begin{itemize}
+    \item Análisis
+    \begin{itemize}
+        \item Refinamiento de historias de usuario prioritarias.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Diseño
+    \begin{itemize}
+        \item Diseño de interfaz base.
+        \item Diseño técnico preliminar.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Implementación
+    \begin{itemize}
+        \item Desarrollo de la estructura funcional de la Web App.
+        \item Configuración de base de datos.
+        \item Implementación de lógica básica del sistema.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Pruebas
+    \begin{itemize}
+        \item Pruebas funcionales iniciales.
+        \item Validación de comportamiento general.
+    \end{itemize}
+\end{itemize}
+
+El resultado de esta iteración es un prototipo funcional base.
+
+\subsection{Iteración 2 - Prototipo Refinado}
+
+\begin{itemize}
+    \item Análisis
+    \begin{itemize}
+        \item Ajustes derivados del prototipo anterior.
+        \item Definición de integración de inteligencia artificial.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Diseño
+    \begin{itemize}
+        \item Diseño de integración del modelo de IA.
+        \item Refinamiento arquitectónico.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Implementación
+    \begin{itemize}
+        \item Integración del modelo de IA.
+        \item Optimización del backend.
+        \item Ajustes de interfaz.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Pruebas
+    \begin{itemize}
+        \item Pruebas de integración.
+        \item Validación de resultados predictivos.
+        \item Corrección de defectos.
+    \end{itemize}
+\end{itemize}
 
 
-\textbf{Resumen del ciclo:} Este ciclo se repite  tantas  veces
-como sea necesario  hasta  obtener  un  prototipo  final  que  cumpla  con  los
-objetivos del proyecto.
+El resultado es el prototipo final validado.
 
-\section{Despliegue y Mantenimiento}
+\subsection{Fase Final - Despliegue y Cierre}
 
-Las actividades de despliegue y mantenimiento se consideran posteriores al ciclo
-de  desarrollo.  El  sistema  podrá  ser  desplegado  de   manera   incremental,
-permitiendo la publicación de versiones funcionales sin afectar su  estabilidad.
-Posteriormente, se realizarán tareas de  mantenimiento  correctivo  y  evolutivo
-según sea necesario.
+Incluye:
+
+\begin{itemize}
+    \item Configuración del entorno productivo.
+    \item Validación del pipeline de integración continua.
+    \item Pruebas finales.
+    \item Análisis de resultados.
+    \item Documentación final.
+\end{itemize}
+
+Durante las iteraciones se realizaron despliegues incrementales en entornos de prueba, mientras que en esta fase se consolida la versión estable del sistema.
