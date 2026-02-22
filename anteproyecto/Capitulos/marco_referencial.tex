@@ -2,17 +2,17 @@
 
 \section{Marco Teórico}
 
-\subsection{Agricultura 4.0}
+\subsection{Agricultura Inteligente}
 
-\subsubsection{Contexto  y  relevancia  para  Colombia}   La   Agricultura   4.0
+\subsubsection{Contexto y relevancia para Colombia} La  Agricultura  inteligente
 constituye la integración de tecnologías emergentes —tales como el  Internet  de
 las Cosas (IoT), analítica avanzada  de  datos,  automatización  e  inteligencia
 artificial— en los sistemas productivos agrícolas, con el propósito de optimizar
 procedimientos, incrementar la productividad y fortalecer la  sostenibilidad  de
-la  actividad  agrícola   \parencite[]{shafi2019precision}.   En   el   contexto
-colombiano, este enfoque  adquiere  una  especial  importancia  debido  al  peso
-estratégico del sector rural  y  a  la  diversidad  ecológica  y  climática  que
-caracteriza los sistemas de producción del país.
+la actividad agrícola \parencite[]{de2022survey}.  En  el  contexto  colombiano,
+este enfoque adquiere una especial importancia debido al  peso  estratégico  del
+sector rural y a  la  diversidad  ecológica  y  climática  que  caracteriza  los
+sistemas de producción del país.
 
 No obstante, la literatura evidencia la existencia de rezagos  estructurales  en
 materia de  adopción  tecnológica.  Únicamente  el  1.7\%  de  las  Unidades  de
@@ -34,13 +34,13 @@ cambios en la organización productiva, la  formación  de  capital  humano  y  
 gobernanza del conocimiento agrícola.
 
 \subsubsection{Retos: brecha digital e ineficiencias} A pesar  de  las  ventajas
-potenciales que supone la Agricultura 4.0, su implementación enfrenta  múltiples
-desafíos. Uno de los más significativos es la denominada brecha  digital  rural,
-entendida como la  desigualdad  en  el  acceso  a  tecnologías  digitales  entre
-agricultores tecnificados y pequeños productores tradicionales. Se evidencia que
-esta  brecha  no  solo  se  manifiesta  en  infraestructura,  sino  también   en
-alfabetización  digital,  acceso  a  plataformas  inteligentes  y  capacidad  de
-inversión en innovación tecnológica \parencite[]{quiroz2023agricultura}.
+potenciales que supone la Agricultura inteligente,  su  implementación  enfrenta
+múltiples desafíos. Uno de  los  más  significativos  es  la  denominada  brecha
+digital rural,  entendida  como  la  desigualdad  en  el  acceso  a  tecnologías
+digitales entre agricultores tecnificados y pequeños productores  tradicionales.
+Se evidencia que esta brecha no solo  se  manifiesta  en  infraestructura,  sino
+también en alfabetización digital, acceso a plataformas inteligentes y capacidad
+de inversión en innovación tecnológica \parencite[]{quiroz2023agricultura}.
 
 A ello  se  suma  la  baja  disponibilidad  de  conectividad  en  zonas  rurales
 colombianas,  condición  imprescindible  para  soportar  sistemas  de  monitoreo
@@ -60,14 +60,8 @@ tecnologías, destacando la necesidad de arquitecturas interoperables para logra
 la    integración    funcional     de     múltiples     fuentes     de     datos
 \parencite[]{quiroz2023agricultura}.
 
-\subsubsection{El rol del IoT y la agricultura de precisión} La  Agricultura  de
-Precisión se constituye como un fundamento metodológico de la  Agricultura  4.0.
-Esta se define como una estrategia de gestión basada en la captura y análisis de
-datos espacio-temporales, con el objetivo de optimizar decisiones  relativas  al
-uso   de    insumos,    manejo    de    suelos    y    gestión    de    cultivos
-\parencite[]{quiroz2023agricultura}.
-
-En  este  marco,  el  IoT  emerge  como  un  componente  clave  y  se  presentan
+\subsubsection{El rol del IoT y la agricultura Inteligente} En el  marco  de  la
+agricultura inteligente el IoT emerge como un componente clave  y  se  presentan
 arquitecturas IoT aplicables a la  agricultura  colombiana,  donde  se  integran
 sensores ambientales, redes de comunicación de baja potencia  y  plataformas  de
 visualización y análisis de datos \parencite[]{chen2018cognitive}
@@ -78,7 +72,7 @@ cultivo en sistemas de control inteligente, combinando el conocimiento  empíric
 local       con        modelos        predictivos        y        automatización
 \parencite[]{florez2021agroindustria}.
 
-En consecuencia, tanto la Agricultura de Precisión como las infraestructuras IoT
+En consecuencia, tanto la Agricultura inteligente como las infraestructuras  IoT
 proveen las bases tecno-operativas para evolucionar hacia modelos agrícolas  más
 robustos, sostenibles y basados en evidencia cuantificable. Este enfoque integra
 los datos provenientes del entorno físico con modelos de decisión computacional,
@@ -86,8 +80,8 @@ reduciendo la incertidumbre operativa y permitiendo una mayor eficiencia  en  el
 uso de recursos críticos como agua, fertilizantes y energía.
 
 
-\subsection{Redes LPWAN: Tecnologías Habilitadoras de la Agricultura de
-      Precisión}
+\subsection{Redes   LPWAN:   Tecnologías   Habilitadoras   de   la   Agricultura
+      Inteligente}
 
 \subsubsection{Fundamentos: Objetivos de diseño, toppologías, arquitecturas} Las
 Redes de Área Amplia  de  Baja  Potencia  (LPWAN,  por  sus  siglas  en  inglés)
@@ -232,6 +226,7 @@ cobertura \parencite[]{chilamkurthy2022low}.
 \begin{itemize}
       \item \textbf{Topología de estrella:} La topología de estrella consiste en
 
+
             una red de tipo punto a punto (P2P, por sus siglas en inglés), en la
             cual todos los nodos se conectan a un nodo central, denominado hub o
             gateway. Este hub o hub actúa como el único  medio  de  comunicación
@@ -290,79 +285,102 @@ servicios   en   la   nube   para   respaldo   y    procesamiento    de    datos
 
             \begin{itemize}
 
-                  \item \textbf{Dispositivos finales  (End  Devices):}  Su  función  principal  es
-                        recopilar información relevante según la aplicación. Los datos  capturados
-                        pueden  enviarse  a  capas  superiores  de   la   arquitectura   para   su
-                        procesamiento o para generar una respuesta  según  la  implementación.  La
-                        información recolectada se transmite comúnmente a la  estación  de  acceso
-                        mediante un canal de radio dedicado, y posteriormente al backend de la red
-                        IoT \parencite[]{chilamkurthy2022low}.
-
-                  \item \textbf{Estación de acceso  /  Gateway  /  Concentrador:}  Proporciona  el
-                        enlace  radioeléctrico  para  la  administración  de  dispositivos  y   el
-                        intercambio de tráfico.  Garantiza  la  integridad  del  enlace  de  radio
-                        considerando métricas como la tasa de error  de  bit  (BER),  seguridad  y
-                        calidad de servicio (QoS). La estación base se comunica con el  gateway  o
-                        concentrador, el  cual  en  algunos  casos  es  denominado  núcleo  (core)
+                  \item \textbf{Dispositivos finales (End Devices):} Su  función
+                        principal es
+                        recopilar información relevante según la aplicación. Los
+                        datos capturados pueden enviarse a capas  superiores  de
+                        la arquitectura para su procesamiento o para generar una
+                        respuesta  según  la  implementación.   La   información
+                        recolectada se transmite comúnmente  a  la  estación  de
+                        acceso  mediante  un  canal   de   radio   dedicado,   y
+                        posteriormente   al    backend    de    la    red    IoT
                         \parencite[]{chilamkurthy2022low}.
 
-                  \item \textbf{Núcleo de red (Core):} Es responsable del control  y  enrutamiento
-                        del tráfico de usuario. Actúa como enlace entre la estación de acceso y la
-                        red  IoT,  además  de  funcionar  como  traductor  entre  los   protocolos
-                        utilizados por la estación de acceso y aquellos  soportados  por  la  red.
-                        Dependiendo de la tecnología, el concentrador puede ofrecer capacidades de
-                        computación en el borde y almacenamiento de datos para reducir la carga en
-                        la nube, especialmente en aplicaciones que requieren asistencia en  tiempo
-                        real y baja latencia. También puede proporcionar tratamiento  prioritario,
-                        control de  admisión  robusto  y  soporte  de  movilidad  en  determinadas
+                  \item \textbf{Estación de acceso /  Gateway  /  Concentrador:}
+                        Proporciona el
+                        enlace  radioeléctrico   para   la   administración   de
+                        dispositivos y el intercambio de tráfico.  Garantiza  la
+                        integridad del enlace  de  radio  considerando  métricas
+                        como la tasa de error de bit (BER), seguridad y  calidad
+                        de servicio (QoS). La estación base se comunica  con  el
+                        gateway o concentrador, el  cual  en  algunos  casos  es
+                        denominado                 núcleo                 (core)
+                        \parencite[]{chilamkurthy2022low}.
+
+                  \item \textbf{Núcleo  de  red  (Core):}  Es  responsable   del
+                        control y enrutamiento
+                        del tráfico de  usuario.  Actúa  como  enlace  entre  la
+                        estación de acceso y la red  IoT,  además  de  funcionar
+                        como traductor entre los protocolos  utilizados  por  la
+                        estación de acceso y aquellos  soportados  por  la  red.
+                        Dependiendo de  la  tecnología,  el  concentrador  puede
+                        ofrecer  capacidades  de  computación  en  el  borde   y
+                        almacenamiento de datos para  reducir  la  carga  en  la
+                        nube,  especialmente  en  aplicaciones   que   requieren
+                        asistencia en tiempo real y baja latencia. También puede
+                        proporcionar   tratamiento   prioritario,   control   de
+                        admisión robusto y soporte de movilidad en  determinadas
                         tecnologías LPWAN \parencite[]{chilamkurthy2022low}.
 
-                  \item \textbf{Servidor LPWAN y servidores de aplicación:} El servidor  LPWAN  se
-                        encarga del aprovisionamiento, registro y operación de las entidades de la
-                        red. Puede compartir o ampliar funcionalidades esenciales del núcleo  como
-                        el enrutamiento  de  tráfico,  seguridad  y  manejo  de  prioridades.  Los
-                        servidores de aplicación y la nube gestionan la base de datos que almacena
-                        los mensajes recibidos de los dispositivos conectados, y pueden analizar y
-                        actuar sobre los datos mediante técnicas de análisis de grandes  volúmenes
-                        de información \parencite[]{chilamkurthy2022low}.
+                  \item \textbf{Servidor LPWAN y servidores de  aplicación:}  El
+                        servidor LPWAN se
+                        encarga del aprovisionamiento, registro y  operación  de
+                        las entidades de  la  red.  Puede  compartir  o  ampliar
+                        funcionalidades   esenciales   del   núcleo   como    el
+                        enrutamiento  de  tráfico,   seguridad   y   manejo   de
+                        prioridades. Los servidores  de  aplicación  y  la  nube
+                        gestionan la base de datos  que  almacena  los  mensajes
+                        recibidos  de  los  dispositivos  conectados,  y  pueden
+                        analizar y actuar sobre los datos mediante  técnicas  de
+                        análisis   de   grandes   volúmenes    de    información
+                        \parencite[]{chilamkurthy2022low}.
 
             \end{itemize}
 
       \item \textbf{Variantes arquitectónicas}
 
-            Las LPWAN pueden organizarse bajo diferentes enfoques
-            arquitectónicos, dependiendo de la tecnología, el entorno de despliegue y los requerimientos
-            de la aplicación:
+            Las   LPWAN   pueden   organizarse    bajo    diferentes    enfoques
+            arquitectónicos,  dependiendo  de  la  tecnología,  el  entorno   de
+            despliegue y los requerimientos de la aplicación:
 
             \begin{itemize}
 
-                  \item \textbf{Arquitectura híbrida con tecnologías de acceso externas:} En  este
-                        esquema,  tecnologías  como  ZigBee  o  Wi-Fi  proporcionan   conectividad
-                        primaria al dispositivo mediante su propia  arquitectura.  Posteriormente,
-                        el gateway de dicha red preliminar se interconecta con el punto de  acceso
-                        de  la  LPWAN,  generando  una  arquitectura  mixta.   Este   enfoque   es
-                        particularmente     común     en      LPWAN      de      tipo      celular
+                  \item \textbf{Arquitectura híbrida con tecnologías  de  acceso
+                              externas:} En este
+                        esquema, tecnologías como ZigBee  o  Wi-Fi  proporcionan
+                        conectividad primaria al dispositivo mediante su  propia
+                        arquitectura. Posteriormente, el gateway  de  dicha  red
+                        preliminar se interconecta con el punto de acceso de  la
+                        LPWAN, generando una arquitectura mixta. Este enfoque es
+                        particularmente  común  en   LPWAN   de   tipo   celular
                         \parencite[]{chilamkurthy2022low}.
 
-                  \item \textbf{Arquitectura híbrida multi-LPWAN:} Permite  que  los  dispositivos
-                        tengan acceso a múltiples redes LPWAN (por ejemplo, SigFox y  LoRa).  Cada
-                        LPWAN recopila datos de los dispositivos dentro de su zona  de  cobertura,
-                        con estaciones base instaladas según el área cubierta.  El  tráfico  puede
-                        transmitirse hacia el núcleo y la nube a través del gateway LPWAN o de los
-                        nodos. En estas arquitecturas mixtas,  las  entidades  del  núcleo  o  del
-                        servidor  de  red  gestionan  funciones  como   autenticación,   registro,
-                        asignación      de      recursos      y      control      del      tráfico
+                  \item \textbf{Arquitectura híbrida multi-LPWAN:}  Permite  que
+                        los dispositivos
+                        tengan acceso a  múltiples  redes  LPWAN  (por  ejemplo,
+                        SigFox  y  LoRa).  Cada  LPWAN  recopila  datos  de  los
+                        dispositivos  dentro  de  su  zona  de  cobertura,   con
+                        estaciones base instaladas según el  área  cubierta.  El
+                        tráfico puede transmitirse hacia el núcleo y la  nube  a
+                        través del gateway  LPWAN  o  de  los  nodos.  En  estas
+                        arquitecturas mixtas, las entidades  del  núcleo  o  del
+                        servidor de red gestionan funciones como  autenticación,
+                        registro, asignación de recursos y control  del  tráfico
                         \parencite[]{chilamkurthy2022low}.
 
-                  \item \textbf{Arquitecturas   LPWAN   cognitivas:}    Se    investigan    nuevas
-                        arquitecturas basadas en inteligencia artificial y aprendizaje  automático
-                        para  crear   soluciones   LPWAN   cognitivas.   Estas   buscan   soportar
-                        comunicaciones  sofisticadas,  gestionar  aplicaciones  IoT   diversas   y
-                        habilitar  redes  definidas  por  software.  Permiten  la  coexistencia  e
-                        interoperabilidad de múltiples tecnologías  LPWAN,  facilitando  servicios
-                        inteligentes más eficientes en aplicaciones  como  ciudades  inteligentes,
-                        Green  IoT,  monitoreo  de  salud,  hogares  inteligentes   y   conducción
-                        automatizada \parencite[]{chilamkurthy2022low}.
+                  \item \textbf{Arquitecturas LPWAN cognitivas:}  Se  investigan
+                        nuevas
+                        arquitecturas  basadas  en  inteligencia  artificial   y
+                        aprendizaje  automático  para  crear  soluciones   LPWAN
+                        cognitivas.   Estas   buscan   soportar   comunicaciones
+                        sofisticadas,  gestionar  aplicaciones  IoT  diversas  y
+                        habilitar redes  definidas  por  software.  Permiten  la
+                        coexistencia   e    interoperabilidad    de    múltiples
+                        tecnologías LPWAN,  facilitando  servicios  inteligentes
+                        más   eficientes   en   aplicaciones    como    ciudades
+                        inteligentes, Green IoT,  monitoreo  de  salud,  hogares
+                        inteligentes       y       conducción       automatizada
+                        \parencite[]{chilamkurthy2022low}.
 
             \end{itemize}
 
@@ -380,12 +398,12 @@ de diseño IoT.
 \begin{itemize}
       \item \textbf{Tecnologías en Banda con Licencia (3GPP):} Estas tecnologías
 
+
             operan en espectro licenciado (principalmente 700-900 MHz),  lo  que
             garantiza  una  comunicación  confiable  sin  interferencias,   pero
             conlleva costos de suscripción. Son ideales  para  aplicaciones  que
             requieren  alta  confiabilidad,  movilidad  y   cobertura   nacional
-            \parencite[]{chilamkurthy2022low}.
-            \begin{itemize}
+            \parencite[]{chilamkurthy2022low}. \begin{itemize}
                   \item \textbf{LTE-M (LTE Cat M1 / eMTC):} Basada en LTE,
                         ofrece la mayor tasa de datos (hasta  1  Mbps),  soporta
                         movilidad (handover) y voz (VoLTE). Es la  más  adecuada
@@ -411,8 +429,7 @@ de diseño IoT.
             bandas ISM sub-GHz (e.g., 868 MHz, 915 MHz) o 2.4 GHz, sin costos de
             espectro pero sujetas a restricciones  de  duty  cycle  y  potencial
             interferencia.   Permiten   el   despliegue   de   redes    privadas
-            \parencite[]{chilamkurthy2022low}.
-            \begin{itemize}
+            \parencite[]{chilamkurthy2022low}. \begin{itemize}
                   \item \textbf{SigFox:} Utiliza Banda Ultra Estrecha (UNB). Se
                         caracteriza por su extremo bajo costo, mayor alcance (50
                         km rural) y minimización del consumo energético (6 nA en
@@ -430,6 +447,7 @@ de diseño IoT.
                         tasa de datos es baja (0.3-50 kbps) y depende del factor
                         de ensanchamiento (SF).
                   \item \textbf{RPMA (Ingenu):} Opera en la banda de 2.4 GHz, lo
+
 
                         que  le  otorga  un  gran  ancho   de   banda   y   alta
                         escalabilidad estructural. Ofrece la mayor tasa de datos
@@ -560,7 +578,7 @@ adecuada:
 
 \subsection{Sensórica y Variables Agronómicas}
 
-La agricultura de precisión se fundamenta en la  captura  sistemática  de  datos
+La agricultura inteligente se fundamenta en  la  captura  sistemática  de  datos
 agronómicos mediante sensores, los cuales permiten  monitorear  las  condiciones
 del cultivo y el ambiente en tiempo real o casi real. Esta capacidad de medición
 precisa y continua resulta esencial para la toma de  decisiones  informadas,  la
@@ -570,7 +588,7 @@ agrícola, la selección  de  la  sensórica  adecuada  y  la  comprensión  de 
 variables que  miden  constituyen  un  paso  crítico  previo  al  diseño  de  la
 arquitectura de comunicación.
 
-\subsubsection{Sensórica en  la  agricultura  de  presición}  Los  sensores  son
+\subsubsection{Sensórica en la agricultura  de  inteligente}  Los  sensores  son
 dispositivos que convierten señales del  mundo  físico  (por  ejemplo,  humedad,
 temperatura, composición química) en datos digitales, actuando como la  interfaz
 primaria entre el campo y los sistemas de información (Applying IoT Sensors  and
@@ -586,6 +604,7 @@ sensores clasificables según el parámetro físico que miden:
 
 \begin{itemize}
       \item \textbf{Sensores Químicos:} Miden propiedades como el pH del suelo y
+
             agua, conductividad eléctrica, salinidad, y concentraciones de gases
             (CO2, O2, CH4) y nutrientes (nitratos). Se dividen principalmente en
             fotodetectores y electroquímicos \parencite[]{alahmad2023applying}.
@@ -601,6 +620,7 @@ sensores clasificables según el parámetro físico que miden:
             de presión, acelerómetros y celdas de carga. Son fundamentales  para
             medir la compactación del suelo, el crecimiento de frutos, el viento
             y el peso continuo de las plantas \parencite[]{alahmad2023applying}.
+
 
       \item \textbf{Sensores Acústicos:} Detectan cambios en las frecuencias
             sonoras,  útiles  para  identificar  plagas  (como  barrenadores  de
@@ -630,10 +650,11 @@ relevantes, vinculadas a los sensores antes descritos, incluyen:
                   \item \textbf{Nutrientes (N, P, K) y pH:} Determinan la
                         fertilidad del suelo y la  necesidad  de  fertilización.
                         Sensores electroquímicos y ópticos permiten estimaciones
-                        en el sitio, aunque su medición en tiempo real sigue  siendo
-                        un           desafío            en            desarrollo
+                        en el sitio, aunque su medición  en  tiempo  real  sigue
+                        siendo       un       desafío       en        desarrollo
                         \parencite[]{alahmad2023applying}.
                   \item \textbf{Temperatura del Suelo: }Afecta la germinación de
+
                         semillas y la actividad microbiana. Se mide con sensores
                         térmicos \parencite[]{alahmad2023applying}.
                   \item \textbf{Conductividad Eléctrica (CE):} Indica la
@@ -650,11 +671,13 @@ relevantes, vinculadas a los sensores antes descritos, incluyen:
                         resistivos) \parencite[]{alahmad2023applying}.
                   \item \textbf{Precipitación y Viento: }Afectan la programación
 
+
                         de riego, la aplicación de agroquímicos y los riesgos de
                         erosión.  Se  miden  con  pluviómetros   y   anemómetros
                         (sensores         mecánicos         o         acústicos)
                         \parencite[]{alahmad2023applying}.
                   \item \textbf{Radiación Solar:} Determina la fotosíntesis y el
+
                         crecimiento.  Se  mide  con  sensores  de  radiación   o
                         piranómetros \parencite[]{alahmad2023applying}.
 
@@ -671,24 +694,25 @@ relevantes, vinculadas a los sensores antes descritos, incluyen:
 El siguiente análisis se basa en el artículo: \textit{A Survey on LoRaWAN
       Technology: Recent Trends,  Opportunities,  Simulation  Tools  and  Future
       Directions} \parencite[]{almuhaya2022survey}. La simulación de redes LPWAN
-es crucial para evaluar el rendimiento  de  la  red  a
-gran escala. A continuación, se detallan las herramientas de simulación tratadas
-en el artículo y sus métricas de desempeño.
+
+es crucial para evaluar el rendimiento de la red a gran escala. A  continuación,
+se detallan las herramientas  de  simulación  tratadas  en  el  artículo  y  sus
+métricas de desempeño.
 
 \begin{table}[H]
-      \centering
-      \small % Reducimos un poco el tamaño de letra para que respire la tabla
+      \centering\small % Reducimos el tamaño de letra
       \begin{tabularx}{\textwidth}{@{} p{2.2cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X @{}}
             \toprule
-            \textbf{Herramienta} & \textbf{Descripción y Plataforma}         & \textbf{Características Clave}                                                                                  & \textbf{Métricas de Desempeño}                \\ \midrule
-
-            LoRaSim              & Simulador de eventos discretos en Python. & Simula un único gateway para varios dispositivos finales (EDs). Incorpora efecto de captura y asignación de SF. & Packet Reception Ratio (PRR) y escalabilidad. \\ \addlinespace
-
-            LoRaWANSim           & Módulo para ns-3 basado en C++.           & Soporta comunicación multicanal, multi-gateway y bidireccional. Incluye Clases A y C.                           & Consumo de energía, PDR y latencia.           \\ \addlinespace
-
-            FAD                  & Simulador de eventos discretos en Python. & Enfocado en gran escala. Introduce un modelo de canal realista y considera el efecto de captura.                & PDR y consumo de energía.                     \\ \addlinespace
-
-            Simu-LoRa            & Implementado en MATLAB.                   & Diseñado para evaluar la capa física (PHY) y diferentes factores de dispersión (SF).                            & Eficiencia energética y PDR.                  \\ \bottomrule
+            \textbf{Herramienta} & \textbf{Descripción y Plataforma}         & \textbf{Características Clave}                                                                                  & \textbf{Métricas de Desempeño}                \\
+            \midrule
+            LoRaSim              & Simulador de eventos discretos en Python. & Simula un único gateway para varios dispositivos finales (EDs). Incorpora efecto de captura y asignación de SF. & Packet Reception Ratio (PRR) y escalabilidad. \\
+            \addlinespace
+            LoRaWANSim           & Módulo para ns-3 basado en C++.           & Soporta comunicación multicanal, multi-gateway y bidireccional. Incluye Clases A y C.                           & Consumo de energía, PDR y latencia.           \\
+            \addlinespace
+            FAD                  & Simulador de eventos discretos en Python. & Enfocado en gran escala. Introduce un modelo de canal realista y considera el efecto de captura.                & PDR y consumo de energía.                     \\
+            \addlinespace
+            Simu-LoRa            & Implementado en MATLAB.                   & Diseñado para evaluar la capa física (PHY) y diferentes factores de dispersión (SF).                            & Eficiencia energética y PDR.                  \\
+            \bottomrule
       \end{tabularx}
       \caption{Comparativa de herramientas de simulación para redes LoRaWAN. Elaboración propia.}
       \label{tab:lorawan_tools}
@@ -746,7 +770,7 @@ En el documento de \textit{LLM-Based Multi-Agent Systems for Software
 
 En el caso particular de los agentes basados en LLM, estos integran un modelo de
 lenguaje como núcleo cognitivo del  agente,  complementado  con  componentes  de
-memoria, percepción y ejecución  de  acciones. De  modo  que  estos  agentes  son
+memoria, percepción y ejecución de acciones.  De  modo  que  estos  agentes  son
 sistemas que utilizan el LLM  para  razonar  sobre  observaciones,  objetivos  y
 retroalimentación,  permitiéndoles  planificar  y  actuar  de  forma   iterativa
 \parencite[]{he2025llm}.
@@ -850,7 +874,8 @@ gestionar el trabajo de manera dinámica.
       \item Visualización del flujo de trabajo mediante el tablero Kanban.
       \item Limitación del WIP para evitar sobrecarga y mejorar la eficiencia
             del flujo.
-      \item Gestión continua del flujo de trabajo basada en la capacidad disponible.
+      \item Gestión continua  del  flujo  de  trabajo  basada  en  la  capacidad
+            disponible.
       \item Hacer explícitas las políticas del proceso
       \item Implementar ciclos de feedback.
       \item Mejora colaborativa.
@@ -911,8 +936,8 @@ No obstante, el modelo ágil también presenta limitaciones:
 
 Las métricas permiten inspeccionar  el  progreso  y  detectar  oportunidades  de
 mejora. En entornos ágiles, la medición del desempeño se orienta tanto al avance
-del   producto    como    a    la    eficiencia    del    flujo    de    trabajo.
-\subsubsection{Métricas de Flujo y Eficiencia}
+del producto como a la eficiencia del flujo de trabajo.  \subsubsection{Métricas
+      de Flujo y Eficiencia}
 
 \begin{itemize}
       \item Tiempo de ciclo (cycle time): mide el tiempo desde que una tarea
@@ -976,7 +1001,9 @@ Entre las principales ventajas del Modelo de Prototipado se encuentran:
             en el proceso \parencite[]{hossain2023software}.
       \item \textbf{Clarificación de Requisitos:} Permite identificar y resolver
 
+
             ambigüedades tempranamente, generando especificaciones más precisas.
+
 
       \item \textbf{Reducción de Riesgos y Errores Costosos:} La detección
             temprana de fallos  de  diseño  o  usabilidad  disminuye  retrabajos
@@ -995,6 +1022,7 @@ A pesar de sus beneficios, el modelo presenta ciertas limitaciones:
 
 \begin{itemize}
       \item \textbf{Escalabilidad Limitada:} Puede resultar difícil de gestionar
+
 
             en proyectos grandes y complejos \parencite[]{hossain2023software}.
       \item \textbf{Costos Potencialmente Elevados:} La construcción de
@@ -1016,13 +1044,14 @@ para el éxito del proyecto \parencite[]{hossain2023software}.
 
 \section{Marco Conceptual}
 
-\subsection{Agricultura  4.0}  Integración  de  tecnologías   emergentes   (IoT,
-analítica de  datos,  automatización  e  inteligencia  artificial)  en  sistemas
-productivos   agrícolas   para   optimizar   procedimientos,   incrementar    la
-productividad y fortalecer la sostenibilidad. En Colombia, este proceso  implica
-no solo una transformación técnica, sino  también  cambios  en  la  organización
-productiva, la formación de capital humano  y  la  gobernanza  del  conocimiento
-agrícola \parencite[]{shafi2019precision}.
+\subsection{Agricultura inteligente} Aplicación  de  tecnologías  de  la
+información  y  la  comunicación  (TIC)  —como  Internet  de  las  Cosas  (IoT),
+inteligencia artificial (IA), big data, sensores  y  robótica—  a  la  actividad
+agrícola. Su objetivo es optimizar la producción mediante la monitorización  remota  y  en
+tiempo real de los cultivos, permitiendo a los agricultores tomar decisiones más
+precisas y rápidas para mejorar  la  eficiencia,  aumentar  la  productividad  y
+reducir  el  consumo  de  recursos  (agua,  energía)  y  el  impacto  ambiental.
+\parencite[]{de2022survey}.
 
 \subsection{Brecha  digital  rural}  Desigualdad  en  el  acceso  a  tecnologías
 digitales entre agricultores tecnificados y pequeños productores  tradicionales,
@@ -1030,14 +1059,9 @@ manifestada no solo en infraestructura, sino también en alfabetización  digita
 acceso a  plataformas  inteligentes  y  capacidad  de  inversión  en  innovación
 tecnológica \parencite[]{quiroz2023agricultura, alvarez2022colombian}.
 
-\subsection{Agricultura de Precisión} Estrategia de gestión basada en la captura
-y análisis de datos espacio-temporales, con el objetivo de optimizar  decisiones
-relativas al uso de insumos, manejo de suelos y gestión de cultivos.  Constituye
-un      fundamento      metodológico      de      la       Agricultura       4.0
-\parencite[]{quiroz2023agricultura}.
 
 \subsection{Internet de las Cosas (IoT) en agricultura} Componente clave  de  la
-Agricultura de Precisión que integra sensores ambientales, redes de comunicación
+Agricultura inteligente que integra sensores ambientales, redes de  comunicación
 de baja potencia y plataformas de visualización y análisis de datos, permitiendo
 transformar  procesos  tradicionales  en   sistemas   de   control   inteligente
 \parencite[]{Cognitive-LPWAN, florez2021agroindustria}.
@@ -1063,12 +1087,6 @@ Puede ser básica  (estrella),  híbrida  con  tecnologías  externas,  multi-LP
 inteligencia        artificial        para        optimización         dinámica)
 \parencite[]{chilamkurthy2022low}.
 
-\subsection{Tecnologías LPWAN} Clasificadas según  el  espectro:  en  banda  con
-licencia (3GPP) como LTE-M, NB-IoT y EC-GSM-IoT, que ofrecen alta  confiabilidad
-y cobertura con costos de suscripción; en banda sin licencia (ISM) como  SigFox,
-LoRaWAN, RPMA, Telensa, Weightless, DASH7 y NB-Fi, que permiten  redes  privadas
-con menor costo pero sujetas a interferencias  y  restricciones  de  duty  cycle
-\parencite[]{chilamkurthy2022low}.
 
 \subsection{Sensórica agrícola}  Dispositivos  que  convierten  señales  físicas
 (humedad,  temperatura,  composición  química,  etc.)  en  datos  digitales.  Se
