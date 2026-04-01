@@ -1,79 +1,148 @@
-
 \chapter{Problema de Investigación}
-
-
-
 
 \section{Planteamiento del problema}
 
-El sector agrícola colombiano es un pilar de la economía  nacional,  como  parte
-del sector agropecuario,  registró  un  crecimiento  del  3.8\%  en  el  segundo
-trimestre de 2025, respecto al mismo periodo en el 2024,  aportando  0,4  puntos
-porcentuales al crecimiento total del PIB \parencite{DANEPIB2025II}. A pesar  de
-su  relevancia,  este  sector  enfrenta  una  limitación   estructural   en   su
-modernización:  la   brecha   de   conectividad   digital   en   zonas   rurales
-\parencite{alvarez2022colombian}. Esta restricción dificulta la adopción  de  la
-Agricultura inteligente, la cual depende de tecnologías como el Internet de  las
-Cosas (IoT) y la Inteligencia Artificial (IA) para optimizar recursos y  mejorar
-la productividad.
+El sector agrícola colombiano constituye un pilar  fundamental  de  la  economía
+nacional. Como parte del sector agropecuario, registró un crecimiento del  3.8\%
+en el segundo trimestre de 2025 respecto al mismo periodo de 2024, aportando 0,4
+puntos porcentuales al crecimiento total del  PIB  \parencite{DANEPIB2025II}.  A
+pesar de su relevancia, este sector presenta limitaciones en  su  modernización.
+Estas  limitaciones  comprenden  aspectos  productivos,  de  innovación   y   de
+estándares de calidad, las cuales han rezagado el desarrollo agrícola  del  país
+\parencite{montoyaagricultura}.
 
-En este contexto de conectividad limitada, persiste  una  incertidumbre  técnica
-relacionada con la selección e integración adecuada de tecnologías  LPWAN  —como
-LoRaWAN o NB-IoT— para su despliegue en escenarios agrícolas  específicos.  Esta
-decisión involucra compensaciones entre  cobertura  (especialmente  sensible  en
-regiones   con   infraestructura   limitada),   consumo   energético   y   costo
-\parencite{Cognitive-LPWAN}. Actualmente, dicha selección se realiza  de  manera
-empírica debido a la ausencia de herramientas de apoyo, generando un alto riesgo
-de implementaciones subóptimas, ineficientes o económicamente inviables.
+A su vez, existen limitaciones que coinciden, en  términos  generales,  con  las
+problemáticas  históricas  del  agro  a  nivel  mundial.  La  tendencia   a   la
+urbanización ha consolidado un “planeta urbano”, donde más de  la  mitad  de  la
+población mundial reside en ciudades que se expanden incluso más  rápido  de  lo
+que crece su población \parencite{cambra2022re}. Esta  concentración  urbana  se
+sustenta en los diversos problemas que acarrea la  vida  en  el  campo:  menores
+oportunidades  laborales,  dificultad  en  el  acceso  a   servicios   públicos,
+capacidades de infraestructura limitadas  \parencite{alabdali2023influential}  y
+una marcada brecha de desarrollo frente a las zonas urbanas.
 
-A ello se suma una desconexión entre las  capacidades  de  las  herramientas  de
-simulación y las necesidades  reales  del  entorno  agrícola.  Si  bien  existen
-simuladores como NS-3 o LoRaSim \parencite{almuhaya2022survey},  estos  permiten
-modelar el comportamiento técnico de  las  redes  LPWAN  pero  no  traducen  las
-necesidades del cultivo, terreno  y  condiciones  ambientales  en  criterios  de
-decisión tecnológica. Como resultado, se evidencia un vacío de investigación  en
-la integración  de  modelos  de  desempeño  de  red  con  parámetros  agronómico,
-orientado a  la  generación  de  una  recomendación  tecnológica  sistemática  y
-fundamentada.
+En este contexto, las zonas  rurales  presentan  una  influencia  socioeconómica
+limitada en comparación con las urbanas, y tienden a especializarse en  sectores
+específicos como la silvicultura, la agricultura y la ganadería, incluyendo rara
+vez servicios avanzados  \parencite{alabdali2023influential}.  No  obstante,  el
+sector  rural,  y  específicamente  el  agro,  sigue  siendo  esencial  para  el
+sostenimiento de la sociedad, pues provee los  alimentos  que  abastecen  a  las
+grandes ciudades. La Organización de las Naciones Unidas para la Alimentación  y
+la Agricultura (FAO) ha establecido  que  la  producción  de  alimentos  debería
+expandirse     en     torno     al     70\%     entre     2005/07     y     2050
+\parencite{fao_agricultura_mundial}.  Por  lo  tanto,  es  de  suma  importancia
+asegurar un crecimiento sostenible en este sector agrícola.
 
-Las consecuencias de esta brecha son significativas: la  falta  de  conectividad
-limita la capacidad de monitoreo y control de variables  críticas  del  cultivo,
-perpetúa  ineficiencias  en  el  uso  de  recursos  como  agua  y  fertilizantes
-\parencite{alvarez2022colombian}, incrementa la desigualdad digital y afecta  la
-competitividad   del   sector   agrícola   colombiano   en   mercados   globales
-\parencite{florez2021agroindustria}.
+Ante este panorama, la agricultura inteligente (smart agriculture)  emerge  como
+un enfoque necesario para satisfacer las demandas de una urbanización  creciente
+y para aumentar la productividad del agro  de  forma  sostenible.  Sin  embargo,
+mientras que el concepto de ciudades inteligentes avanza hacia su consolidación,
+la     agricultura     inteligente     aún     no     se     ha      consolidado
+\parencite{alabdali2023influential}, especialmente en países de desarrollo medio
+como Colombia.
 
-Por lo tanto, surge la necesidad de desarrollar una herramienta inteligente que,
-integrando simulación de redes  LPWAN  e  inteligencia  artificial,  sirva  como
-experto virtual para  la  selección  de  tecnologías  de  comunicación  rurales,
-permitiendo predecir su desempeño según condiciones reales  del  terreno  y  los
-requerimientos del proyecto agronómico. Tal herramienta contribuiría a convertir
-una decisión compleja y especializada en  una  recomendación  técnica  sólida  y
-accesible, respaldada en evidencia y simulación.
+Una de las múltiples aristas de esta  problemática  es  el  limitado  desarrollo
+investigativo en torno a la  implementación  de  arquitecturas  tecnológicas  en
+contextos   rurales   reales   \parencite{cambra2022re}.   Las   características
+específicas de las zonas rurales colombianas,  como  sus  barreras  ambientales,
+condiciones climáticas y tipos  de  cultivos,  deben  ser  consideradas  en  los
+proyectos de innovación para generar soluciones contextualizadas que aumenten la
+productividad y la sostenibilidad \parencite{liu2024personalized}.
 
+Dado que se busca aumentar la productividad del  agro  colombiano  a  través  de
+soluciones tecnológicas sostenibles, las tecnologías de red de  área  extensa  y
+baja potencia (LPWAN)  se  perfilan  como  una  opción  adecuada  para  entornos
+agrícolas debido a su bajo consumo energético,  su  capacidad  de  cobertura  en
+grandes extensiones de terreno y su soporte para  una  alta  densidad  de  nodos
+sensores distribuidos. Frente a otras alternativas como redes celulares  (4G/5G)
+y Wi-Fi, las LPWAN  ofrecen  una  relación  costo-eficiencia  más  favorable  en
+escenarios rurales, donde la infraestructura eléctrica y  de  telecomunicaciones
+es limitada \parencite{chilamkurthy2022low}.
+
+No obstante, la selección e implementación de una arquitectura basada  en  LPWAN
+implica riesgos técnicos significativos  cuando  no  se  dispone  de  referentes
+locales que validen su comportamiento bajo condiciones específicas del  terreno,
+el clima y los cultivos.
+
+La  situación  descrita  resulta  preocupante,  pues  de   persistir,   Colombia
+continuará desaprovechando el  potencial  de  la  agricultura  inteligente  para
+mejorar la competitividad y sostenibilidad del sector. La falta de investigación
+aplicada y de casos de estudio documentados en entornos rurales locales derivará
+en  una  selección  de  tecnologías  LPWAN  basada   en   criterios   empíricos,
+experiencias ajenas o generalizaciones que no responden a  las  particularidades
+del territorio donde se planea desarrollar el  proyecto.  En  consecuencia,  los
+proyectos enfrentarán: \begin{itemize}
+      \item Selecciones inadecuadas de protocolos LPWAN (LoRa, NB-IoT, Sigfox,
+            etc.), que no se ajustan a las condiciones de cobertura, densidad de
+            nodos o consumo energético requeridos en cultivos específicos.
+      \item Fallos de conectividad y subutilización de la infraestructura
+            desplegada, elevando  los  costos  operativos  y  comprometiendo  la
+            viabilidad técnica de las soluciones.
+      \item Baja escalabilidad y replicabilidad de las experiencias, al no
+            contar con referentes documentados que permitan aprender de aciertos
+            y errores previos.
+\end{itemize}
+
+Estas circunstancias profundizarán el rezago  en  productividad  y  calidad  que
+actualmente  enfrenta  el  sector  agrícola   del   país,   contraviniendo   las
+proyecciones de aumento de la producción alimentaria  mundial  y  las  metas  de
+sostenibilidad establecidas por organismos internacionales.
+
+Para anticiparse y  contrarrestar  este  escenario,  la  presente  investigación
+propone el desarrollo de un sistema basado en agentes de inteligencia artificial
+generativa  que  actúe  como  asistente  especializado  en  la   planeación   de
+arquitecturas LPWAN para  proyectos  de  agricultura  inteligente  en  contextos
+rurales colombianos. Este sistema  tiene  como  propósito  generar  conocimiento
+situado mediante la integración de diversas fuentes de información:
+
+\begin{itemize}
+      \item Estudios comparativos disponibles en la literatura especializada
+            sobre el comportamiento de  redes  LPWAN  en  distintas  condiciones
+            topográficas, climáticas y de cultivo.
+      \item Literatura académica y técnica referente a agricultura inteligente,
+            sensores y protocolos LPWAN.
+      \item Características específicas del contexto rural ingresadas por el
+            usuario (terreno, clima, cultivos, recursos disponibles).
+\end{itemize}
+
+A partir de esta integración, el sistema ofrecerá recomendaciones  fundamentadas
+en evidencia técnica  y  académica  para  seleccionar  el  protocolo  LPWAN  más
+adecuado,  sugerir  las  variables  agronómicas  y  ambientales  a   monitorear,
+recomendar sensores compatibles y generar un diagrama de  arquitectura  IoT  que
+visualice la solución propuesta. De esta manera, el sistema:
+
+\begin{itemize}
+      \item Sustituye la toma de decisiones empírica por un proceso informado,
+            reduciendo  los  riesgos  técnicos  y  económicos  asociados  a   la
+            implementación de proyectos de agricultura inteligente.
+      \item Acelera la fase de planeación al automatizar tareas que actualmente
+            requieren un alto nivel de especialización y tiempo.
+      \item Contribuye a la generación de conocimiento situado al documentar las
+
+            recomendaciones y permitir su trazabilidad frente a las  fuentes  de
+            conocimiento consideradas.
+\end{itemize}
+
+Con  esta  propuesta,  se  espera  cerrar  la  brecha  entre   el   conocimiento
+técnico-científico disponible y las necesidades concretas del  agro  colombiano,
+facilitando la consolidación de la agricultura inteligente en el país.
 
 \section{Formulación del problema}
 
-
-
 \subsection{Pregunta principal de investigación}
 
-¿En qué medida el Desarrollo de una plataforma web con IA  para  el  análisis  y
-simulación de arquitecturas LPWAN reduce el tiempo de selección  de  tecnologías
-de  conectividad  para  agricultura  inteligente  en  comparación  con   métodos
-tradicionales de análisis técnico?
+¿Cuáles son los criterios que determinan la selección de tecnologías LPWAN  para
+agricultura  inteligente  en  contextos  rurales  colombianos,  y  cómo   pueden
+cuantificarse en función de las características  del  terreno,  el  clima  y  el
+cultivo?
 
 \subsection{Sistematización del problema}
 
-
 \begin{enumerate}[leftmargin=*, align=left]
-      \item ¿Cuáles son los criterios técnicos determinantes para seleccionar
-            entre las tecnologías LPWAN en el contexto agrícola colombiano?
-
-      \item ¿Cómo se puede diseñar e implementar un sistema de inteligencia
-            artificial que, integrado con un sistema  de  simulación  visual  de
-            arquitecturas LPWAN, traduzca los  criterios  identificados  en  una
-            recomendación técnica cuantificable sobre la  tecnología  LPWAN  que
-            mejor se adapte?
-
+      \item ¿Qué criterios determinan la selección de tecnologías LPWAN en
+            proyectos de  agricultura  inteligente  desarrollados  en  contextos
+            rurales colombianos?
+      \item ¿Cómo pueden medirse o cuantificarse dichos criterios según las
+            características específicas del terreno, el clima y  el  cultivo  de
+            cada proyecto?
 \end{enumerate}
