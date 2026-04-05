@@ -1,115 +1,119 @@
 \chapter{Metodología}
 
-El proyecto se desarrollará bajo un enfoque iterativo e incremental con gestión ágil tipo Kanban, estructurado en fases definidas que permiten planificación inicial, desarrollo evolutivo por iteraciones y cierre formal del proyecto.
+El proyecto se desarrollará bajo un esquema ágil, adaptando la metodología XP a
+las necesidades del proyecto y del equipo de desarrollo. La elección de XP se
+justifica por su gran flexibilidad, la cual permite ajustar el proceso de
+desarrollo sin fricción ante cambios en los requisitos o en la dinámica del
+equipo. Esta flexibilidad es fundamental para asegurar la satisfacción del
+cliente, ya que facilita la entrega continua de valor, la integración inmediata
+de su retroalimentación y la corrección oportuna de desviaciones entre lo
+solicitado y lo implementado. Además, XP se adapta sin dificultad a equipos
+pequeños como el de este proyecto, donde la comunicación directa con el cliente
+y la ausencia de roles rígidos agilizan aún más la respuesta a sus necesidades.
 
-La metodología se divide en cuatro grandes fases:
+En este caso, no se considerará el rol del gerente; la comunicación e
+integración entre el cliente y el equipo de desarrollo será directa. Sobre este
+último recaen las actividades de análisis, diseño, pruebas y programación de la
+aplicación web.
+\section{Fase 1: Exploración}
 
-\begin{enumerate}
-    \item Planificación
-    \item Ciclo de vida iterativo
-    \item Despliegue
-    \item Documentación y cierre    
-\end{enumerate}
+\subsection{Definición de requerimientos funcionales} En esta primera  etapa  se
+documentan, junto con el cliente, los requerimientos funcionales del  sistema  a
+través de  historias  de  usuario.  Cada  historia  de  usuario  representa  una
+funcionalidad que será añadida a la aplicación web.
 
-Aunque se adopta Kanban como método de gestión del flujo de trabajo, el proyecto se organiza en iteraciones funcionales que permiten entregar incrementos progresivos del sistema.
+\subsection{Definición de la arquitectura del sistema y requerimientos no
+    funcionales} En esta etapa se especifican los requerimientos no  funcionales
+del
+sistema en un formato claro  y  se  define  una  arquitectura  de  software  que
+satisfaga dichos  requerimientos  y  que  sea  mantenible  para  el  proceso  de
+desarrollo iterativo e incremental.
 
-\section{Fase de Planificación}
+\subsection{Selección de tecnologías} En esta etapa se evalúan y seleccionan las
+tecnologías más adecuadas para construir la aplicación web, teniendo  en  cuenta
+el nivel de conocimiento del equipo  de  desarrollo  y  su  idoneidad  para  las
+funcionalidades a implementar.
 
-Durante esta fase se establecen las bases estratégicas y técnicas del proyecto. Se definen:
+\subsection{Artefactos} En esta fase, el artefacto entregado serán las historias
+de usuario.
 
-\begin{itemize}
-    \item Alcance y objetivos generales
-    \item Requerimientos iniciales
-    \item Arquitectura base del sistema
-    \item Backlog inicial priorizado
-    \item Configuración del entorno de desarrollo
-\end{itemize}
+\section{Fase 2: Planificación de la iteración}
 
-Al finalizar esta fase se obtiene la aprobación formal del enfoque técnico y del plan de trabajo.
+\subsection{Priorización de historias de usuario} En esta  etapa  se  reúnen  el
+equipo de desarrollo con el cliente, y  este  último  indica  las  historias  de
+usuario que serán incluidas en la siguiente iteración.
 
-\section{Ciclo de Vida Iterativo}
+\subsection{Estimación del esfuerzo por cada historia de usuario} En esta etapa,
+el equipo de desarrollo estima el esfuerzo requerido para completar cada una  de
+las historias de usuario priorizadas anteriormente, asignando un número del 1 al
+13 basado en la sucesión de Fibonacci. Cuanto mayor sea el número, mayor  es  el
+esfuerzo necesario para completar la historia de usuario.
 
-El desarrollo se ejecuta mediante tres iteraciones incrementales, cada una con entregables funcionales.
+\subsection{Asignación de tareas} Cada historia  de  usuario  se  descompone  en
+tareas más sencillas y manejables. Cada  integrante  del  equipo  de  desarrollo
+selecciona aquellas en las que desee trabajar. Estas tareas  se  representan  de
+forma visual en un tablero Kanban virtual para hacer seguimiento del avance.
 
-Cada iteración incluye actividades de:
+\subsection{Cronograma para la iteración} En esta etapa se define el  cronograma
+de la iteración, que  contiene  el  orden  en  que  se  completarán  las  tareas
+asignadas.
 
-\begin{itemize}
-    \item Análisis
-    \item Diseño
-    \item Implementación
-    \item Pruebas
-    \item Entrega del prototipo
-\end{itemize}
+\subsection{Artefactos} En esta  fase,  los  artefactos  a  entregar  serán  las
+historias de usuario priorizadas y estimadas para la iteración actual, junto con
+el cronograma de la iteración.
 
-El flujo de trabajo se gestiona mediante Kanban, permitiendo flexibilidad en prioridades y control visual del avance.
+\section{Fase 3: Iteración}
 
-\subsection{Iteración 1 - Base del Sistema}
+\subsection{Sesión rápida de diseño} El objetivo de esta etapa  es  eliminar  la
+incertidumbre  sobre  cómo  se  implementarán  las  tareas  asignadas   a   cada
+desarrollador. Para ello, el equipo de desarrollo se reúne y dibuja  rápidamente
+los diagramas necesarios (sin profundizar  demasiado  en  el  detalle,  pues  se
+refinarán más adelante) para aclarar las ideas en cuanto al diseño del código  y
+los flujos de información.
 
-Objetivo: Construir la estructura fundamental del sistema.
+\subsection{Implementación} El desarrollo se llevará a cabo mediante un  enfoque
+basado en pruebas (TDD, por sus siglas en inglés).  Primero  se  escribirán  las
+pruebas unitarias y luego se implementará el código para que estas  se  cumplan.
+Finalmente, se integrará todo el trabajo en un repositorio mediante  integración
+continua, ejecutando todas las pruebas para asegurarse de que no haya errores.
 
-Incluye:
+También  se  ejecutarán  pruebas  de  integración  para  validar   el   correcto
+comportamiento de los distintos componentes de la aplicación.
 
-\begin{itemize}
-    \item Configuración de base de datos
-    \item Autenticación y gestión de usuarios
-    \item Estructura backend
-    \item Interfaces iniciales
-    \item Primer prototipo funcional
-\end{itemize}
+Cuando se terminen  de  programar  las  funcionalidades,  se  implementarán  las
+pruebas  de  aceptación  en  concordancia  con  los  criterios   de   aceptación
+especificados en las historias de usuario.
 
-Resultado: Sistema base estable y navegable.
+\subsection{Validación con el usuario} El equipo de desarrollo se reúne  con  el
+cliente y obtiene la retroalimentación de las funcionalidades implementadas,  si
+hay funcionalidades a corregir, se organizan en forma de tareas y se desarrollan
+en la siguiente iteración, la retroalimentación del cliente se documentará en un
+acta de reunión.
 
-\subsection{Iteración 2 - Desarrollo Funcional Principal}
+\subsection{Artefactos} El artefacto entregado en esta fase es el
+acta de reunión con el cliente.
 
-Objetivo: Implementar las funcionalidades centrales del sistema.
+\section{Fase 4: Despliegue} En esta fase, el resultado de la iteración final se
+valida con el cliente y posteriormente se despliega cada una de las unidades  de
+despliegue que componen la  aplicación  web  (cliente  web,  backend,  bases  de
+datos).
 
-Incluye:
+\section{Fase 5: Mantenimiento}
+\subsection{Detección y corrección de
+    errores} En esta etapa, el equipo y el cliente, prueban y valida  el  código
+en producción para
+detectar  errores  de  funcionamiento  y  problemas  de  rendimiento.   De   ser
+encontrados, se corrigen y el código corregido se vuelve a desplegar.
 
-\begin{itemize}
-    \item Desarrollo de módulos principales
-    \item Integración de servicios externos (si aplica)
-    \item Lógica de negocio avanzada
-    \item Pruebas funcionales intermedias
-\end{itemize}
+\section{Fase  6:  Muerte}
+\subsection{Refinamiento  de  la  documentación  del código} En esta etapa se  refinan  los  diagramas  utilizados  para  diseñar  la
+aplicación web. También se construyen los que sean necesarios para asegurar  que
+el sistema quede documentado apropiadamente y sea fácil de mantener.
 
-Resultado: Versión funcional completa del sistema.
+\subsection{Entrega final del producto de software}
+En esta etapa se hace entrega de la aplicación web desplegada, el código fuente esta misma en un repositorio público
+y la documentación correspondiente (diagramas).
 
-\subsection{Iteración 3 - Optimizar y Validar el Producto Final}
-
-Objetivo: Refinar, optimizar y validar el producto final.
-
-Incluye:
-\begin{itemize}
-    \item Optimización de rendimiento
-    \item Corrección de errores
-    \item Pruebas integrales
-    \item Pruebas de usuario
-    \item Ajustes finales
-\end{itemize}
-
-Resultado: Prototipo final validado y listo para despliegue.
-
-\section{Fase de Despliegue}
-
-Durante esta fase se realiza:
-
-\begin{itemize}
-    \item Configuración del entorno de producción
-    \item Migración y configuración de base de datos
-    \item Pruebas en ambiente real
-    \item Verificación de estabilidad
-    \item Se asegura que el sistema quede completamente operativo.
-\end{itemize}
-
-Resultado: Prototipo final validado y listo para despliegue.
-
-\section{Fase de Documentación y Cierre}
-
-Se realiza:
-\begin{itemize}
-    \item Documentación técnica
-    \item Manual de usuario
-    \item Documentación de arquitectura
-    \item Informe final del proyecto
-    \item Cierre formal
-\end{itemize}
+\subsection{Artefactos}
+Los artefactos entregados en esta fase son la documentación del sistema, que se compone de los
+diagramas UML y C4 que especifican el diseño del software.
