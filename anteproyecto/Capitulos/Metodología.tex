@@ -1,119 +1,188 @@
 \chapter{Metodología}
 
-El proyecto se desarrollará bajo un esquema ágil, adaptando la metodología XP a
-las necesidades del proyecto y del equipo de desarrollo. La elección de XP se
-justifica por su gran flexibilidad, la cual permite ajustar el proceso de
-desarrollo sin fricción ante cambios en los requisitos o en la dinámica del
-equipo. Esta flexibilidad es fundamental para asegurar la satisfacción del
-cliente, ya que facilita la entrega continua de valor, la integración inmediata
-de su retroalimentación y la corrección oportuna de desviaciones entre lo
-solicitado y lo implementado. Además, XP se adapta sin dificultad a equipos
-pequeños como el de este proyecto, donde la comunicación directa con el cliente
-y la ausencia de roles rígidos agilizan aún más la respuesta a sus necesidades.
+\section{Enfoque metodológico}
 
-En este caso, no se considerará el rol del gerente; la comunicación e
-integración entre el cliente y el equipo de desarrollo será directa. Sobre este
-último recaen las actividades de análisis, diseño, pruebas y programación de la
-aplicación web.
+El proyecto se desarrolla bajo una adaptación de la metodología
+Extreme Programming (XP), ajustada a las necesidades del proyecto
+y a las características del equipo de desarrollo. La elección de
+XP se justifica por tres razones principales: su orientación hacia
+equipos pequeños con comunicación directa con el cliente, su
+capacidad de respuesta ante cambios en los requisitos durante el
+desarrollo y su énfasis en la calidad del software mediante
+prácticas de prueba continua \parencite{beck2004xp}.
+
+Dado que el proyecto es desarrollado por un equipo de dos personas,
+se adoptan las prácticas centrales de XP: historias de usuario,
+desarrollo dirigido por pruebas (TDD),
+integración continua, diseño simple, entregas incrementales y
+programación en pares.
+
+La metodología se estructura en seis fases adaptadas del ciclo de
+vida de XP: exploración, planificación,
+iteraciones de desarrollo, despliegue, evaluación y cierre. A
+diferencia de un modelo en cascada, las fases de planificación e
+iteración son cíclicas y se repiten hasta completar el backlog de
+historias de usuario.
+
 \section{Fase 1: Exploración}
 
-\subsection{Definición de requerimientos funcionales} En esta primera  etapa  se
-documentan, junto con el cliente, los requerimientos funcionales del  sistema  a
-través de  historias  de  usuario.  Cada  historia  de  usuario  representa  una
-funcionalidad que será añadida a la aplicación web.
+\subsection{Levantamiento de requisitos funcionales y definición de historias de usuario}
+En esta fase se identifican y documentan los requisitos del sistema
+en forma de historias de usuario.
+Cada historia incluye criterios de aceptación medibles que servirán
+como base para las pruebas de aceptación ejecutadas en la Fase 3.
+El conjunto de historias de usuario constituye el backlog inicial
+del proyecto, el cual puede ser actualizado en cualquier iteración.
 
-\subsection{Definición de la arquitectura del sistema y requerimientos no
-    funcionales} En esta etapa se especifican los requerimientos no  funcionales
-del
-sistema en un formato claro  y  se  define  una  arquitectura  de  software  que
-satisfaga dichos  requerimientos  y  que  sea  mantenible  para  el  proceso  de
-desarrollo iterativo e incremental.
+\subsection{Definición de requisitos no funcionales y arquitectura}
+Se especifican los requisitos no funcionales del sistema y se define una arquitectura de software
+que los satisfaga. La arquitectura se documenta mediante diagramas del modelo C4,
+los cuales se refinan progresivamente durante el desarrollo.
 
-\subsection{Selección de tecnologías} En esta etapa se evalúan y seleccionan las
-tecnologías más adecuadas para construir la aplicación web, teniendo  en  cuenta
-el nivel de conocimiento del equipo  de  desarrollo  y  su  idoneidad  para  las
-funcionalidades a implementar.
+\subsection{Definición del plan de pruebas}
 
-\subsection{Artefactos} En esta fase, el artefacto entregado serán las historias
-de usuario.
+Se elabora un documento que especifica
+los tipos de prueba a ejecutar (unitarias, de integración y de
+aceptación), los criterios de aprobación y reprobación para cada
+caso de prueba y el alcance de la evaluación.
+
+\subsection{Selección de tecnologías}
+Se evalúan y seleccionan las tecnologías para construir la aplicación
+web, considerando su idoneidad técnica para las funcionalidades a
+implementar y el nivel de conocimiento del equipo de desarrollo.
+
+\subsection{Artefactos}
+Los artefactos entregados en esta fase son: requisitos funcionales, el backlog inicial de
+historias de usuario con sus criterios de aceptación, requisitos no funcionales, la definición de arquitectura inicial,
+la justificación de tecnologías seleccionadas y el plan de pruebas
+del sistema.
 
 \section{Fase 2: Planificación de la iteración}
 
-\subsection{Priorización de historias de usuario} En esta  etapa  se  reúnen  el
-equipo de desarrollo con el cliente, y  este  último  indica  las  historias  de
-usuario que serán incluidas en la siguiente iteración.
+\subsection{Priorización del backlog}
+Al inicio de cada iteración, el cliente prioriza las historias de
+usuario que serán implementadas en el ciclo actual, considerando el
+valor que cada una aporta al sistema.
 
-\subsection{Estimación del esfuerzo por cada historia de usuario} En esta etapa,
-el equipo de desarrollo estima el esfuerzo requerido para completar cada una  de
-las historias de usuario priorizadas anteriormente, asignando un número del 1 al
-13 basado en la sucesión de Fibonacci. Cuanto mayor sea el número, mayor  es  el
-esfuerzo necesario para completar la historia de usuario.
+\subsection{Estimación de esfuerzo}
+El equipo de desarrollo estima el esfuerzo requerido para completar
+cada historia de usuario priorizada, utilizando la sucesión de
+Fibonacci (1, 2, 3, 5, 8, 13) como escala relativa. A mayor número,
+mayor esfuerzo estimado.
 
-\subsection{Asignación de tareas} Cada historia  de  usuario  se  descompone  en
-tareas más sencillas y manejables. Cada  integrante  del  equipo  de  desarrollo
-selecciona aquellas en las que desee trabajar. Estas tareas  se  representan  de
-forma visual en un tablero Kanban virtual para hacer seguimiento del avance.
-
-\subsection{Cronograma para la iteración} En esta etapa se define el  cronograma
-de la iteración, que  contiene  el  orden  en  que  se  completarán  las  tareas
-asignadas.
-
-\subsection{Artefactos} En esta  fase,  los  artefactos  a  entregar  serán  las
-historias de usuario priorizadas y estimadas para la iteración actual, junto con
-el cronograma de la iteración.
-
-\section{Fase 3: Iteración}
-
-\subsection{Sesión rápida de diseño} El objetivo de esta etapa  es  eliminar  la
-incertidumbre  sobre  cómo  se  implementarán  las  tareas  asignadas   a   cada
-desarrollador. Para ello, el equipo de desarrollo se reúne y dibuja  rápidamente
-los diagramas necesarios (sin profundizar  demasiado  en  el  detalle,  pues  se
-refinarán más adelante) para aclarar las ideas en cuanto al diseño del código  y
-los flujos de información.
-
-\subsection{Implementación} El desarrollo se llevará a cabo mediante un  enfoque
-basado en pruebas (TDD, por sus siglas en inglés).  Primero  se  escribirán  las
-pruebas unitarias y luego se implementará el código para que estas  se  cumplan.
-Finalmente, se integrará todo el trabajo en un repositorio mediante  integración
-continua, ejecutando todas las pruebas para asegurarse de que no haya errores.
-
-También  se  ejecutarán  pruebas  de  integración  para  validar   el   correcto
-comportamiento de los distintos componentes de la aplicación.
-
-Cuando se terminen  de  programar  las  funcionalidades,  se  implementarán  las
-pruebas  de  aceptación  en  concordancia  con  los  criterios   de   aceptación
-especificados en las historias de usuario.
-
-\subsection{Validación con el usuario} El equipo de desarrollo se reúne  con  el
-cliente y obtiene la retroalimentación de las funcionalidades implementadas,  si
-hay funcionalidades a corregir, se organizan en forma de tareas y se desarrollan
-en la siguiente iteración, la retroalimentación del cliente se documentará en un
-acta de reunión.
-
-\subsection{Artefactos} El artefacto entregado en esta fase es el
-acta de reunión con el cliente.
-
-\section{Fase 4: Despliegue} En esta fase, el resultado de la iteración final se
-valida con el cliente y posteriormente se despliega cada una de las unidades  de
-despliegue que componen la  aplicación  web  (cliente  web,  backend,  bases  de
-datos).
-
-\section{Fase 5: Mantenimiento}
-\subsection{Detección y corrección de
-    errores} En esta etapa, el equipo y el cliente, prueban y valida  el  código
-en producción para
-detectar  errores  de  funcionamiento  y  problemas  de  rendimiento.   De   ser
-encontrados, se corrigen y el código corregido se vuelve a desplegar.
-
-\section{Fase  6:  Muerte}
-\subsection{Refinamiento  de  la  documentación  del código} En esta etapa se  refinan  los  diagramas  utilizados  para  diseñar  la
-aplicación web. También se construyen los que sean necesarios para asegurar  que
-el sistema quede documentado apropiadamente y sea fácil de mantener.
-
-\subsection{Entrega final del producto de software}
-En esta etapa se hace entrega de la aplicación web desplegada, el código fuente esta misma en un repositorio público
-y la documentación correspondiente (diagramas).
+\subsection{Descomposición en tareas}
+Cada historia de usuario se descompone en tareas técnicas específicas,
+las cuales se representan en un tablero Kanban virtual con los estados:
+pendiente, en progreso y completada.
 
 \subsection{Artefactos}
-Los artefactos entregados en esta fase son la documentación del sistema, que se compone de los
-diagramas UML y C4 que especifican el diseño del software.
+Los artefactos entregados son: las historias de usuario priorizadas
+y estimadas para la iteración, el tablero Kanban con las tareas
+descompuestas y el cronograma de la iteración.
+
+\section{Fase 3: Iteración de desarrollo}
+
+\subsection{Diseño emergente}
+Antes de implementar cada tarea, el equipo realiza una sesión de
+diseño breve para definir la estructura del código y los flujos de
+información relevantes, produciendo los diagramas UML mínimos necesarios.
+
+\subsection{Diseño de casos de prueba}
+Con base en el plan de pruebas definido en la Fase 1, el equipo
+diseña los casos de prueba específicos para cada historia de usuario
+incluida en la iteración. Cada caso de prueba especifica las
+precondiciones, los datos de entrada, los pasos a ejecutar y el
+resultado esperado, el cual se deriva directamente de los criterios
+de aceptación de la historia de usuario correspondiente.
+
+\subsection{Implementación mediante TDD}
+El desarrollo sigue el ciclo TDD: primero
+se escribe la prueba unitaria que define el comportamiento esperado
+del módulo, luego se implementa el código mínimo para que la prueba
+pase, y finalmente se refactoriza para mejorar la calidad sin alterar
+el comportamiento. Este ciclo garantiza que cada unidad de código
+tenga cobertura de prueba desde su origen.
+
+\subsection{Pruebas de integración}
+Una vez implementadas las unidades, se ejecutan pruebas de integración
+para verificar la comunicación correcta entre los componentes del
+sistema. Todo el código se integra en el repositorio mediante
+integración continua, ejecutando la suite de pruebas completa para
+detectar regresiones.
+
+\subsection{Pruebas de aceptación}
+Al finalizar la implementación de cada historia de usuario, se
+ejecutan sus pruebas de aceptación con base en los criterios definidos
+en la Fase 1. Cada prueba de aceptación verifica que el sistema
+produce el resultado esperado ante una entrada específica. El
+resultado de cada prueba se registra como aprobado o reprobado en
+una tabla de seguimiento, la cual alimentará el cálculo del IRF en
+la Fase 5.
+
+\subsection{Validación con el cliente}
+El equipo presenta al cliente las funcionalidades implementadas en
+la iteración. La retroalimentación recibida se documenta en un acta
+de reunión. Las correcciones o ajustes identificados se incorporan
+al backlog como nuevas historias de usuario o tareas de corrección
+para la siguiente iteración.
+
+\subsection{Artefactos}
+Los artefactos entregados son: el incremento de software funcional,
+los resultados de las pruebas unitarias, de integración y de
+aceptación, el tablero Kanban actualizado y el acta de reunión
+con el cliente.
+
+\section{Fase 4: Despliegue}
+
+Al completar el backlog de historias de usuario, el incremento final
+se valida con el cliente y se despliegan las unidades que componen
+la aplicación web. El
+despliegue se realiza en un entorno de producción accesible, lo que
+permite ejecutar las pruebas de aceptación finales sobre el sistema
+en condiciones reales de operación.
+
+\subsection{Artefactos}
+El artefacto entregado es la aplicación web desplegada y funcional.
+
+\section{Fase 5: Evaluación}
+
+\subsection{Ejecución de pruebas de aceptación finales}
+Sobre el sistema desplegado se ejecuta la suite completa de pruebas
+de aceptación, verificando cada requisito funcional definido en el
+backlog. Cada prueba se registra como aprobada o reprobada con base
+en la coincidencia entre el resultado obtenido y el resultado esperado
+definido en los criterios de aceptación.
+
+\subsection{Cálculo del IRF}
+Con los resultados de las pruebas de aceptación se calcula el Índice
+de Requisitos Funcionales (IRF), definido como:
+
+\begin{equation}
+    IRF = \frac{\text{Requisitos funcionales aprobados en prueba}}
+    {\text{Total de requisitos funcionales definidos}} \times 100
+\end{equation}
+
+El IRF operacionaliza la subcaracterística de completitud funcional
+de la ISO/IEC 25010:2023 y constituye la métrica principal para
+responder la pregunta de investigación.
+
+\subsection{Artefactos}
+Los artefactos entregados son: la tabla de resultados de pruebas
+de aceptación y el valor calculado del IRF con su interpretación.
+
+\section{Fase 6: Cierre}
+
+\subsection{Refinamiento de la documentación}
+Se refinan y completan los diagramas UML y C4 utilizados durante
+el desarrollo, asegurando que el sistema quede documentado de forma
+que facilite su mantenimiento y comprensión por terceros.
+
+\subsection{Entrega final}
+Se hace entrega de la aplicación web desplegada, el código fuente
+en un repositorio público y la documentación técnica del sistema.
+
+\subsection{Artefactos}
+Los artefactos entregados son: el código fuente en repositorio
+público, la documentación del sistema compuesta por diagramas UML
+y C4, y el informe final de resultados del IRF.
+
