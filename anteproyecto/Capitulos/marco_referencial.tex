@@ -1,3 +1,4 @@
+
 \chapter{Marco Referencial}
 
 \section{Marco Teórico}
@@ -100,6 +101,8 @@ efectividad: \begin{itemize}
 
 
 
+
+
             de la red para conectar una gran cantidad de nodos  sin  afectar  el
             rendimiento de la red. No obstante, la coexistencia  de  un  elevado
             número de dispositivos puede provocar interferencias, impactando  de
@@ -184,6 +187,8 @@ cobertura \parencite{chilamkurthy2022low,chaudhari2020lpwan}.
 
 \begin{itemize}
       \item \textbf{Topología de estrella:} La topología de estrella consiste en
+
+
 
 
 
@@ -361,6 +366,8 @@ idoneidad para distintos objetivos de diseño IoT.
 
 
 
+
+
             operan en espectro licenciado (principalmente 700-900 MHz),  lo  que
             garantiza  una  comunicación  confiable  sin  interferencias,   pero
             conlleva costos de suscripción. Son ideales  para  aplicaciones  que
@@ -409,6 +416,8 @@ idoneidad para distintos objetivos de diseño IoT.
                         tasa de datos es baja (0.3-50 kbps) y depende del factor
                         de ensanchamiento (SF).
                   \item \textbf{RPMA (Ingenu):} Opera en la banda de 2.4 GHz, lo
+
+
 
 
 
@@ -495,154 +504,186 @@ domina en todos los aspectos.
             confiables.
 \end{itemize}
 
-\textbf{Discusión y Aplicabilidad:} No existe una tecnología LPWAN única  óptima
-para todos los casos. La selección debe basarse en los requisitos específicos de
-la aplicación: \begin{itemize}
-      \item \textbf{Aplicaciones de Monitoreo Masivo y Estático} (e.g.,
-            medidores,  agricultura):  NB-IoT  (por   cobertura/penetración)   o
-            SigFox/LoRaWAN (por coste y energía).
-      \item \textbf{Aplicaciones con Movilidad o Baja Latencia} (e.g.,
-            logística,   wearables):   LTE-M   (mejor    opción    celular)    o
-            D7AP/Weightless-P (en redes privadas).
-      \item \textbf{Redes Privadas y Control Industrial} (e.g., ciudades
-            inteligentes,  fabricas):  LoRaWAN  (flexibilidad  y  ecosistema)  o
-            Weightless-P (QoS y confiabilidad).
-      \item \textbf{Aplicaciones con Datos más Voluminosos o Voz} (e.g.,
-            vigilancia, teleasistencia): LTE-M es la opción predominante.
-\end{itemize} La tendencia futura apunta hacia la convergencia y coexistencia de
-múltiples tecnologías en arquitecturas híbridas, donde una plataforma de gestión
-unificada pueda seleccionar dinámicamente la mejor conexión disponible para cada
-dispositivo y aplicación.
 
 \subsection{WSN}
 
-La agricultura inteligente se fundamenta en  la  captura  sistemática  de  datos
-agronómicos mediante sensores, los cuales permiten  monitorear  las  condiciones
-del cultivo y el ambiente en tiempo real o casi real. Esta capacidad de medición
-precisa y continua resulta esencial para la toma de  decisiones  informadas,  la
-optimización de insumos y la mitigación de riesgos asociados a  la  variabilidad
-climática. En el contexto del despliegue de LPWAN para el monitoreo agrícola, la
-selección de la sensórica adecuada y la comprensión de las variables  que  miden
-constituyen un paso crítico previo al diseño de la arquitectura de comunicación.
+Una Red de Sensores Inalámbricos (WSN por su siglas en inglés) es una infraestructura compuesta por nodos sensores de
+bajo costo y consumo energético reducido, distribuidos
+geográficamente para recolectar y transmitir datos del entorno
+físico hacia un punto central \parencite{rani2024wsn_iot}. Cada
+nodo integra capacidades de sensado, procesamiento y comunicación,
+permitiendo medir variables como temperatura, humedad, presión y
+luminancia. En agricultura inteligente, las WSN han reemplazado
+los sistemas cableados gracias a su infraestructura simple y su
+capacidad de transferir datos eficientemente desde el campo hacia
+usuarios remotos \parencite{alahmad2023applying}.
+
+\begin{table}[H]
+      \centering
+      \begin{tabularx}{0.85\textwidth}{>{\raggedright\arraybackslash}X
+                  >{\raggedright\arraybackslash}X}
+            \toprule
+            \textbf{Características} & \textbf{Limitaciones}                     \\
+            \midrule
+            Operación en entornos remotos o adversos
+                                     & Restricciones de energía y ancho de banda \\
+            Bajo consumo energético
+                                     & Capacidad de procesamiento limitada       \\
+            Autoorganización y recuperación ante fallos
+                                     & Desafíos en seguridad y privacidad        \\
+            Escalabilidad y cobertura de grandes áreas
+                                     & Interoperabilidad entre fabricantes       \\
+            Transmisión de datos en tiempo real
+                                     & Necesidad de gestión robusta de datos     \\
+            \bottomrule
+      \end{tabularx}
+      \caption{Características y limitaciones de las WSN.
+            \parencite{rani2024wsn_iot, alahmad2023applying}}
+      \label{tab:wsn_caract}
+\end{table}
 
 
+\subsubsection{Sensores en la agricultura inteligente}
+
+Los sensores son la interfaz primaria entre el entorno físico del
+cultivo y los sistemas de información agrícola
+\parencite{rajak2023internet}. Un sensor inteligente integra
+un elemento de medición, un microprocesador, un convertidor
+analógico-digital y un módulo de comunicación inalámbrica para
+capturar, procesar y transmitir datos de forma autónoma
+\parencite{rajak2023internet}.
+
+Respecto a las modalidades de despliegue, existen tres enfoques
+\parencite{alahmad2023applying}: (1)~imagen satelital,
+de cobertura amplia pero alto costo y acceso restringido;
+(2)~sensores on-the-go, acoplados a maquinaria
+o drones, que proveen datos en tiempo real pero requieren retiro
+durante la cosecha; y (3)~sensores in situ,
+distribuidos permanentemente en el cultivo, siendo el único enfoque
+capaz de proveer datos continuos sin intervención humana y, por
+tanto, el más relevante para sistemas WSN y LPWAN.
+
+La tabla~\ref{tab:sensores_agricultura} sintetiza las principales
+categorías de sensores empleados en agricultura inteligente.
+\begin{table}[H]
+      \centering
+      \begin{tabularx}{\textwidth}{
+            >{\raggedright\arraybackslash}p{2.8cm}
+            >{\raggedright\arraybackslash}X
+            >{\raggedright\arraybackslash}X}
+            \toprule
+            \textbf{Tipo} & \textbf{Principio de funcionamiento}
+                          & \textbf{Aplicaciones principales}                    \\
+            \midrule
+            Acústico
+                          & Detección de cambios en frecuencias sonoras y
+            vibraciones
+                          & Monitoreo de plagas, madurez de frutos               \\
+            Electromagnético
+                          & Inducción electromagnética y radar de penetración
+            terrestre (GPR)
+                          & Humedad, nitratos y capacidad de intercambio
+            catiónico del suelo                                                  \\
+            Electroquímico
+                          & Gradientes electroquímicos en suelo y tejido vegetal
+                          & pH, nutrientes (N, P, K), salinidad y compuestos
+            orgánicos volátiles                                                  \\
+            LiDAR
+                          & Pulsos de luz láser con medición del tiempo de
+            retorno
+                          & Modelado 3D, estimación de biomasa, navegación
+            autónoma                                                             \\
+            Óptico
+                          & Reflectancia de luz en múltiples longitudes de onda
+                          & Índices NDVI, detección de malezas, monitoreo de
+            canopia                                                              \\
+            FPGA
+                          & Circuitos integrados reconfigurables
+                          & Humedad, transpiración e irrigación en tiempo real   \\
+            Eddy Covariance
+                          & Flujos turbulentos verticales de gases
+                          & Medición de \(CO_2\), metano y vapor de agua         \\
+            Flujo de masa
+                          & Registro de caudal de material particulado
+                          & Rendimiento automatizado en cosechadoras             \\
+            Flexibles / vestibles
+                          & Materiales elásticos sobre tejido vegetal
+                          & Elongación de órganos vegetales, estrés biótico y
+            abiótico                                                             \\
+            Sin batería / autónomos
+                          & Cosecha de energía solar
+                          & Monitoreo continuo de largo plazo
+            instalar y olvidar                                                   \\
+            \bottomrule
+      \end{tabularx}
+      \caption{Categorías de sensores para agricultura inteligente.
+            \parencite{rajak2023internet, pyingkodi2022sensor,
+                  alahmad2023applying}}
+      \label{tab:sensores_agricultura}
+\end{table}
 
 
+\subsubsection{Variables relevantes en el Monitoreo
+      Agrícola Inteligente}
 
+El monitoreo agrícola mediante WSN y LPWAN requiere la medición
+sistemática de variables ambientales y propiedades del suelo,
+que constituyen el insumo principal para los sistemas de soporte
+a decisiones en agricultura inteligente
+\parencite{alahmad2023applying}. Cuando una variable supera
+los umbrales definidos, el sistema emite alertas automáticas para
+activar acciones correctivas \parencite{ rajak2023internet}.
+La frecuencia de muestreo requerida varía según la sensibilidad
+del cultivo: especies más susceptibles a variaciones térmicas o
+hídricas demandan intervalos más cortos
+\parencite{alahmad2023applying}.
 
+\begin{table}[H]
+      \centering
+      \begin{tabularx}{\textwidth}{
+            >{\raggedright\arraybackslash}p{2.2cm}
+            >{\raggedright\arraybackslash}p{2.5cm}
+            >{\raggedright\arraybackslash}p{3cm}
+            >{\raggedright\arraybackslash}X}
+            \toprule
+            \textbf{Categoría} & \textbf{Variable}
+                               & \textbf{Sensor asociado}
+                               & \textbf{Relevancia agronómica}                     \\
+            \midrule
+            {Ambiental}
+                               & Temperatura
+                               & Térmico / FPGA
+                               & Estrés térmico, fenología del cultivo              \\
+                               & Humedad relativa
+                               & Capacitivo / resistivo
+                               & Riesgo de hongos, planificación de riego           \\
+                               & \(CO_2\) y gases
+                               & Eddy Covariance / electroquímico
+                               & Balance de gases de efecto invernadero             \\
+                               & Luminancia
+                               & Óptico
+                               & Fotosíntesis, manejo de sombrío                    \\
+            \midrule
+            {Edáfica}
+                               & Humedad del suelo
+                               & Capacitivo / Vis-NIR
+                               & Programación de riego de precisión                 \\
+                               & pH del suelo
+                               & Electroquímico / Vis-NIR
+                               & Disponibilidad de nutrientes, corrección de acidez \\
+                               & Nutrientes (N, P, K)
+                               & Electroquímico (experimental)
+                               & Fertilización sitio-específica                     \\
+                               & Compactación
+                               & Mecánico
+                               & Labranza de precisión, manejo de raíces            \\
+            \bottomrule
+      \end{tabularx}
+      \caption{Variables relevantes para el monitoreo agrícola
+            inteligente. \parencite{  rajak2023internet, pyingkodi2022sensor,alahmad2023applying}}
+      \label{tab:variables_monitoreo}
+\end{table}
 
-
-
-\subsubsection{Sensórica en la agricultura  de  inteligente}  Los  sensores  son
-dispositivos que convierten señales del  mundo  físico  (por  ejemplo,  humedad,
-temperatura, composición química) en datos digitales, actuando como la  interfaz
-primaria entre el campo y los sistemas de información (Applying IoT Sensors  and
-Big Data to Improve  Precision  Crop.pdf).  Su  integración  en  componentes  de
-maquinaria, suelo, plantas o animales proporciona  información  vital  sobre  el
-estado del sistema agroproductivo \parencite[]{alahmad2023applying}.
-
-Para el desarrollo de sistemas IoT agrícolas (Ag-IoT), la selección  del  sensor
-apropiado debe considerar factores como bajo consumo de energía,  compatibilidad
-en la transferencia de información,  precisión,  sensibilidad,  repetibilidad  y
-durabilidad \parencite[]{alahmad2023applying}. Existe  una  amplia  variedad  de
-sensores clasificables según el parámetro físico que miden:
-
-\begin{itemize}
-      \item \textbf{Sensores Químicos:} Miden propiedades como el pH del suelo y
-
-
-
-
-
-
-
-
-
-            agua, conductividad eléctrica, salinidad, y concentraciones de gases
-            (CO2, O2, CH4) y nutrientes (nitratos). Se dividen principalmente en
-            fotodetectores y electroquímicos \parencite[]{alahmad2023applying}.
-      \item \textbf{Sensores Ópticos:} Utilizan la reflectancia de la luz en
-            diferentes longitudes de onda para determinar materia  orgánica  del
-            suelo, humedad, color, contenido de  clorofila  en  plantas,  estrés
-            hídrico y  detección  de  enfermedades  foliares.  Tecnologías  como
-            cámaras multiespectrales, hiperespectrales y el Índice de Vegetación
-            de Diferencia Normalizada (NDVI) son clave para la  teledetección  y
-            estimación de rendimiento \parencite[]{alahmad2023applying}.
-      \item \textbf{Sensores Electromecánicos y de Humedad:} Incluyen sensores
-            de humedad del suelo (que miden la constante dieléctrica),  sensores
-            de presión, acelerómetros y celdas de carga. Son fundamentales  para
-            medir la compactación del suelo, el crecimiento de frutos, el viento
-            y el peso continuo de las plantas \parencite[]{alahmad2023applying}.
-
-
-
-      \item \textbf{Sensores Acústicos:} Detectan cambios en las frecuencias
-            sonoras,  útiles  para  identificar  plagas  (como  barrenadores  de
-            madera) mediante el sonido que generan al alimentarse o  moverse,  y
-            para    estimar    la    altura    del     dosel     del     cultivo
-            \parencite[]{alahmad2023applying}.
-      \item \textbf{Sensores Térmicos:} Monitorean la temperatura de hojas,
-            suelo y ambiente. Los datos de temperatura foliar se  utilizan  para
-            predecir la producción, estimar la evapotranspiración y programar el
-            riego \parencite[]{alahmad2023applying}.
-\end{itemize}
-
-\subsubsection{ Variables Agronómicas Críticas para el Monitoreo} Las  variables
-agronómicas monitoreables definen el estado de salud del cultivo  y  del  suelo,
-guiando las  intervenciones  de  manejo.  La  cantidad  y  frecuencia  de  datos
-requeridos dependen del cultivo específico, las condiciones  ambientales  y  los
-objetivos del productor  \parencite[]{alahmad2023applying}.  Las  variables  más
-relevantes, vinculadas a los sensores antes descritos, incluyen:
-
-\begin{itemize}
-      \item \textbf{Variables Edáficas (del Suelo):}
-            \begin{itemize}
-                  \item \textbf{Humedad del Suelo: }Parámetro fundamental para
-                        la programación eficiente del riego. Se mide  comúnmente
-                        con sensores  capacitivos  o  de  resistencia  eléctrica
-                        \parencite[]{alahmad2023applying}.
-                  \item \textbf{Nutrientes (N, P, K) y pH:} Determinan la
-                        fertilidad del suelo y la  necesidad  de  fertilización.
-                        Sensores electroquímicos y ópticos permiten estimaciones
-                        en el sitio, aunque su medición  en  tiempo  real  sigue
-                        siendo       un       desafío       en        desarrollo
-                        \parencite[]{alahmad2023applying}.
-                  \item \textbf{Temperatura del Suelo: }Afecta la germinación de
-
-
-
-                        semillas y la actividad microbiana. Se mide con sensores
-                        térmicos \parencite[]{alahmad2023applying}.
-                  \item \textbf{Conductividad Eléctrica (CE):} Indica la
-                        salinidad del suelo y la concentración de iones. Se mide
-                        con                 sensores                  eléctricos
-                        \parencite[]{alahmad2023applying}.
-            \end{itemize}
-      \item \textbf{Variables Ambientales y Climáticas:}
-            \begin{itemize}
-                  \item \textbf{Temperatura y Humedad del Aire:} Condicionan la
-                        evapotranspiración, la aparición de  enfermedades  y  el
-                        estrés  térmico  de  los  cultivos.  Se  monitorean  con
-                        sensores  térmicos   y   de   humedad   (capacitivos   o
-                        resistivos) \parencite[]{alahmad2023applying}.
-                  \item \textbf{Precipitación y Viento: }Afectan la programación
-
-
-
-                        de riego, la aplicación de agroquímicos y los riesgos de
-                        erosión.  Se  miden  con  pluviómetros   y   anemómetros
-                        (sensores         mecánicos         o         acústicos)
-                        \parencite[]{alahmad2023applying}.
-                  \item \textbf{Radiación Solar:} Determina la fotosíntesis y el
-
-
-
-
-                        crecimiento.  Se  mide  con  sensores  de  radiación   o
-                        piranómetros \parencite[]{alahmad2023applying}.
-
-            \end{itemize}
-\end{itemize}
 
 \subsection{Simulación de LPWAN}
 
@@ -901,35 +942,37 @@ se describen las principales prácticas  propuestas  por  \parencite{beck2004xp}
             mejora continuamente, en lugar de definirse completamente al inicio.
 
 
+
+
 \end{itemize}
 
 \subsubsection{Valores} A continuación, se describen los  valores  fundamentales
-de  XP según \parencite{beck2004xp}.
+de XP según \parencite{beck2004xp}.
 
 \begin{itemize}
-      \item \textbf{Comunicación}: Es el valor más importante en  el  desarrollo
+      \item \textbf{Comunicación}: Es el valor más importante en el desarrollo
             del software en equipo. Muchos problemas  surgen  no  por  falta  de
             conocimiento, sino porque ese conocimiento no se transmite  a  quien
             puede actuar. La comunicación ayuda a resolver problemas imprevistos
             y a evitar que se repitan.
 
-      \item \textbf{Simplicidad}: Consiste en hacer  lo  más  simple  que  pueda
+      \item \textbf{Simplicidad}: Consiste en hacer lo más simple que pueda
             funcionar, considerando el contexto y las restricciones reales (como
             seguridad o rendimiento). No es simplismo, sino eliminar complejidad
             innecesaria. La simplicidad reduce lo que hay que comunicar.
 
-      \item \textbf{Retroalimentación}: Como  las  direcciones  cambian  con  la
+      \item \textbf{Retroalimentación}: Como las direcciones cambian con la
             experiencia, se necesita retroalimentación constante para adaptarse.
             Se busca ciclos de \textit{feedback} cortos (minutos  u  horas).  El
             exceso de retroalimentación puede indicar problemas de fondo que hay
             que resolver.
 
-      \item \textbf{Valentía}: Actuar  eficazmente  a  pesar  del  miedo.  Puede
+      \item \textbf{Valentía}: Actuar eficazmente a pesar del miedo. Puede
             implicar acción o paciencia.  Sin  otros  valores,  la  valentía  es
             peligrosa; con  ellos,  permite  hablar  con  honestidad,  descartar
             soluciones fallidas y buscar respuestas concretas.
 
-      \item \textbf{Respeto}: Subyace a los anteriores. Sin  respeto  entre  los
+      \item \textbf{Respeto}: Subyace a los anteriores. Sin respeto entre los
             miembros del equipo y  hacia  el  proyecto,  XP  no  funciona.  Cada
             persona involucrada tiene el mismo valor humano, y el éxito requiere
             que se respeten las contribuciones de todos.
