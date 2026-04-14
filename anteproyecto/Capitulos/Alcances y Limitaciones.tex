@@ -1,49 +1,84 @@
-\chapter{Alcances y Limitaciones}
+\section{Alcances del proyecto} El proyecto consiste en  el  desarrollo  de  una
+aplicación web  con  inteligencia  artificial  que  asiste  en  la  selección  y
+simulación de arquitecturas LPWAN  para  agricultura  inteligente  en  contextos
+rurales colombianos. Los alcances se definen en los siguientes ejes funcionales:
 
-\section{Alcances del proyecto}
 
-\subsection{Desarrollo de una aplicación web funcional}
-El proyecto contempla el desarrollo de una aplicación web operativa orientada al análisis y apoyo en la toma de decisiones para la selección de tecnologías LPWAN en contextos de agricultura inteligente.
+\subsection{Recomendación de variables y sensores} A  partir  del  cultivo,  los
+objetivos de monitoreo, el tipo de terreno  y  las  condiciones  climáticas,  la
+aplicación sugerirá las variables ambientales y edáficas  relevantes,  así  como
+los sensores más apropiados para medirlas, articulando así la capa de percepción
+con la arquitectura LPWAN propuesta.
 
-\subsection{Análisis comparativo de tecnologías LPWAN}
-La aplicación permitirá evaluar diferentes tecnologías LPWAN (como LoRa, Sigfox y NB-IoT) mediante criterios como cobertura, costo, escalabilidad y eficiencia energética, con base en información técnica y parámetros definidos por el usuario.
+\subsection{Recomendación de tecnología LPWAN} Con base en el contexto ingresado
+por el usuario (cultivo, objetivos de monitoreo, terreno y clima), la aplicación
+recomendará —fundamentada en evidencia técnica y académica— la tecnología  LPWAN
+más adecuada entre LoRa, Sigfox, NB-IoT y LTE-M, considerando cobertura, consumo
+energético, escalabilidad y costo.
 
-\subsection{Integración de agentes de inteligencia artificial}
-Se incorporarán agentes de inteligencia artificial que interpretarán el contexto ingresado (tipo de cultivo, ubicación, condiciones y requerimientos) para estructurar criterios de análisis y apoyar la recomendación tecnológica.
+\subsection{Integración de agentes de inteligencia artificial}  Se  incorporarán
+agentes de  IA  generativa  que  interpretarán  el  contexto  del  usuario  para
+estructurar  los  criterios  de  análisis,  sustentar  las  recomendaciones  con
+literatura técnica  y  generar  representaciones  visuales  de  la  arquitectura
+propuesta.
 
-\subsection{Simulación conceptual de arquitecturas de red} 
-El sistema generará representaciones visuales de arquitecturas LPWAN propuestas, permitiendo comprender la distribución de nodos, cobertura estimada y estructura general de la red.
+\subsection{Simulación  conceptual  de  arquitecturas  de  red}  La   simulación
+consistirá en un cálculo consolidado de los costos  de  los  componentes  de  la
+arquitectura LPWAN y en la visualización de un diagrama de dicha arquitectura.
 
-\subsection{Proceso iterativo de desarrollo}
-El desarrollo se realizará mediante un enfoque iterativo basado en prototipado y prácticas ágiles, permitiendo la mejora continua del sistema a partir de validaciones funcionales.
+\subsection{Validación funcional del sistema} Se evaluará el cumplimiento de los
+requisitos funcionales mediante pruebas de aceptación, utilizando el  Índice  de
+Requisitos Funcionales (IRF) como métrica principal de calidad.
 
-\subsection{Validación funcional del sistema}
-Se evaluará el cumplimiento de los requisitos funcionales mediante pruebas de aceptación, utilizando métricas como el Índice de Requisitos Funcionales (IRF).
+\subsection{Generación  de  documentación  técnica}  El  proyecto   incluye   la
+elaboración de documentación técnica, metodológica y de resultados que  respalde
+el desarrollo realizado y facilite su futura extensión o adaptación.
 
-\subsection{Generación de documentación técnica}
-El proyecto incluye la elaboración de documentación técnica, metodológica y de resultados que respalde el desarrollo y facilite su futura extensión.
 
 \section{Limitaciones del proyecto}
 
-\subsection{Sin integración física}
-No se realizará integración con sensores reales ni despliegues en campo. El sistema operará con datos simulados o ingresados por el usuario.
+\subsection{Alcance conceptual sin despliegue físico}
+El sistema no contempla integración con sensores reales ni
+despliegue de redes LPWAN operativas. Las recomendaciones y
+arquitecturas generadas son de carácter conceptual,
+fundamentadas en modelos técnicos y literatura especializada,
+a partir del contexto de proyecto descrito por el usuario.
 
-\subsection{Sin implementación real de red}
-No se implementará una red LPWAN operativa; el análisis será conceptual y basado en modelos y literatura técnica.
+\subsection{Recomendaciones sin validación agronómica en campo}
+Las sugerencias de variables y sensores se basan en evidencia
+académica y técnica disponible, pero no contemplan la validación
+con expertos agrónomos ni con datos reales de cultivos colombianos
+específicos.
 
-\subsection{IA sin predicción agronómica}
-La inteligencia artificial no realizará predicciones climáticas ni agrícolas, sino que apoyará la estructuración de criterios para la toma de decisiones tecnológicas.
+\subsection{IA orientada a decisión tecnológica}
+Los agentes de inteligencia artificial tienen como único propósito
+apoyar la selección de tecnología LPWAN, la recomendación de
+sensores y la generación de arquitecturas. La aplicación no realizará
+predicciones climáticas, de rendimiento de cultivos ni de
+comportamiento de la red en condiciones reales.
 
 \subsection{Restricciones de infraestructura y despliegue}
-El despliegue del sistema dependerá de recursos disponibles (servicios gratuitos o infraestructura institucional), lo cual puede limitar su rendimiento o disponibilidad.
+El despliegue de la aplicación dependerá de recursos disponibles
+—servicios gratuitos en la nube o infraestructura institucional—,
+lo que puede limitar su rendimiento, disponibilidad o capacidad
+de procesamiento simultáneo de múltiples usuarios.
+
+\subsection{Cobertura geográfica acotada}
+Las recomendaciones estarán orientadas a contextos rurales
+colombianos. La extrapolación de los resultados a otras regiones
+o países requerirá ajustes en los parámetros de cobertura,
+regulación del espectro radioeléctrico y condiciones topográficas
+locales.
+
 
 \section{Productos y Resultados de Investigación}
 
-A continuación se presentan los siguientes productos principales que resultarán del proyecto de investigación.
+A continuación se presentan los siguientes productos principales que  resultarán
+del proyecto de investigación.
 
 \begin{table}[H]
     \centering
-    \small % Tamaño de fuente ligeramente menor para mejorar el ajuste
+    \small
     \begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{4cm} >{\raggedright\arraybackslash}X c @{}}
         \toprule
         \textbf{Producto}                                   & \textbf{Descripción}                                                                                                                                                                                                & \textbf{Cantidad} \\

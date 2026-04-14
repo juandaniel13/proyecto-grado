@@ -1,188 +1,91 @@
 \chapter{Metodología}
 
-\section{Enfoque metodológico}
+La investigación se llevará a cabo  bajo  la  metodología  de  investigación  en
+ciencias de diseño (Design Science Research  Methodology,  DSRM)  propuesta  por
+\parencite{peffers2007design}. Este enfoque se justifica en  la  naturaleza  del
+proyecto, cuyo producto principal  es  un  artefacto  de  software  orientado  a
+resolver un problema concreto: la ausencia de una  aplicación  web  que  permita
+simular y analizar arquitecturas LPWAN en escenarios de agricultura  inteligente
+en Colombia. La  DSRM  se  compone  de  seis  actividades  que  se  describen  a
+continuación.
 
-El proyecto se desarrolla bajo una adaptación de la metodología
-Extreme Programming (XP), ajustada a las necesidades del proyecto
-y a las características del equipo de desarrollo. La elección de
-XP se justifica por tres razones principales: su orientación hacia
-equipos pequeños con comunicación directa con el cliente, su
-capacidad de respuesta ante cambios en los requisitos durante el
-desarrollo y su énfasis en la calidad del software mediante
-prácticas de prueba continua \parencite{beck2004xp}.
+\section{Fase 1: Identificación del problema y motivación} Se define el problema
+Se define el problema de investigación: la  ausencia  de  aplicaciones  web  que
+permitan simular y analizar arquitecturas LPWAN  en  escenarios  de  agricultura
+inteligente en Colombia. Se justifica el valor de una solución por la  creciente
+adopción de IoT en el sector agrícola colombiano y la necesidad de  herramientas
+que faciliten la toma de decisiones técnicas y económicas en este dominio.
 
-Dado que el proyecto es desarrollado por un equipo de dos personas,
-se adoptan las prácticas centrales de XP: historias de usuario,
-desarrollo dirigido por pruebas (TDD),
-integración continua, diseño simple, entregas incrementales y
-programación en pares.
 
-La metodología se estructura en seis fases adaptadas del ciclo de
-vida de XP: exploración, planificación,
-iteraciones de desarrollo, despliegue, evaluación y cierre. A
-diferencia de un modelo en cascada, las fases de planificación e
-iteración son cíclicas y se repiten hasta completar el backlog de
-historias de usuario.
+\section{Fase 2: Definición de los objetivos de la solución} Una vez definido el
+problema, se establecen los objetivos que debe cumplir  la  solución  propuesta.
+Estos se formulan como criterios observables y medibles, alineados con la  norma
+ISO 9241-11, particularmente en términos de eficacia, eficiencia y satisfacción.
+De esta manera,  se  orienta  el  desarrollo  del  artefacto  hacia  propiedades
+verificables, evitando formulaciones generales o ambiguas.
 
-\section{Fase 1: Exploración}
 
-\subsection{Levantamiento de requisitos funcionales y definición de historias de usuario}
-En esta fase se identifican y documentan los requisitos del sistema
-en forma de historias de usuario.
-Cada historia incluye criterios de aceptación medibles que servirán
-como base para las pruebas de aceptación ejecutadas en la Fase 3.
-El conjunto de historias de usuario constituye el backlog inicial
-del proyecto, el cual puede ser actualizado en cualquier iteración.
+\section{Fase 3: Diseño y  desarrollo}  Se  diseña  y  construye  el  artefacto,
+correspondiente  a  una  aplicación  web  basada  en  agentes  de   inteligencia
+artificial para la simulación y análisis de arquitecturas LPWAN. Esta  actividad
+comprende la definición de la funcionalidad  del  artefacto,  el  diseño  de  su
+arquitectura y su construcción, para lo cual se  requiere  conocimiento  teórico
+que permita desarrollar la solución. El  desarrollo  interno  del  artefacto  se
+llevará a cabo adaptando el ciclo de vida clásico del  software,  siguiendo  las
+siguientes actividades:
 
-\subsection{Definición de requisitos no funcionales y arquitectura}
-Se especifican los requisitos no funcionales del sistema y se define una arquitectura de software
-que los satisfaga. La arquitectura se documenta mediante diagramas del modelo C4,
-los cuales se refinan progresivamente durante el desarrollo.
+\begin{enumerate}
+      \item \textbf{Planificación}: Se define el alcance funcional de la
+            aplicación web y se elabora un cronograma de desarrollo que organiza
+            las actividades subsiguientes.
 
-\subsection{Definición del plan de pruebas}
+      \item \textbf{Análisis}: Se realiza el levantamiento y especificación
+            detallada  de  los  requisitos  funcionales  y  no  funcionales  del
+            sistema, y se definen los casos de uso.
 
-Se elabora un documento que especifica
-los tipos de prueba a ejecutar (unitarias, de integración y de
-aceptación), los criterios de aprobación y reprobación para cada
-caso de prueba y el alcance de la evaluación.
+      \item \textbf{Diseño}: Se define la arquitectura del sistema acorde a los
+            requisitos establecidos, se diseñan los componentes  de  software  a
+            través  de  modelos  funcionales,  estructurales  y  dinámicos,  las
+            interfaces de usuario, la base de datos, el stack tecnológico  y  el
+            plan de pruebas, que especifica  los  tipos  de  prueba  a  ejecutar
+            (unitarias  y  de  integración),  los  criterios  de  aprobación   y
+            reprobación para cada caso de prueba y el alcance de la evaluación.
 
-\subsection{Selección de tecnologías}
-Se evalúan y seleccionan las tecnologías para construir la aplicación
-web, considerando su idoneidad técnica para las funcionalidades a
-implementar y el nivel de conocimiento del equipo de desarrollo.
+      \item \textbf{Codificación y pruebas}: La codificación se llevará a cabo
+            mediante un enfoque de desarrollo dirigido por pruebas (Test  Driven
+            Development, TDD) \parencite{beck2004xp},  en  el  cual  primero  se
+            escribe la prueba unitaria que define el comportamiento esperado del
+            módulo, luego se implementa el código  mínimo  para  que  la  prueba
+            pase, y finalmente  se  refactoriza  para  mejorar  la  calidad  sin
+            alterar el comportamiento. Este ciclo garantiza que cada  unidad  de
+            código tenga cobertura de prueba desde su origen. Posteriormente, se
+            ejecutarán pruebas de integración  para  verificar  la  comunicación
+            correcta entre los componentes del sistema.
 
-\subsection{Artefactos}
-Los artefactos entregados en esta fase son: requisitos funcionales, el backlog inicial de
-historias de usuario con sus criterios de aceptación, requisitos no funcionales, la definición de arquitectura inicial,
-la justificación de tecnologías seleccionadas y el plan de pruebas
-del sistema.
+      \item \textbf{Despliegue}: Se realizará el despliegue de cada una de las
+            unidades de software que comprenden  la  arquitectura  del  sistema,
+            incluyendo  la  configuración  del  entorno  de  producción   y   la
+            verificación del funcionamiento correcto del sistema desplegado.
+\end{enumerate}
 
-\section{Fase 2: Planificación de la iteración}
+\section{Fase 4: Demostración}  El  artefacto  se  aplica  a  casos  de  estudio
+documentados sobre despliegues LPWAN en cultivos colombianos en  zonas  rurales,
+con el fin de demostrar su capacidad  para  resolver  instancias  concretas  del
+problema identificado.  Sobre  estos  casos  se  ejecutará  la  aplicación  para
+evidenciar su funcionamiento en condiciones reales de uso.
 
-\subsection{Priorización del backlog}
-Al inicio de cada iteración, el cliente prioriza las historias de
-usuario que serán implementadas en el ciclo actual, considerando el
-valor que cada una aporta al sistema.
+\section{Fase 5: Evaluación} En esta fase se compara el desempeño del  artefacto
+con los objetivos definidos en la Fase 2. Para  ello,  se  realizan  pruebas  de
+usabilidad con una muestra representativa de  los  usuarios  finales  previstos.
+Estas pruebas miden tres componentes establecidos  por  la  norma  ISO  9241-11:
+eficacia, eficiencia y satisfacción. Los  resultados  obtenidos  indican  si  el
+artefacto cumple con los criterios definidos. En caso contrario, se debe  iterar
+sobre su diseño antes de pasar a la fase de comunicación.
 
-\subsection{Estimación de esfuerzo}
-El equipo de desarrollo estima el esfuerzo requerido para completar
-cada historia de usuario priorizada, utilizando la sucesión de
-Fibonacci (1, 2, 3, 5, 8, 13) como escala relativa. A mayor número,
-mayor esfuerzo estimado.
 
-\subsection{Descomposición en tareas}
-Cada historia de usuario se descompone en tareas técnicas específicas,
-las cuales se representan en un tablero Kanban virtual con los estados:
-pendiente, en progreso y completada.
 
-\subsection{Artefactos}
-Los artefactos entregados son: las historias de usuario priorizadas
-y estimadas para la iteración, el tablero Kanban con las tareas
-descompuestas y el cronograma de la iteración.
-
-\section{Fase 3: Iteración de desarrollo}
-
-\subsection{Diseño emergente}
-Antes de implementar cada tarea, el equipo realiza una sesión de
-diseño breve para definir la estructura del código y los flujos de
-información relevantes, produciendo los diagramas UML mínimos necesarios.
-
-\subsection{Diseño de casos de prueba}
-Con base en el plan de pruebas definido en la Fase 1, el equipo
-diseña los casos de prueba específicos para cada historia de usuario
-incluida en la iteración. Cada caso de prueba especifica las
-precondiciones, los datos de entrada, los pasos a ejecutar y el
-resultado esperado, el cual se deriva directamente de los criterios
-de aceptación de la historia de usuario correspondiente.
-
-\subsection{Implementación mediante TDD}
-El desarrollo sigue el ciclo TDD: primero
-se escribe la prueba unitaria que define el comportamiento esperado
-del módulo, luego se implementa el código mínimo para que la prueba
-pase, y finalmente se refactoriza para mejorar la calidad sin alterar
-el comportamiento. Este ciclo garantiza que cada unidad de código
-tenga cobertura de prueba desde su origen.
-
-\subsection{Pruebas de integración}
-Una vez implementadas las unidades, se ejecutan pruebas de integración
-para verificar la comunicación correcta entre los componentes del
-sistema. Todo el código se integra en el repositorio mediante
-integración continua, ejecutando la suite de pruebas completa para
-detectar regresiones.
-
-\subsection{Pruebas de aceptación}
-Al finalizar la implementación de cada historia de usuario, se
-ejecutan sus pruebas de aceptación con base en los criterios definidos
-en la Fase 1. Cada prueba de aceptación verifica que el sistema
-produce el resultado esperado ante una entrada específica. El
-resultado de cada prueba se registra como aprobado o reprobado en
-una tabla de seguimiento, la cual alimentará el cálculo del IRF en
-la Fase 5.
-
-\subsection{Validación con el cliente}
-El equipo presenta al cliente las funcionalidades implementadas en
-la iteración. La retroalimentación recibida se documenta en un acta
-de reunión. Las correcciones o ajustes identificados se incorporan
-al backlog como nuevas historias de usuario o tareas de corrección
-para la siguiente iteración.
-
-\subsection{Artefactos}
-Los artefactos entregados son: el incremento de software funcional,
-los resultados de las pruebas unitarias, de integración y de
-aceptación, el tablero Kanban actualizado y el acta de reunión
-con el cliente.
-
-\section{Fase 4: Despliegue}
-
-Al completar el backlog de historias de usuario, el incremento final
-se valida con el cliente y se despliegan las unidades que componen
-la aplicación web. El
-despliegue se realiza en un entorno de producción accesible, lo que
-permite ejecutar las pruebas de aceptación finales sobre el sistema
-en condiciones reales de operación.
-
-\subsection{Artefactos}
-El artefacto entregado es la aplicación web desplegada y funcional.
-
-\section{Fase 5: Evaluación}
-
-\subsection{Ejecución de pruebas de aceptación finales}
-Sobre el sistema desplegado se ejecuta la suite completa de pruebas
-de aceptación, verificando cada requisito funcional definido en el
-backlog. Cada prueba se registra como aprobada o reprobada con base
-en la coincidencia entre el resultado obtenido y el resultado esperado
-definido en los criterios de aceptación.
-
-\subsection{Cálculo del IRF}
-Con los resultados de las pruebas de aceptación se calcula el Índice
-de Requisitos Funcionales (IRF), definido como:
-
-\begin{equation}
-    IRF = \frac{\text{Requisitos funcionales aprobados en prueba}}
-    {\text{Total de requisitos funcionales definidos}} \times 100
-\end{equation}
-
-El IRF operacionaliza la subcaracterística de completitud funcional
-de la ISO/IEC 25010:2023 y constituye la métrica principal para
-responder la pregunta de investigación.
-
-\subsection{Artefactos}
-Los artefactos entregados son: la tabla de resultados de pruebas
-de aceptación y el valor calculado del IRF con su interpretación.
-
-\section{Fase 6: Cierre}
-
-\subsection{Refinamiento de la documentación}
-Se refinan y completan los diagramas UML y C4 utilizados durante
-el desarrollo, asegurando que el sistema quede documentado de forma
-que facilite su mantenimiento y comprensión por terceros.
-
-\subsection{Entrega final}
-Se hace entrega de la aplicación web desplegada, el código fuente
-en un repositorio público y la documentación técnica del sistema.
-
-\subsection{Artefactos}
-Los artefactos entregados son: el código fuente en repositorio
-público, la documentación del sistema compuesta por diagramas UML
-y C4, y el informe final de resultados del IRF.
-
+\section{Fase 6: Comunicación} Se comunica, en espacios  académicos  (tales  como
+congresos o jornadas académicas): el problema  abordado  y  su  importancia,  el
+artefacto desarrollado, su utilidad y novedad, así como el rigor de su diseño  y
+su  efectividad,  con  el  fin  de  socializar  los  resultados  y  promover  la
+apropiación social del conocimiento.

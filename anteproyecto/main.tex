@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 
 % ====== Tipografía y márgenes (APA 7) ======
-\usepackage{newtxtext,newtxmath}
+\usepackage{amsmath}
 \usepackage{geometry}
 \geometry{margin=2.54cm, headheight=16pt}
 \usepackage{setspace}
@@ -17,9 +17,9 @@
 
 % ====== Figuras, Tablas y Gráficos ======
 \usepackage{graphicx}
-\usepackage{float}       % Fix: Para usar [H]
-\usepackage{booktabs}    % Fix: Para \toprule, \midrule
-\usepackage{tabularx}    % Fix: Para tablas tabularx
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 
 % ====== Bibliografía (APA 7) ======
@@ -37,15 +37,15 @@
 \addto\captionsspanish{%
   \renewcommand{\tablename}{Tabla}%
 }
+
 % ====== Comandos del proyecto ======
 \newcommand{\tituloTesis}{
-DESARROLLO DE UNA PLATAFORMA WEB CON
-IA MEDIANTE MODELO DE PROTOTIPADO Y KANBAN PARA EL ANÁLISIS Y SIMULACIÓN DE
-ARQUITECTURAS LPWAN EN AGRICULTURA INTELIGENTE}
-\newcommand{\nombreEstudiante}{Santiago Sánchez Moya}
-\newcommand{\nombreEstudianteJ}{Juan Daniel Rodríguez Hurtado}
+DESARROLLO DE UNA APLICACION WEB PARA LA SIMULACION Y ANÁLISIS DEL USO DE
+ARQUITECTURAS LPWAN. CASO DE ESTUDIO:
+AGRICULTURA INTELIGENTE}
+\newcommand{\nombreEstudiante}{Juan Daniel Rodríguez Hurtado}
 \newcommand{\nombreDirector}{Ing. Roberto Ferro Escobar, PhD}
-\newcommand{\nombreCoDirector}{Ing. Carlos Andrés Martínez Alayón, MsC}
+\newcommand{\nombreCoDirector}{Ing. Carlos Andrés Martínez Alayón, PhD (candidato)}
 \newcommand{\nombreUni}{Universidad Distrital Francisco José de Caldas}
 \newcommand{\nombreFacultad}{Facultad de Ingeniería}
 \newcommand{\nombreProyecto}{Proyecto Curricular de Ingeniería de Sistemas}
@@ -70,7 +70,7 @@ ARQUITECTURAS LPWAN EN AGRICULTURA INTELIGENTE}
   \vspace*{3cm}
   {\large \textbf{\tituloTesis} \par}
   \vfill
-  {\normalsize \nombreEstudiante \\ \nombreEstudianteJ \par}
+  {\normalsize \nombreEstudiante \par}
   \vfill
   {\normalsize
     Trabajo de grado para optar por el título de:\\
@@ -88,22 +88,20 @@ ARQUITECTURAS LPWAN EN AGRICULTURA INTELIGENTE}
 \end{titlepage}
 
 % ====== Índice ======
-\pagenumbering{roman} % Páginas preliminares en romanos
+\pagenumbering{roman}
 \tableofcontents
 \clearpage
 
 % ====== Contenido ======
-\pagenumbering{arabic} % Reinicia numeración a arábigos
+\pagenumbering{arabic}
 \include{Capitulos/Resumen}
 \include{Capitulos/Introduccion}
-\include{Capitulos/problema_investigación}
+\include{Capitulos/problema_investigacion} % ← sin tilde
 \include{Capitulos/Justificacion}
 \include{Capitulos/objetivos}
 \include{Capitulos/marco_referencial}
-\include{Capitulos/Metodología}
-
-% IMPORTANTE: Renombra tu archivo "Alcances y Limitaciones.tex" a "alcances.tex"
-\include{Capitulos/Alcances y Limitaciones}
+\include{Capitulos/Metodología} % ← opcional: sin tilde también
+\include{Capitulos/Alcances_y_Limitaciones} % ← evita espacios
 \include{Capitulos/Cronograma}
 \include{Capitulos/presupuesto}
 
